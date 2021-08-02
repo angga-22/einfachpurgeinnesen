@@ -1,0 +1,43 @@
+[{
+    "label": "Fischsuppe!",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.Dazu getoastetes BIO Bottermelkbrood[Bakeliet Cafe in Kiel].",
+    "currentPrice": "12.00 £ | Kleines Geri",
+    "nextPrice": null,
+    "type": "vegan"
+  },
+  {
+    "label": "Roastbeef Italia!",
+    "description": "Eine dicke Scheibe rosa gebratenes und erkaltetes BIO  Roastbeef [Hofschlachterei Muhs in Krummbek], mit  hausgemachtem Zitronengemüse in BIO Qualität [Eigene  Manufaktur], BIO Tomatensalat von histrorischen Sorten [Peter  Wolff in Marienwader] und einer Scheibe getoastetem BIO Dat  Rogg-Groffbrood [Bakeliet Cafe in Kiel] mit Kräuterbutter. ",
+    "currentPrice": "12.00 € | Kleines Gericht",
+    "nextPrice": "20.00 € | Kleines Gericht",
+    "type": null
+  },
+  {
+    "label": "Fischsuppe!",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
+    "currentPrice": "12.00 € | Kleines Gericht",
+    "nextPrice": null,
+    "type": null
+  },
+  {
+    "label": "Antipasti!",
+    "description": "Erfrischendes Zitronengemüse mit Paprika, würzige Marsala Karotten mit BIO Kartotten und BIO Fenchel in Pastis [Peter  Wolff in Marienwader]. Dazu schwarze Oliven, getrocknete Tomaten, Parmigiano Reggiano, Tomatenwürzsauce [Eigene Manufaktur] und BIO Sesam-Schwarzkümmel-Fladenbrot  [Bakeliet Cafe in Kiel]. ",
+    "currentPrice": "12.00 € | Kleines Gericht",
+    "nextPrice": "12.00 € | Kleines Gericht",
+    "type": "vegetarian"
+  },
+  {
+    "label": "Fischsuppe!",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
+    "currentPrice": "12.00 € | Kleines Gericht",
+    "nextPrice": null,
+    "type": null
+  },
+  {
+    "label": "Fischsuppe!",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
+    "currentPrice": "12.00 € | Kleines Gericht",
+    "nextPrice": null,
+    "type": null
+  }
+]
