@@ -4,6 +4,7 @@ export default {
     background: '#FFFCF9',
     primary: '#FFFCF9',
     secondary: '#FDC601',
+    white: '#fff',
   },
   fonts: {
     label: 'Quincy CF',
@@ -44,9 +45,13 @@ export default {
     primary: {
       color: '#fff',
       bg: '#000',
+      height: "44px",
+      width: '186px',
+      fontWeight: 1,
+      borderRadius: '12px',
       '&:hover': {
-        color: '#000',
-        bg: 'tomato',
+        color: 'text',
+        bg: 'white',
       },
     }
   },

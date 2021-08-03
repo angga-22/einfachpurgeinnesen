@@ -3,6 +3,7 @@ import { jsx, Box, Text, Button } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Footer = () => {
+
   return (
     <div>
       <footer
@@ -11,15 +12,15 @@ const Footer = () => {
           display: 'flex',
           justifyContent: "space-between",
           flexDirection: ["column-reverse", "column-reverse", "row"],
-          maxWidth: ["100%", "95%", "100%", "95%", "92%", "90%"],
+          maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
           margin: [null, "20px auto", null, "20px auto", "40px auto", "50px auto"],
           padding: [
             "5vw 7.5vw",
             "5vw 9.4vw",
             "0 7.6vw",
             "2vw 2.6vw",
-            "2vw 2vw",
-            "2vw 2vw",
+            "2vw 85px",
+            "1vw 15vw",
           ],
           borderTopLeftRadius: ["1em"],
           borderTopRightRadius: ["1em"],
@@ -33,20 +34,28 @@ const Footer = () => {
           justifyContent: 'center',
           maxWidth: ["100%", "100%", "50%"],
         }}>
-          <Text variant="subHeading">
+          <Text variant="subHeading"
+            sx={{
+              fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
+              lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
+              fontWeight: '400',
+              fontFamily: 'Quincy CF',
+              marginBottom: '40px'
+            }}
+          >
             Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
             <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
           </Text>
           <Button>Jetzt einkaufen</Button>
         </Box>
         <Box sx={{
-          margin: '0 auto',
+          margin: ['0 auto', '0 auto', '0', null, null, null],
+          overflow: 'hidden'
         }}>
           <StaticImage
             sx={{
-              maxWidth: ["20em", "20em", "40em", "20em"],
-              marginTop: '-3em',
-              marginBottom: '-3em'
+              width: '20em',
+              margin: '-30px -35px -40px -20px',
             }}
             src={'../../images/header-img.png'}
             alt="bottle"

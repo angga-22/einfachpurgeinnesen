@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
 import Section from "../Box";
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Box, Heading, Text } from "theme-ui";
 
 const Card = () => {
   const data = useStaticQuery(graphql`
@@ -27,54 +27,42 @@ const Card = () => {
       {data.allPurDataJson.edges.map((item, i) => {
         return (
           <Section>
-            <h1
-              sx={{
-                fontFamily: "label",
-                fontSize: [2, 3, 4, 5, 6, 7],
-              }}
-            >
-              {item.node.label}{" "}
-              <span >
-                {item.node.type === "vegan"
-                  ? <StaticImage
-                    alt="vegan"
-                    width="20"
-                    src={'../../images/vegan.png'}
-                  />
-                  : item.node.type === "vegetarian"
+            <Box>
+              <Heading
+                variant="heading"
+                sx={{
+                  fontFamily: "label",
+                }}
+              >
+                {item.node.label}{" "}
+                <span >
+                  {item.node.type === "vegan"
                     ? <StaticImage
                       alt="vegan"
                       width="20"
-                      src={'../../images/vegetarian.png'}
+                      src={'../../images/vegan.png'}
                     />
-                    : null}
-              </span>
-            </h1>
-            <p
-              sx={{
-                fontFamily: "body",
-                "& > span": {
-                  fontWeight: 'bold',
-                  color: "red"
-                },
-              }}
-              dangerouslySetInnerHTML={{ __html: item.node.description }}
-            >
-            </p>
-            <p
-              sx={{
-                fontFamily: "body",
-              }}
-            >
-              <StaticImage
-                alt="vegan"
-                width="20"
-                src={'../../images/bullet-small.png'}
-              />
-              {item.node.currentPrice}
-            </p>
-            {item.node.nextPrice !== null ?
-              <p
+                    : item.node.type === "vegetarian"
+                      ? <StaticImage
+                        alt="vegan"
+                        width="20"
+                        src={'../../images/vegetarian.png'}
+                      />
+                      : null}
+                </span>
+              </Heading>
+              <Text
+                sx={{
+                  fontFamily: "body",
+                  "& > span": {
+                    fontWeight: 'bold',
+                    color: "red"
+                  },
+                }}
+                dangerouslySetInnerHTML={{ __html: item.node.description }}
+              >
+              </Text>
+              <Text
                 sx={{
                   fontFamily: "body",
                 }}
@@ -82,12 +70,26 @@ const Card = () => {
                 <StaticImage
                   alt="vegan"
                   width="20"
-                  src={'../../images/bullet-big.png'}
+                  src={'../../images/bullet-small.png'}
                 />
-                {item.node.nextPrice}
-              </p>
-              : ""
-            }
+                {item.node.currentPrice}
+              </Text>
+              {item.node.nextPrice !== null ?
+                <Text
+                  sx={{
+                    fontFamily: "body",
+                  }}
+                >
+                  <StaticImage
+                    alt="vegan"
+                    width="20"
+                    src={'../../images/bullet-big.png'}
+                  />
+                  {item.node.nextPrice}
+                </Text>
+                : ""
+              }
+            </Box>
           </Section>
         );
       })}
