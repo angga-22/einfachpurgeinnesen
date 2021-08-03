@@ -1,10 +1,9 @@
-import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
-
 import Section from "../Box";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+
 const Card = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -54,17 +53,13 @@ const Card = () => {
             <p
               sx={{
                 fontFamily: "body",
+                "& > span": {
+                  fontWeight: 'bold',
+                  color: "red"
+                },
               }}
+              dangerouslySetInnerHTML={{ __html: item.node.description }}
             >
-              {i === 0 ?
-
-                item.node.description.slice(0, 80) + " " +
-                item.node.description.slice(80, 99) + " " +
-                item.node.description.slice(99)
-                :
-                item.node.description
-              }
-
             </p>
             <p
               sx={{
@@ -78,18 +73,21 @@ const Card = () => {
               />
               {item.node.currentPrice}
             </p>
-            <p
-              sx={{
-                fontFamily: "body",
-              }}
-            >
-              <StaticImage
-                alt="vegan"
-                width="20"
-                src={'../../images/bullet-big.png'}
-              />
-              {item.node.nextPrice}
-            </p>
+            {item.node.nextPrice !== null ?
+              <p
+                sx={{
+                  fontFamily: "body",
+                }}
+              >
+                <StaticImage
+                  alt="vegan"
+                  width="20"
+                  src={'../../images/bullet-big.png'}
+                />
+                {item.node.nextPrice}
+              </p>
+              : ""
+            }
           </Section>
         );
       })}

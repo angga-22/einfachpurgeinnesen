@@ -1,15 +1,13 @@
-import * as React from 'react'
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Flex } from 'theme-ui'
-import Section from '../Box'
+import { jsx, Flex, Box, Heading, Text } from "theme-ui"
+// import Section from '../Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 const Header = () => {
 
 
   const datas = useStaticQuery(graphql`
-    query tes {
+    query getHours {
       allPurHoursJson {
         edges {
           node {
@@ -23,59 +21,137 @@ const Header = () => {
   `)
 
   return (
-    <>
-      <header>
+    <div>
+      <header sx={{
+        maxWidth: ["100%", "100%", "100%", "85%", "85%", "90%"],
+        margin: [null, null, null, "20px auto", "40px auto", "50px auto"],
+        padding: [
+          "5vw 7.5vw",
+          "5vw 9.4vw",
+          "5vw 7.6vw",
+          "2vw 2.6vw",
+          "2vw 2vw",
+          "2vw 2vw",
+        ],
+        borderRadius: [null, null, null, "1em"],
+        boxShadow: [
+          "1px 1px 7px black"
+        ]
+      }}>
         <Flex as="nav"
           sx={{
-            justifyContent: "center",
+            display: 'flex',
             flexDirection: "column",
-            boxShadow: "4px 4px 4px black"
+            position: 'relative'
           }}
         >
-          <Section>
-            <h1>Bistrokuche?!</h1>
-            {datas.allPurHoursJson.edges.map(item => {
-              return (
-                <div>
-                  <h4>{item.node.label}</h4>
-                  <p>{item.node.hours}</p>
-                </div>
-              )
-            })}
-            <div
+          <Heading sx={{
+            mb: ["1em", "1em", "10px", "10px", "10px", "5px"]
+          }}>Bistrokuche?!</Heading>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: ["column", "column", "column", "column", "row"],
+              justifyContent: "space-between"
+            }}
+          >
+            <Box>
+              {datas.allPurHoursJson.edges.map(item => {
+                return (
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: ["column", "row", "row", "row", "row", "row"],
+                      pb: ["1em", "1em", '1px', '1px', '1px', '1px']
+                    }}
+                  >
+                    <Text
+                      variant="subHeading"
+                      sx={{
+                        mr: "1em",
+                        lineHeight: ["1.2em", "1.4em", "1.8"]
+                      }}
+                    >{item.node.label}</Text>
+                    <Text
+                      sx={{
+                        lineHeight: ["1.2em", "1.4em", "1.8"]
+                      }}
+                    >{item.node.hours}</Text>
+                  </Box>
+                )
+              })}
+            </Box>
+            <Box
               sx={{
                 display: 'flex',
-                flexDirection: "column"
+                flexDirection: ["column", "row", "row", "row", "column", "row"],
+                pr: [null, null, null, null, "10em", "15em"],
+                mt: [null, null, null, null, "-1.5em"]
               }}
             >
-              <div>
-                <StaticImage
-                  alt="vegan"
-                  width="20"
-                  src={'../../images/vegan.png'}
-                />
-                <span>Vegan oder vegane Option</span>
-              </div>
-              <div sx={{
+              <Box sx={{
+                display: 'flex',
+                flexDirection: "row",
+                alignItems: 'center',
+                pb: ["1em"]
               }}>
                 <StaticImage
-                  width="12"
+                  alt="vegan"
+                  width="17"
+                  sx={{
+                    mr: '10px'
+                  }}
+                  src={'../../images/vegan.png'}
+                />
+                <Text
+                  variant="subHeading"
+                  sx={{
+                    pr: "20px"
+                  }}
+                >Vegan oder vegane Option</Text>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: "row",
+                  alignItems: 'center',
+                  pb: ["1em"]
+                }}
+              >
+                <StaticImage
+                  width="10"
                   alt="vegetarian"
+                  sx={{
+                    mr: '17px'
+                  }}
                   src={'../../images/vegetarian.png'}
                 />
-                <span>
-                  Vegatarisch</span>
-              </div>
-            </div>
+                <Text variant="subHeading">
+                  Vegatarisch</Text>
+              </Box>
+            </Box>
+          </Box>
+
+          <Box
+            sx={{
+              top: [2, 2, 2, 2, 3, 3,],
+              right: [2],
+              position: "absolute"
+            }}
+          >
             <StaticImage
-              width="12"
+              sx={{
+                width: ["40px", "40px", "40px", "50px", "50px", "50px"]
+              }}
               alt="vegetarian"
               src={'../../images/close.png'}
             />
-          </Section>
+          </Box>
+
         </Flex>
+
       </header>
-    </>
+    </div>
   )
 }
 

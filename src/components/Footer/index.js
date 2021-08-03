@@ -1,11 +1,10 @@
-import * as React from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <footer
         sx={{
           backgroundColor: 'secondary'
@@ -17,7 +16,7 @@ const Footer = () => {
           alt="drink"
         />
       </footer>
-    </>
+    </div>
   )
 }
 
