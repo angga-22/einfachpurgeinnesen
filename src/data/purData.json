@@ -10,14 +10,14 @@
     "description": "Eine dicke Scheibe rosa gebratenes und erkaltetes BIO  Roastbeef [Hofschlachterei Muhs in Krummbek], mit  hausgemachtem Zitronengemüse in BIO Qualität [Eigene  Manufaktur], BIO Tomatensalat von histrorischen Sorten [Peter  Wolff in Marienwader] und einer Scheibe getoastetem BIO Dat  Rogg-Groffbrood [Bakeliet Cafe in Kiel] mit Kräuterbutter. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": "20.00 € | Kleines Gericht",
-    "type": null
+    "type": "default"
   },
   {
     "label": "Fischsuppe!",
     "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
-    "type": null
+    "type": "default"
   },
   {
     "label": "Antipasti!",
@@ -31,13 +31,13 @@
     "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
-    "type": null
+    "type": "default"
   },
   {
     "label": "Fischsuppe!",
     "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes BIO Bottermelkbrood [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
-    "type": null
+    "type": "default"
   }
 ]
