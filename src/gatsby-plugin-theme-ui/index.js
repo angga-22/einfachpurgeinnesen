@@ -9,12 +9,8 @@ export default {
     label: 'Quincy CF',
     body: 'Cera Round Pro',
   },
-  fontWeights: {
-    normal: 400,
-    medium: 600,
-    bold: 900
-  },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontWeights: [400, 800, 700, 800],
+  fontSizes: [12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
   lineHeights: {
     body: 1,
     heading: 1.2,
@@ -24,14 +20,16 @@ export default {
     wide: "0.25em"
   },
   text: {
-    default: {
+    heading: {
       color: "text",
-      fontSize: 2,
+      fontSize: 3,
+      fontFamily: 'label'
     },
     subHeading: {
-      fontWeight: "bold",
+      color: "text",
+      fontFamily: 'body',
+      fontWeight: 1,
       fontSize: 2,
-      lineHeight: "heading"
     }
   },
   breakpoints: [

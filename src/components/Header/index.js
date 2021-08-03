@@ -33,9 +33,9 @@ const Header = () => {
           "2vw 2vw",
           "2vw 2vw",
         ],
-        borderRadius: [null, null, null, "1em"],
+        borderRadius: [null, null, null, "12px"],
         boxShadow: [
-          "1px 1px 7px black"
+          "0px 12px 24px rgba(0, 0, 0, 0.15)"
         ]
       }}>
         <Flex as="nav"
@@ -46,7 +46,8 @@ const Header = () => {
           }}
         >
           <Heading sx={{
-            mb: ["1em", "1em", "10px", "10px", "10px", "5px"]
+            mb: ["24px", "8px", "12px", "12px", "12px"],
+            fontSize: ["32px", "42px", "38px", "40px", "40px", "43px"]
           }}>Bistrokuche?!</Heading>
           <Box
             sx={{
@@ -69,12 +70,17 @@ const Header = () => {
                       variant="subHeading"
                       sx={{
                         mr: "1em",
-                        lineHeight: ["1.2em", "1.4em", "1.8"]
+                        lineHeight: ["1.2em", "1.4em", "1.8"],
+                        fontSize: [2, 2, 2, 3, 3, 3,]
                       }}
                     >{item.node.label}</Text>
                     <Text
+                      variant="subHeading"
                       sx={{
-                        lineHeight: ["1.2em", "1.4em", "1.8"]
+                        lineHeight: ["1.2em", "1.4em", "1.8"],
+                        fontWeight: '400',
+                        fontSize: [2, 2, 2, 3, 3, 3,]
+
                       }}
                     >{item.node.hours}</Text>
                   </Box>
@@ -85,8 +91,9 @@ const Header = () => {
               sx={{
                 display: 'flex',
                 flexDirection: ["column", "row", "row", "row", "column", "row"],
-                pr: [null, null, null, null, "10em", "15em"],
-                mt: [null, null, null, null, "-1.5em"]
+                pt: ["24px", "16px", "12px", "12px", null, null],
+                pr: [null, null, "10px", "10px", "5em", "7em"],
+                mt: [null, null, null, null, "-3em"]
               }}
             >
               <Box sx={{
@@ -106,7 +113,8 @@ const Header = () => {
                 <Text
                   variant="subHeading"
                   sx={{
-                    pr: "20px"
+                    pr: ["48px", "48px", "48px", "48px", "48px"],
+                    fontSize: [2, 2, 2, 3, 3, 3,]
                   }}
                 >Vegan oder vegane Option</Text>
               </Box>
@@ -126,7 +134,9 @@ const Header = () => {
                   }}
                   src={'../../images/vegetarian.png'}
                 />
-                <Text variant="subHeading">
+                <Text variant="subHeading" sx={{
+                  fontSize: [2, 2, 2, 3, 3, 3,]
+                }}>
                   Vegatarisch</Text>
               </Box>
             </Box>
@@ -134,14 +144,14 @@ const Header = () => {
 
           <Box
             sx={{
-              top: [2, 2, 2, 2, 3, 3,],
-              right: [2],
+              top: [0, 0, 0, 0, 4, 4,],
+              right: [0],
               position: "absolute"
             }}
           >
             <StaticImage
               sx={{
-                width: ["40px", "40px", "40px", "50px", "50px", "50px"]
+                width: ["43px", "43px", "43px", "58px", "58px", "58px"]
               }}
               alt="vegetarian"
               src={'../../images/close.png'}
