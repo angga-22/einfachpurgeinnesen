@@ -24,12 +24,18 @@ export default {
     heading: {
       color: "text",
       fontSize: 3,
-      fontFamily: 'label'
+      fontFamily: 'label',
     },
     subHeading: {
       color: "text",
       fontFamily: 'body',
       fontWeight: 1,
+      fontSize: 2,
+    },
+    paragraph: {
+      color: "text",
+      fontFamily: 'body',
+      lineHeight: "175%",
       fontSize: 2,
     }
   },

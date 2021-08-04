@@ -1,6 +1,6 @@
 [{
     "label": "Fischsuppe!",
-    "description": "Würzige  Fischsuppe  mit reichhaltiger Einlage an frischem Fisch.Dazu getoastetes <span> BIO Bottermelkbrood </span> [Bakeliet Cafe in Kiel].",
+    "description": "Würzige  Fischsuppe  mit reichhaltiger Einlage an frischem Fisch.Dazu getoastetes <b> BIO Bottermelkbrood </b> [Bakeliet Cafe in Kiel].",
     "currentPrice": "12.00 £ | Kleines Geri",
     "nextPrice": null,
     "type": "vegan"
@@ -14,7 +14,7 @@
   },
   {
     "label": "Fischsuppe!",
-    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <span> BIO Bottermelkbrood </span> [Bakeliet Cafe in Kiel]. ",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <b> BIO Bottermelkbrood </b> [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
     "type": "default"
@@ -28,14 +28,14 @@
   },
   {
     "label": "Fischsuppe!",
-    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <span> BIO Bottermelkbrood </span> [Bakeliet Cafe in Kiel]. ",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <b> BIO Bottermelkbrood </b> [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
     "type": "default"
   },
   {
     "label": "Fischsuppe!",
-    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <span> BIO Bottermelkbrood </span> [Bakeliet Cafe in Kiel]. ",
+    "description": "Würzige Fischsuppe mit reichhaltiger Einlage an frischem Fisch.  Dazu getoastetes <b> BIO Bottermelkbrood </b> [Bakeliet Cafe in Kiel]. ",
     "currentPrice": "12.00 € | Kleines Gericht",
     "nextPrice": null,
     "type": "default"
