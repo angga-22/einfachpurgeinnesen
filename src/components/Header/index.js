@@ -65,7 +65,6 @@ const Header = () => {
                   sx={{
                     display: 'flex',
                     flexDirection: ["column", "row", "row", "row", "row", "row"],
-                    pb: ["1em", "1em", '1px', '1px', '1px', '1px']
                   }}
                 >
                   <Text

@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { jsx, Box, Text, Button } from 'theme-ui'
+import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
+import ButtonCustom from '../Button'
 
 const Footer = () => {
 
@@ -13,7 +14,7 @@ const Footer = () => {
           justifyContent: "space-between",
           flexDirection: ["column-reverse", "column-reverse", "row"],
           maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
-          margin: [null, "20px auto", null, "20px auto", "40px auto", "50px auto"],
+          margin: [null, "20px auto", "0 auto", "20px auto", "40px auto", "50px auto"],
           padding: [
             "5vw 7.5vw",
             "5vw 9.4vw",
@@ -31,7 +32,6 @@ const Footer = () => {
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
           maxWidth: ["100%", "100%", "50%"],
         }}>
           <Text variant="subHeading"
@@ -40,13 +40,18 @@ const Footer = () => {
               lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
               fontWeight: '400',
               fontFamily: 'Quincy CF',
+              marginTop: '39px',
               marginBottom: '40px'
             }}
           >
             Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
             <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
           </Text>
-          <Button>Jetzt einkaufen</Button>
+          <ButtonCustom
+            style={{
+              marginLeft: '-1px',
+            }}
+          >Jetzt einkaufen</ButtonCustom>
         </Box>
         <Box sx={{
           margin: ['0 auto', '0 auto', '0', null, null, null],
