@@ -49,7 +49,11 @@ const Card = () => {
               flexDirection: 'column',
               width: 'auto',
               height: 'fit-content',
-              marginBottom: ["64px", "64px", "64px", "80px", "80px", "80px"]
+              marginBottom: ["64px", "64px", "64px", "80px", "80px", "80px"],
+              marginRight: '0',
+              '@media screen and (min-width: 812px)': {
+                marginRight: '40px',
+              },
             }}
           >
             <Heading
@@ -87,7 +91,7 @@ const Card = () => {
             </Text>
             <Text
               sx={{
-                fontFamily: "body",
+                fontFamily: "label",
                 fontSize: "18px",
                 lineHeight: "100%",
                 marginBottom: '12px',
@@ -109,7 +113,7 @@ const Card = () => {
               item.node.nextPrice !== null ?
                 <Text
                   sx={{
-                    fontFamily: "body",
+                    fontFamily: "label",
                     fontSize: "18px",
                     lineHeight: "100%",
                     display: 'flex',
