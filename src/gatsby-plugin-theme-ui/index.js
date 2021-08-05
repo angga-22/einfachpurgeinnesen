@@ -5,6 +5,7 @@ export default {
     primary: '#FFFCF9',
     secondary: '#FDC601',
     white: '#fff',
+    footer: '#fCF5DE'
   },
   fonts: {
     label: 'Quincy CF',
@@ -30,7 +31,7 @@ export default {
       color: "text",
       fontFamily: 'body',
       fontWeight: 1,
-      fontSize: 2,
+      fontSize: 3,
     },
     paragraph: {
       color: "text",
