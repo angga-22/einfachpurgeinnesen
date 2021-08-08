@@ -1,17 +1,17 @@
 import * as React from 'react'
-import Footer from '../Footer'
 import FooterInfo from '../FooterInfo'
-import Header from '../Header'
+
+// General css reset
+import 'reset-css'
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <Header />
+    <main>
       {children}
-      <Footer />
       <FooterInfo />
-    </>
+    </main>
   )
 }
+
 
 export default Layout

@@ -1,11 +1,12 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import Card from '../components/Card'
-import Layout from '../components/Layout'
+import React from 'react'
+
+import { Dishes } from 'sections/menuOverlay'
+import Layout from 'components/Layout'
+
 const IndexPage = () => {
   return (
     <Layout>
-      <Card />
+      <Dishes />
     </Layout>
   )
 }
