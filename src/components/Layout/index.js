@@ -1,17 +1,20 @@
 import * as React from 'react'
 import Footer from '../Footer'
-import FooterInfo from '../FooterInfo'
-import Header from '../Header'
+import Nav from '../Nav'
+import { Helmet } from 'react-helmet'
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Header />
-      {children}
-      <Footer />
-      <FooterInfo />
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title data-react-helmet="true">einfachpurgeinnesen | Home</title>
+      <link rel="einfachpurgeinnesen" href="https://localhost:8000/" />
+    </Helmet>
+    <Nav />
+    <main>{children}</main>
+    <Footer />
+  </>
+)
+
 
 export default Layout

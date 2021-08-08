@@ -1,77 +1,59 @@
 button {
-  width: 186px;
-  height: 44px;
-  margin-top: -2px;
-  margin-left: -2px;
-  font-family: "Cera Round Pro";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  border-radius: 12px;
-  color: #fff;
-  cursor: pointer;
-  background: #2e2e2e;
   mask: url("../../images/button-vector.png");
   -webkit-mask: url("../../images/button-vector.png");
 }
 
-.button-container {
+.btn-container-home {
   width: 186px;
   height: 44px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  border: 1px solid #2e2e2e;
+  border: 1px solid #FFFCF9;
   transition: 1s;
-  letter-spacing: 1px;
+  border-radius: 12px;
+}
+.btn-container-overlay {
+  width: 186px;
+  height: 44px;
+  border: 1px solid #2E2E2E;
+  transition: 1s;
   border-radius: 12px;
 }
 
-.button-container:hover {
-  background-color: #2e2e2e;
+.btn-home:hover{
+  background-color: #FFFCF9;
+}
+
+.btn-overlay:hover{
+  background-color: #2E2E2E;
 }
 
 @media screen and (min-width: 376px){
-
-  .button-container{
+  .btn-container-home{
     width: 211px;
     height: 57px;
   }
-  button{
+  .btn-container-overlay{
     width: 211px;
     height: 57px;
   }
 }
 @media screen and (min-width: 640px){
-.button-container{
+  .btn-container-home{
     width: 199px;
     height: 44px;
   }
-  button{
+  .btn-container-overlay{
     width: 199px;
     height: 44px;
   }
-
 }
 @media screen and (min-width: 812px){
-  .button-container{
+  .btn-container-home{
     width: 211px;
     height: 57px;
   }
-  button{
+ 
+  .btn-container-overlay{
     width: 211px;
     height: 57px;
   }
-
-
 }
-/* @media screen and (min-width: 834px){
-
-}
-@media screen and (min-width: 1194px){
-
-}
-@media screen and (min-width: 1440px){
-
-}
- */

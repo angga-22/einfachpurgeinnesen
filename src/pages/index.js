@@ -1,13 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import Card from '../components/Card'
+import * as React from 'react'
+import ContentMain from '../components/ContentMain'
 import Layout from '../components/Layout'
-const IndexPage = () => {
-  return (
-    <Layout>
-      <Card />
-    </Layout>
-  )
-}
+const Home = () => (
+  <Layout>
+    <ContentMain />
+  </Layout>
+)
 
-export default IndexPage
+export default Home
