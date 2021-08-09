@@ -10,7 +10,6 @@ const ShopOverview = () => {
         <title data-react-helmet="true">einfachpurgeinnesen | Shop</title>
         <link rel="einfachpurgeinnesen" href="https://localhost:8000/" />
       </Helmet>
-      <Nav />
       <MainContent />
     </>
   )

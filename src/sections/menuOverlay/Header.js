@@ -1,22 +1,18 @@
 /** @jsx jsx */
 import { jsx, Flex, Box, Heading, Text } from "theme-ui"
-// import Section from '../Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
-const MenuNav = () => {
 
-
-  const datas = useStaticQuery(graphql`
-    query getHours {
-      allPurHoursJson {
-        edges {
-          node {
+const Header = ({ handleClose }) => {
+  const data = useStaticQuery(graphql`
+    query getOpeningHours {
+    allPurHoursJson {
+        nodes {
             id
             label
             hours
-          }
-        }
-      }
+        }    
+    }
     }
   `)
 
@@ -24,7 +20,7 @@ const MenuNav = () => {
     <div
       sx={{
         maxWidth: ["100%", "100%", "100%", "85%", "85%", "90%"],
-        margin: [null, null, null, "20px auto", "40px auto", "50px auto"],
+        marginX: [null, null, null, "auto", "auto", "auto"],
         padding: [
           "5vw 7.5vw",
           "5vw 9.4vw",
@@ -59,7 +55,7 @@ const MenuNav = () => {
           }}
         >
           <Box>
-            {datas.allPurHoursJson.edges.map(item => {
+            {data.allPurHoursJson.nodes.map(item => {
               return (
                 <Box
                   sx={{
@@ -74,7 +70,7 @@ const MenuNav = () => {
                       lineHeight: "175%",
                       fontSize: [2, 2, 2, 3, 3, 3,]
                     }}
-                  >{item.node.label}</Text>
+                  >{item.label}</Text>
                   <Text
                     variant="subHeading"
                     sx={{
@@ -83,7 +79,7 @@ const MenuNav = () => {
                       fontSize: [2, 2, 2, 3, 3, 3,]
 
                     }}
-                  >{item.node.hours}</Text>
+                  >{item.hours}</Text>
                 </Box>
               )
             })}
@@ -142,12 +138,16 @@ const MenuNav = () => {
             </Box>
           </Box>
         </Box>
-
-        <Box
+        <button
+          onClick={handleClose}
           sx={{
             top: [0, 0, 0, 0, 0, "2em", "2.5em"],
             right: [0],
-            position: "absolute"
+            position: "absolute",
+            cursor: "pointer",
+            // Reset of default button styles
+            border: 'none',
+            bg: 'unset'
           }}
         >
           <StaticImage
@@ -157,7 +157,7 @@ const MenuNav = () => {
             alt="vegetarian"
             src={'../../images/close.png'}
           />
-        </Box>
+        </button>
 
       </Flex>
 
@@ -165,4 +165,4 @@ const MenuNav = () => {
   )
 }
 
-export default MenuNav
+export default Header

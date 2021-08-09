@@ -35,6 +35,12 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/logo-pur.png`
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/Layout/index.js'),
+      },
+    },
   ],
 };

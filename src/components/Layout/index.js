@@ -3,6 +3,10 @@ import Footer from '../Footer'
 import Nav from '../Nav'
 import { Helmet } from 'react-helmet'
 
+
+// General css reset
+import 'reset-css'
+
 const Layout = ({ children }) => (
   <>
     <Helmet>

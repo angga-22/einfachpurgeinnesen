@@ -1,9 +1,11 @@
 import * as React from 'react'
-import Section from '../Box'
-import Button from '../Button'
 import { navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
+
+import Section from '../../components/Box'
+import Button from '../../components/Button'
+import MenuButton from '../../overlays/MenuOverlays/MenuButton'
 const Banner = () => {
   const [buttonMenuClicked, setButtonMenuClicked] = React.useState('')
 
@@ -139,6 +141,7 @@ const Banner = () => {
                   },
                 }}
               >Menü anzeigen</Button>
+              <MenuButton />
             </Box>
           </Box>
         </Box>

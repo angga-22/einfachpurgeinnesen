@@ -1,12 +1,13 @@
+/** @jsx jsx */
+import { jsx, Box, Heading, Text } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
-import Section from "../Box";
-/** @jsx jsx */
-import { jsx, Heading, Text, Box } from "theme-ui";
 
-const Card = () => {
+import Section from "../../components/Box";
+
+const Dishes = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query getMenuData {
       allPurDataJson {
         edges {
           node {
@@ -27,7 +28,7 @@ const Card = () => {
       sx={{
         display: 'grid',
         gridTemplateColumns: `repeat(1fr, 1fr))`,
-        '@media screen and (min-width: 812px)': {
+        '@media screen and (minWidth: 812px)': {
           gridTemplateColumns: 'repeat(2, 1fr)'
         },
         padding: [
@@ -51,7 +52,7 @@ const Card = () => {
               height: 'fit-content',
               marginBottom: ["64px", "64px", "64px", "80px", "80px", "80px"],
               marginRight: '0',
-              '@media screen and (min-width: 812px)': {
+              '@media screen and (minWidth: 812px)': {
                 marginRight: '40px',
               },
             }}
@@ -139,4 +140,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Dishes;

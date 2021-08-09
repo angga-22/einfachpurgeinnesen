@@ -1,10 +1,22 @@
-import * as React from 'react'
-import ContentMain from '../components/ContentMain'
-import Layout from '../components/Layout'
+import React from 'react'
+
+// Sections
+// import {
+//   Banner,
+//   TopContent,
+//   BottomContent
+// } from 'sections/restaurantPage'
+
+import Banner from '../sections/restaurantPage/Banner'
+import TopContent from '../sections/restaurantPage/TopContent'
+import BottomContent from '../sections/restaurantPage/BottomContent'
+
 const Home = () => (
-  <Layout>
-    <ContentMain />
-  </Layout>
+  <>
+    <TopContent />
+    <Banner />
+    <BottomContent />
+  </>
 )
 
 export default Home
