@@ -5,7 +5,7 @@ import MenuOverlay from "./MenuOverlay"
 
 
 const MenuButton = ({ sx = {} }) => {
-    const [showOverlay, setShowOverlay] = React.useState(true)
+    const [showOverlay, setShowOverlay] = React.useState(false)
 
     return <>
         <Button sx={sx} onClick={() => { setShowOverlay(true) }}>Open Menu</Button>

@@ -1,17 +1,18 @@
 import * as React from 'react'
 import "./style.css"
 
-const ButtonCustom = ({ style, clickHandler, children }) => {
+import { Button as ThemeUIButton } from '@theme-ui/components'
+
+const Button = ({ style, clickHandler, children, ...rest }) => {
   return (
-    <>
-      <button
-        class="button-container"
-        style={style}
-        type="button"
-        onClick={clickHandler}
-      >{children}</button>
-    </>
+    <ThemeUIButton
+      className="button-container"
+      style={style}
+      type="button"
+      onClick={clickHandler}
+      {...rest}
+    >{children}</ThemeUIButton>
   )
 }
 
-export default ButtonCustom
+export default Button

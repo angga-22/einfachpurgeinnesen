@@ -1,16 +1,15 @@
 import React from 'react'
-import { Box } from 'theme-ui'
-import MenuButton from 'overlays/MenuOverlay/MenuButton'
-import Layout from 'components/Layout'
 
-const IndexPage = () => {
+import MenuButton from 'overlays/MenuOverlay/MenuButton'
+
+const BistroPage = () => {
     return (
-        <Layout>
-            <Box sx={{ height: 500, width: '100%' }}>
-                <MenuButton sx={{ margin: "50px" }} />
-            </Box>
-        </Layout>
+        <div style={{ height: '500px' }}>
+            <MenuButton sx={{ marginTop: "50px", bg: "black", height: 40, width: 500, margin: 'auto' }} />
+        </div>
     )
 }
 
-export default IndexPage
+export default BistroPage
+
+

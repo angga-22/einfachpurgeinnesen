@@ -1,73 +1,121 @@
-/** @jsx jsx */
-import { jsx, Box, Text } from 'theme-ui'
+import * as React from 'react'
+
+import Section from '../Box'
+import { Text, Box } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
-import ButtonCustom from '../Button'
+import Content from './Content';
 
 const Footer = () => {
 
   return (
-    <div>
-      <footer
+    <Section
+      sx={{
+        position: 'relative',
+        display: ["flex"],
+        flexDirection: ["column", "column", "column", "row", "row"],
+        justifyContent: 'space-between',
+        backgroundColor: 'footer',
+        padding: [
+          "0 7.5vw 48px 7.5vw",
+          "0 9.4vw 81px 9.4vw",
+          "60px 7.6vw 81px 7.6vw",
+          "0 7.6vw 81px 7.6vw",
+          // "0 9.4vw",
+          // "0 7.6vw",
+          // "0 7.6vw",
+          // "0 8.1vw",
+          // "0 5.6vw",
+        ],
+      }}
+    >
+
+      {/* //logo & seiten wrapper */}
+      <Box
         sx={{
-          backgroundColor: 'secondary',
-          display: 'flex',
-          justifyContent: "space-between",
-          flexDirection: ["column-reverse", "column-reverse", "row"],
-          maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
-          margin: [null, "20px auto", "0 auto", "20px auto", "40px auto", "50px auto"],
-          padding: [
-            "5vw 7.5vw",
-            "5vw 9.4vw",
-            "0 7.6vw",
-            "2vw 2.6vw",
-            "2vw 85px",
-            "1vw 15vw",
-          ],
-          borderTopLeftRadius: ["1em"],
-          borderTopRightRadius: ["1em"],
-          borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
-          borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
+          display: ["flex"], // the rest would be define later
+          flexDirection: ["column", "column", "row", "row", "row", "column-reverse"],
+          justifyContent: 'space-between',
+          textAlign: ["center", "center", "left"],
+          marginTop: ["0", "0", "0", "62px"],
+          width: ["100%", "100%", "100%", "100%", "52%", "60%"]
         }}
       >
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          maxWidth: ["100%", "100%", "50%"],
-        }}>
-          <Text variant="subHeading"
+        {/* //logo */}
+        <Box
+          sx={{
+            margin: ["56px auto", "80px auto", "0", "0"],
+            width: ["100%", "100%", "20%", "30%", "40%"],
+          }}
+        >
+          <Box
             sx={{
-              fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
-              lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
-              fontWeight: '400',
-              fontFamily: 'Quincy CF',
-              marginTop: '39px',
-              marginBottom: '40px'
+              textAlign: ["center"],
+              width: ["100px", "129px", "80px", "113px", "140px"],
+              margin: ['0 auto', "0 auto", "0"]
             }}
           >
-            Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
-            <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
-          </Text>
-          <ButtonCustom
-            style={{
-              marginLeft: '-1px',
-            }}
-          >Jetzt einkaufen</ButtonCustom>
-        </Box>
-        <Box sx={{
-          margin: ['0 auto', '0 auto', '0', null, null, null],
-          overflow: 'hidden'
-        }}>
-          <StaticImage
+            <StaticImage
+              src={'../../images/logo-pur.png'}
+              alt="logo-pur" />
+          </Box>
+          <Text
+            variant="paragraph"
             sx={{
-              width: '20em',
-              margin: '-30px -35px -40px -20px',
+              textAlign: ["center", "center", "left"],
+              fontSize: ["14px", "20px", "16px", "18px"]
             }}
-            src={'../../images/header-img.png'}
-            alt="bottle"
-          />
+          >Ganz bewusst, gewusst was.</Text>
         </Box>
-      </footer>
-    </div>
+        {/* //seitan */}
+        <Box
+          sx={{
+            display: ["flex"],
+            flexDirection: ["column", "column", "column"],
+            textAlign: ["center"],
+            padding: ["0 0 56px 0", "0 0 81px 0", "0", "0 5vw ", "0 5vw 0 0"],
+            width: ["100%", "100%", "75%", "45%", "40%", "100%"],
+          }}
+        >
+          <Text
+            variant="paragraph"
+            sx={{
+              marginBottom: ["16px", "16px", "0"],
+              fontSize: ["16px", "20px", "16px", "20px", "18px"],
+              textAlign: ["center", "center", "left"],
+              fontWeight: 'bold'
+            }}
+          >Seiten</Text>
+          <Text
+            variant="paragraph"
+            sx={{
+              textAlign: ["center", "center", "left"],
+              wordSpacing: ["1rem", "4rem", "1px", "0", "0", "10px"],
+              lineHeight: ["2.5", "2.5", "1.5", "2.5"],
+              fontSize: ["16px", "20px", "16px", "20px", "18px"]
+            }}
+          >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Text>
+        </Box>
+      </Box>
+      {/* //content wrapper */}
+      <Box>
+        <Content />
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          left: "0",
+          bottom: "0",
+          width: ["250px", "350px", "220px", "220px", "270px"],
+          height: 'auto'
+        }}
+      >
+        <StaticImage
+          src={'../../images/art-paint.png'}
+          alt="art-paint"
+        />
+      </Box>
+
+    </Section>
   )
 }
 

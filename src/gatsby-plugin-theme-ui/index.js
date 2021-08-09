@@ -1,3 +1,4 @@
+
 export default {
   colors: {
     text: '#2E2E2E',
@@ -5,7 +6,8 @@ export default {
     primary: '#FFFCF9',
     secondary: '#FDC601',
     white: '#fff',
-    footer: '#fCF5DE'
+    footer: '#fCF5DE',
+    banner: '#070569'
   },
   fonts: {
     label: 'Quincy CF',
@@ -38,8 +40,26 @@ export default {
       fontFamily: 'body',
       lineHeight: "175%",
       fontSize: 2,
+    },
+    mainArticle: {
+      color: "text",
+      fontFamily: 'body',
+      lineHeight: "175%",
+      fontSize: ["18px", "22px", "16px", "20px", "20px", "22px"]
     }
   },
+
+  // //top content
+  //   40, 50, 50, 50, 56, 68
+
+  //   //article content
+  //   18, 22, 16, 20, 20, 22
+
+  // //banner
+  //     18, 20, 16, 20, 20, 20
+  // 3, 4, 2, 4, 
+  //     //footer font
+  //     16, 20, 16, 20, 18, 18
   breakpoints: [
     '@media screen and (min-width: 376px)',
     '@media screen and (min-width: 640px)',
@@ -50,16 +70,23 @@ export default {
   ],
   buttons: {
     primary: {
-      color: '#fff',
-      bg: '#000',
-      height: "44px",
-      width: '186px',
+      display: 'inline-block',
+      whiteSpace: 'nowrap',
+      verticalAlign: 'middle',
+      lineHeights: '175%',
       fontWeight: 1,
+      width: "100%",
+      height: "100%",
+      fontSize: [3, 4, 3, 3, 3, 4],
+      textAlign: 'center',
       borderRadius: '12px',
-      '&:hover': {
-        color: 'text',
-        bg: 'white',
+      fontFamily: 'body',
+      cursor: 'pointer',
+      overflow: 'hidden',
+      '&:focus': {
+        outline: 'none'
       },
+
     }
   },
   styles: {
@@ -67,7 +94,7 @@ export default {
       margin: '0',
       padding: '0',
       boxSizing: 'border-box',
-      backgroundColor: 'background'
+      backgroundColor: 'background',
     },
   }
 }

@@ -4,17 +4,15 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Header = ({ handleClose }) => {
-    const datas = useStaticQuery(graphql`
-    query getHours {
-      allPurHoursJson {
-        edges {
-          node {
+    const data = useStaticQuery(graphql`
+    query getOpeningHours {
+    allPurHoursJson {
+        nodes {
             id
             label
             hours
-          }
-        }
-      }
+        }    
+    }
     }
   `)
 
@@ -57,7 +55,7 @@ const Header = ({ handleClose }) => {
                     }}
                 >
                     <Box>
-                        {datas.allPurHoursJson.edges.map(item => {
+                        {data.allPurHoursJson.nodes.map(item => {
                             return (
                                 <Box
                                     sx={{
@@ -72,7 +70,7 @@ const Header = ({ handleClose }) => {
                                             lineHeight: "175%",
                                             fontSize: [2, 2, 2, 3, 3, 3,]
                                         }}
-                                    >{item.node.label}</Text>
+                                    >{item.label}</Text>
                                     <Text
                                         variant="subHeading"
                                         sx={{
@@ -81,7 +79,7 @@ const Header = ({ handleClose }) => {
                                             fontSize: [2, 2, 2, 3, 3, 3,]
 
                                         }}
-                                    >{item.node.hours}</Text>
+                                    >{item.hours}</Text>
                                 </Box>
                             )
                         })}
@@ -140,7 +138,6 @@ const Header = ({ handleClose }) => {
                         </Box>
                     </Box>
                 </Box>
-
                 <button
                     onClick={handleClose}
                     sx={{

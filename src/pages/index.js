@@ -1,14 +1,18 @@
 import React from 'react'
 
-import { Dishes } from 'sections/menuOverlay'
-import Layout from 'components/Layout'
+// Sections
+import {
+  Banner,
+  TopContent,
+  BottomContent
+} from 'sections/restaurantPage'
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <Dishes />
-    </Layout>
-  )
-}
+const Home = () => (
+  <>
+    <TopContent />
+    <Banner />
+    <BottomContent />
+  </>
+)
 
-export default IndexPage
+export default Home

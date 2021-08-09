@@ -1,0 +1,25 @@
+[{
+    "label": "Restaurant",
+    "link": "/restaurant"
+  },
+  {
+    "label": "Ladengeschäft",
+    "link": "/ladengeschäft"
+  },
+  {
+    "label": "Onlineshop",
+    "link": "/onlineshop"
+  },
+  {
+    "label": "Menü",
+    "link": "/menu"
+  },
+  {
+    "label": "Partner",
+    "link": "/partner"
+  },
+  {
+    "label": "Wir",
+    "link": "/wir"
+  }
+]
