@@ -46,6 +46,13 @@ export default {
       fontFamily: 'body',
       lineHeight: "175%",
       fontSize: ["18px", "22px", "16px", "20px", "20px", "22px"]
+    },
+    paragraphShopOverview: {
+      color: "text",
+      fontFamily: "body",
+      fontWeight: "normal",
+      lineHeight: "175%",
+      fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
     }
   },
 
@@ -60,6 +67,10 @@ export default {
   // 3, 4, 2, 4, 
   //     //footer font
   //     16, 20, 16, 20, 18, 18
+
+  // shop overview
+  // 18 22 18 20 20 20
+
   breakpoints: [
     '@media screen and (min-width: 376px)',
     '@media screen and (min-width: 640px)',

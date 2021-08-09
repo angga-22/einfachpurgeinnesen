@@ -1,6 +1,6 @@
 [{
     "label": "Restaurant",
-    "link": "/restaurant"
+    "link": "/"
   },
   {
     "label": "Ladengeschäft",
@@ -8,7 +8,7 @@
   },
   {
     "label": "Onlineshop",
-    "link": "/onlineshop"
+    "link": "/shop-overview"
   },
   {
     "label": "Menü",

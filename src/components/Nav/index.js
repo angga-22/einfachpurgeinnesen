@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import { Flex, Text, Box } from "@theme-ui/components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
@@ -25,7 +25,6 @@ const Nav = () => {
     setHamburgerClicked(() => !hamburgerClicked);
   };
 
-  console.log(hamburgerClicked, "clicked? ");
 
   return (
     <div>
@@ -156,6 +155,7 @@ const Nav = () => {
         >
           {data.allPurNavigationJson.edges.map((menu) => (
             <Link
+              key={menu.node.id}
               to={menu.node.link}
               activeStyle={{
                 borderBottom: '1px solid black'

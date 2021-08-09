@@ -1,7 +1,7 @@
-import * as React from 'react'
+/** @jsx jsx */
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Box, Text } from 'theme-ui'
+import { jsx, Box, Text } from 'theme-ui'
 import Section from '../Box'
 
 const TopContent = () => {
@@ -107,25 +107,25 @@ const TopContent = () => {
         >
           {data.allPurArticleJson.edges.slice(0, 1).map(item => {
             return (
-              <>
+              <div key={item.node.id}
+                sx={{
+                  pr: ["0", "0", "37px", "0", "0", "0"],
+                  pb: ["20px", "20px", "0", "20px", "20px", "20px"]
+                }}
+              >
                 <Text
-                  key={item.node.id}
                   variant="mainArticle"
-                  sx={{
-                    pr: ["0", "0", "37px", "0", "0", "0"],
-                    pb: ["20px", "20px", "0", "20px", "20px", "20px"]
-                  }}
                 >{item.node.article}</Text>
-              </>
+              </div>
             )
           })}
           {data.allPurArticleJson.edges.slice(1, 2).map(item => {
             return (
-              <>
-                <Text key={item.node.id}
+              <div key={item.node.id}>
+                <Text
                   variant="mainArticle"
                 >{item.node.article}</Text>
-              </>
+              </div>
             )
           })}
         </Box>
