@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { jsx, Box, Text } from 'theme-ui'
 
-import Section from '../../components/Box'
+import Section from 'components/Box'
 
 const BottomContent = () => {
 

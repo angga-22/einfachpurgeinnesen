@@ -1,28 +1,18 @@
 import * as React from 'react'
 import "./style.css"
-import { Button } from '@theme-ui/components'
 
-const Btn = ({
-  style,
-  clickHandler,
-  children,
-  sx,
-  className,
-  styleButton
-}) => (
-  <>
-    <div
+import { Button as ThemeUIButton } from '@theme-ui/components'
+
+const Button = ({ style, clickHandler, children, ...rest }) => {
+  return (
+    <ThemeUIButton
+      className="button-container"
       style={style}
-      className={className}>
-      <Button
-        style={styleButton}
-        sx={{ ...sx }}
-        type="button"
-        name="buttonMenu"
-        onClick={clickHandler}
-      >{children}</Button>
-    </div>
-  </>
-)
+      type="button"
+      onClick={clickHandler}
+      {...rest}
+    >{children}</ThemeUIButton>
+  )
+}
 
-export default Btn
+export default Button

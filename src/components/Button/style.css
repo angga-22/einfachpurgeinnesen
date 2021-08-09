@@ -1,7 +1,20 @@
-button {
+.button-container {
+  font-family: "Cera Round Pro";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  background: #2e2e2e;
   mask: url("../../images/button-vector.png");
   -webkit-mask: url("../../images/button-vector.png");
 }
+
+/* button {
+  mask: url("../../images/button-vector.png");
+  -webkit-mask: url("../../images/button-vector.png");
+} */
 
 .btn-container-home {
   width: 186px;
@@ -10,12 +23,20 @@ button {
   transition: 1s;
   border-radius: 12px;
 }
+
 .btn-container-overlay {
   width: 186px;
   height: 44px;
   border: 1px solid #2E2E2E;
   transition: 1s;
   border-radius: 12px;
+}
+
+.button-container:hover {
+  mask: none;
+  -webkit-mask: none;
+  background-color: #2e2e2e;
+  transition: ease-in-out;
 }
 
 .btn-home:hover{
@@ -27,6 +48,11 @@ button {
 }
 
 @media screen and (min-width: 376px){
+  .button-container{
+    width: 211px;
+    height: 57px;
+  }
+
   .btn-container-home{
     width: 211px;
     height: 57px;

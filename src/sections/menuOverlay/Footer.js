@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
-import ButtonCustom from '../../components/Button'
+import ButtonCustom from 'components/Button'
 
 const Footer = () => {
 

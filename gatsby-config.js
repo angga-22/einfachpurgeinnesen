@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: `einfachpurgeniessen`,
@@ -28,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `einfachpurgeinnesen`,
-        short_name: `einfachpurgeinnesen`,
+        name: `einfachpurgeniessen`,
+        short_name: `einfachpurgeniessen`,
         start_url: `/`,
         background_color: `#FFFCF9`,
         display: `minimal-ui`,

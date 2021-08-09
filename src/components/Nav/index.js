@@ -25,7 +25,6 @@ const Nav = () => {
     setHamburgerClicked(() => !hamburgerClicked);
   };
 
-
   return (
     <div>
       <Flex
@@ -165,7 +164,7 @@ const Nav = () => {
                 fontWeight: "normal",
                 fontSize: 2,
                 textDecoration: "none",
-                '@media screen and (min-width: 812px)': {
+                '@media screen and (minWidth: 812px)': {
                   // height: '200px'
                 }
               }}

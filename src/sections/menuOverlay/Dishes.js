@@ -2,12 +2,13 @@
 import { jsx, Box, Heading, Text } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
+import Section from 'components/Box'
 
-import Section from "../../components/Box";
 
 const Dishes = () => {
   const data = useStaticQuery(graphql`
     query getMenuData {
+
       allPurDataJson {
         edges {
           node {

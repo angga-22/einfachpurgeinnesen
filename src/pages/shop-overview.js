@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Nav from '../components/Nav'
 import { Helmet } from 'react-helmet'
 import MainContent from '../components/ShopOverview/MainContent'
 const ShopOverview = () => {

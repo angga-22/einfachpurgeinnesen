@@ -3,9 +3,9 @@ import { navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
 
-import Section from '../../components/Box'
-import Button from '../../components/Button'
-import MenuButton from '../../overlays/MenuOverlays/MenuButton'
+import Section from 'components/Box'
+import Button from 'components/Button'
+import MenuButton from 'overlays/MenuOverlay/MenuButton'
 const Banner = () => {
   const [buttonMenuClicked, setButtonMenuClicked] = React.useState('')
 
