@@ -80,25 +80,51 @@ export default {
     '@media screen and (min-width: 1440px)',
   ],
   buttons: {
-    primary: {
+    primaryWhite: {
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
       lineHeights: '175%',
       fontWeight: 1,
-      width: "100%",
-      height: "100%",
+      width: '250px',
+      height: '44px',
       fontSize: [3, 4, 3, 3, 3, 4],
       textAlign: 'center',
       borderRadius: '12px',
       fontFamily: 'body',
       cursor: 'pointer',
-      overflow: 'hidden',
       '&:focus': {
         outline: 'none'
       },
-
+      color: 'text',
+      '&:hover': {
+        backgroundColor: 'white'
+      },
+    },
+    primaryBlack: {
+      mask: 'url("../images/button-vector.png")',
+      webkitMask: 'url("../images/button-vector.png")',
+      display: 'inline-block',
+      whiteSpace: 'nowrap',
+      verticalAlign: 'middle',
+      lineHeights: '175%',
+      fontWeight: 1,
+      width: '250px',
+      height: '44px',
+      fontSize: [3, 4, 3, 3, 3, 4],
+      textAlign: 'center',
+      borderRadius: '12px',
+      fontFamily: 'body',
+      cursor: 'pointer',
+      '&:focus': {
+        outline: 'none'
+      },
+      color: 'white',
+      '&:hover': {
+        backgroundColor: 'text'
+      },
     }
+
   },
   styles: {
     root: {
@@ -109,3 +135,20 @@ export default {
     },
   }
 }
+
+// const primary = {
+//   display: 'inline-block',
+//   whiteSpace: 'nowrap',
+//   verticalAlign: 'middle',
+//   lineHeights: '175%',
+//   fontWeight: 1,
+//   fontSize: [3, 4, 3, 3, 3, 4],
+//   textAlign: 'center',
+//   borderRadius: '12px',
+//   fontFamily: 'body',
+//   cursor: 'pointer',
+//   overflow: 'hidden',
+//   '&:focus': {
+//     outline: 'none'
+//   },
+// }

@@ -20,7 +20,12 @@ const TopContent = () => {
   `);
 
   return (
-    <Section>
+    <Section
+      sx={{
+        marginTop: ["40px", "32px", "16px", "65px", "64px", "155px"]
+
+      }}
+    >
       {/* // section wrapper */}
       <Box>
         {/* //hero section */}

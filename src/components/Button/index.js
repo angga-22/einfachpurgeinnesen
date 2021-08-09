@@ -1,5 +1,4 @@
 import * as React from 'react'
-import "./style.css"
 
 import { Button as ThemeUIButton } from '@theme-ui/components'
 

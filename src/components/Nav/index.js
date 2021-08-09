@@ -41,7 +41,6 @@ const Nav = () => {
           alignItems: "center",
           height: ["91px", "100px", "80px", "100px", "100px", "100px"],
           position: "relative",
-          marginBottom: ["40px", "32px", "16px", "65px", "64px", "155px"]
         }}
       >
         <Box

@@ -1,23 +1,12 @@
 import * as React from 'react'
-import { navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
-
 import Section from 'components/Box'
-import Button from 'components/Button'
+// import Button from 'components/Button'
 import MenuButton from 'overlays/MenuOverlay/MenuButton'
 const Banner = () => {
-  const [buttonMenuClicked, setButtonMenuClicked] = React.useState('')
 
-  // const [isMobile, setIsMobile] = React.useState(
-  //   window.matchMedia("(max-width: 768px)").matches
-  // );
 
-  // React.useEffect(() => {
-  //   window.addEventListener("resize", () => {
-  //     setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-  //   });
-  // });
 
   const [bp376, setBp376] = React.useState({
     matches: window.innerWidth < 376 ? true : false
@@ -46,10 +35,6 @@ const Banner = () => {
     return () => bp1194.removeListener(setBp1194)
   }, [])
 
-  const handleMenuClicked = (event) => {
-    event.preventDefault();
-    setButtonMenuClicked(navigate('/menu'))
-  }
 
 
   return (
@@ -130,7 +115,7 @@ const Banner = () => {
                 }}
               >Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.</Text>
 
-              <Button
+              {/* <Button
                 variant="primary"
                 className="btn-container-home btn-home"
                 clickHandler={handleMenuClicked}
@@ -140,7 +125,8 @@ const Banner = () => {
                     bg: '#FFFCF9;',
                   },
                 }}
-              >Menü anzeigen</Button>
+              >Menü anzeigen</Button> */}
+
               <MenuButton />
             </Box>
           </Box>

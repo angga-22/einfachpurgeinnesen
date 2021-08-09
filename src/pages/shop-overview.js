@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import MainContent from '../components/ShopOverview/MainContent'
+import MainContent from 'sections/ShopOverview/MainContent'
 const ShopOverview = () => {
   return (
     <>

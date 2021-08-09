@@ -29,8 +29,9 @@ const Dishes = () => {
       sx={{
         display: 'grid',
         gridTemplateColumns: `repeat(1fr, 1fr))`,
-        '@media screen and (minWidth: 812px)': {
-          gridTemplateColumns: 'repeat(2, 1fr)'
+        '@media screen and (min-width: 812px)': {
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridGap: '4'
         },
         padding: [
           "0 7.5vw",

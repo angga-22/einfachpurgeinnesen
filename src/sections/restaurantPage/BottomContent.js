@@ -21,7 +21,12 @@ const BottomContent = () => {
   `);
 
   return (
-    <Section>
+    <Section
+      sx={{
+        mb: ["126px", "505px", "102px", "179px", "83px", "480px"],
+
+      }}
+    >
       {/* //content section */}
       <Box
         sx={{
@@ -66,7 +71,6 @@ const BottomContent = () => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          pb: ["126px", "505px", "102px", "179px", "83px", "480px"],
           flexDirection: [
             "column",
             "column",
