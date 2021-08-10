@@ -1,74 +1,60 @@
 /** @jsx jsx */
+import * as React from 'react'
 import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Button } from '@theme-ui/components'
+import Section from 'components/Box'
 const Banner = () => {
-
+  const [bp376, setBp376] = React.useState('')
   return (
-    <div>
-      <footer
+    <Section sx={{
+      backgroundColor: 'secondary'
+    }}>
+      <Box
         sx={{
-          backgroundColor: 'secondary',
           display: 'flex',
-          justifyContent: "space-between",
-          flexDirection: ["column-reverse", "column-reverse", "row"],
-          maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
-          margin: [null, "20px auto", "0 auto", "20px auto", "40px auto", "50px auto"],
-          padding: [
-            "5vw 7.5vw",
-            "5vw 9.4vw",
-            "0 7.6vw",
-            "2vw 2.6vw",
-            "2vw 85px",
-            "1vw 15vw",
-          ],
-          borderTopLeftRadius: ["1em"],
-          borderTopRightRadius: ["1em"],
-          borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
-          borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
+          flexDirection: 'column'
         }}
       >
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          maxWidth: ["100%", "100%", "50%"],
-        }}>
-          <Text variant="subHeading"
-            sx={{
-              fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
-              lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
-              fontWeight: '400',
-              fontFamily: 'Quincy CF',
-              marginTop: '39px',
-              marginBottom: '40px'
-            }}
-          >
-            Tu etwas Gutes rein, dann kommt etwas Gutes raus.
-          </Text>
-          <Box sx={{
-            border: '1px solid #2E2E2E',
-            borderRadius: '13px',
-            width: ["186px", "211px", "200px", "211px", null, null],
-            height: ["44px", "57px", "44px", "57px", null, null]
-          }}>
-            <Button variant="primaryBlack">Jetzt einkaufen</Button>
-          </Box>
-        </Box>
-        <Box sx={{
-          margin: ['0 auto', '0 auto', '0', null, null, null],
-          overflow: 'hidden'
-        }}>
+        <Text
+          variant="subHeading"
+          sx={{
+            fontFamily: 'label',
+            fontWeight: 'normal',
+            fontSize: ["40px", "50px", "38px", "40px", "40px", "43px"],
+            lineHeight: ["50px", "62px", "47px", "50px", "40px", "53px"]
+          }}
+        >
+          Tu etwas Gutes rein, dann kommt etwas Gutes raus.
+        </Text>
+        <Box
+          sx={{
+            width: ["250px"]
+          }}
+        >
           <StaticImage
-            sx={{
-              width: '20em',
-              margin: '-30px -35px -40px -20px',
-            }}
-            src={'../../images/header-img.png'}
+            src={'../../images/header-img-2.png'}
             alt="bottle"
           />
         </Box>
-      </footer>
-    </div>
+        <Text
+          variant="paragraph"
+          sx={{
+            fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
+          }}
+        >
+          Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.
+        </Text>
+        <Box sx={{
+          border: '1px solid #2E2E2E',
+          borderRadius: '13px',
+          width: ["186px", "211px", "200px", "211px", null, null],
+          height: ["44px", "57px", "44px", "57px", null, null]
+        }}>
+          <Button variant="primaryBlack">Jetzt einkaufen</Button>
+        </Box>
+      </Box>
+    </Section>
   )
 }
 

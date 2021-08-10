@@ -2,13 +2,10 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
 import Section from 'components/Box'
-// import Button from 'components/Button'
-// import MenuButton from 'overlays/MenuOverlay/MenuButton'
-import { Button } from '@theme-ui/components'
 import MenuButton from '../../overlays/MenuOverlay/MenuButton'
+
+
 const Banner = () => {
-
-
 
   const [bp376, setBp376] = React.useState({
     matches: window.innerWidth < 376 ? true : false

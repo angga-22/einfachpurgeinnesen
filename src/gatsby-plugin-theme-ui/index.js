@@ -7,7 +7,7 @@ export default {
     secondary: '#FDC601',
     white: '#fff',
     footer: '#fCF5DE',
-    banner: '#070569'
+    banner: '#070569',
   },
   fonts: {
     label: 'Quincy CF',

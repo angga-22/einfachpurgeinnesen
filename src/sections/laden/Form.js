@@ -6,6 +6,7 @@ import {
 } from 'theme-ui'
 import { Button } from '@theme-ui/components'
 import { StaticImage } from 'gatsby-plugin-image'
+import Section from 'components/Box'
 const Form = () => {
   const [firstName, setFirstName] = React.useState('')
   const [lastName, setLastName] = React.useState('')
@@ -18,21 +19,33 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <Box>
-        <Text>
+    <Section>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
+        <Text
+          sx={{
+            fontFamily: 'label',
+            fontWeight: 'bold',
+            fontSize: ["54px", "65px", "50px", "51px", "67px", "68px"]
+          }}
+        >
           Kooperation?!
         </Text>
-        <Text>
+        <Text
+          variant="paragraph"
+          sx={{
+            fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
+          }}>
           Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft nachgehen.
         </Text>
       </Box>
       {/* // form section  */}
       <Box
         sx={{
-          width: '470px',
-          height: '508px',
-          padding: '54px',
+          width: ["100%"],
+          padding: ["10px"],
           margin: '0 auto',
           borderRadius: '12px',
           boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.1)',
@@ -93,7 +106,7 @@ const Form = () => {
           <Button variant="primaryBlack" type="submit">Submit</Button>
         </Box>
       </Box>
-    </div>
+    </Section>
   )
 }
 

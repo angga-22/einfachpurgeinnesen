@@ -22,9 +22,8 @@ const MainContent = () => {
 
   return (
     <Section>
-
       <Box sx={{
-
+        pb: ["152px", "120px", "114px", "196px", "228px", "174px"]
       }}>
         {data.allPurLadenJson.edges.slice(0, 1).map(item => (
           <Box sx={{
@@ -34,9 +33,20 @@ const MainContent = () => {
             <Text sx={{
               fontFamily: 'label',
               fontSize: ["32px", "50px", "40px", "40px", "56px", "68px"],
-              lineHeight: ["40px", "62px", "50px", "50px", "70px", "74px"]
+              lineHeight: ["40px", "62px", "50px", "50px", "70px", "74px"],
+              pb: ["40px", "0", "40px", "48px", "64px", "150px"],
+              width: ["100%", "100%", "90%", "90%", "95%", "90%"],
+              backgroundColor: 'red',
+              margin: '0 auto'
             }}>{item.node.label}</Text>
-            <Text variant="paragraph"
+
+            <Text
+              sx={{
+                width: ["100%", "100%", "90%", "70%", "65%", "50%"],
+                fontSize: ["16px", "22px", "18px", "20px", "20px", "20px"],
+                margin: '0 auto'
+              }}
+              variant="paragraph"
               dangerouslySetInnerHTML={{ __html: item.node.content }}
             ></Text>
           </Box>
@@ -45,12 +55,16 @@ const MainContent = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: ["column", "column", "row-reverse", "row-reverse"]
+          flexDirection: ["column", "column", "row-reverse", "row-reverse"],
+          justifyContent: 'space-between',
+          margin: '0 auto',
+          width: ["100%", "100%", "100%", "100%", "100%", "80%"],
+          pb: ["48px", "64px", "48px", "64px", "80px"]
         }}
       >
         <Box
           sx={{
-            width: [""]
+            width: ["103px", "118px", "108px", "165px", "160px", "239px"]
           }}
         >
           <StaticImage
@@ -58,26 +72,35 @@ const MainContent = () => {
             alt="leaves"
           />
         </Box>
-        <Text
-          sx={{
-            fontFamily: 'label',
-            fontSize: ["32x", "42px", "28px", "40px", "40px", "43px"],
-            fontWeight: 'bold',
-            lineHeight: ["40px", "52px", "35px", "50px", "50px", "53px"]
-          }}
-        >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
+        <Box sx={{
+          width: ["100%", "80%", "70%", "50%", "50%", "40%"],
+        }}>
+          <Text
+            sx={{
+              fontFamily: 'label',
+              fontSize: ["32x", "42px", "28px", "40px", "40px", "43px"],
+              fontWeight: 'bold',
+              lineHeight: ["40px", "52px", "35px", "50px", "50px", "53px"]
+            }}
+          >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
+        </Box>
       </Box>
       <Box sx={{
         display: 'grid',
-        gridTemplateColumns: ["repeat(3, 1fr)"],
-        gridGap: '2'
+        gridTemplateColumns: ["100%", "repeat(2, 1fr)", "repeat(3, 1fr)"],
+        gridGap: '2',
+        width: ["100%", "100%", "100%", "100%", "100%", "80%"],
+        margin: '0 auto'
+        // gridTemplateRows: ["50%, 50%"],
       }}>
-        {data.allPurLadenJson.edges.slice(1, 10).map(item => (
+        {data.allPurLadenJson.edges.slice(1, 9).map(item => (
           <Box sx={{
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            pb: ["40px"],
+            backgroundColor: 'yellow'
           }}>
-            <Box
+            {/* <Box
               sx={{
                 width: '100%',
                 backgroundColor: 'red'
@@ -87,14 +110,17 @@ const MainContent = () => {
                 src={'../images/line.png'}
                 alt="line"
               />
-            </Box>
+            </Box> */}
             <Text sx={{
               fontFamily: 'label',
               fontWeight: '700',
-              fontSize: ["28px"],
+              fontSize: ["22px", "28px", "22px", "28px", "26px", "28px"],
               color: '#DA3C6E'
             }}>{item.node.label}</Text>
             <Text
+              sx={{
+                fontSize: ["16px", "20px", "16px", "18px", "18px", "18px"]
+              }}
               variant="paragraph"
             >{item.node.content}</Text>
           </Box>
