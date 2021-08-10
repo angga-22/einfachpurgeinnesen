@@ -9,7 +9,8 @@ import BottomContent from './BottomContent'
 const MainContent = () => {
 
   const data = useStaticQuery(graphql`
-    query PurShopOverviews{
+  
+    query PurShopOverview {
       allPurShopOverviewJson {
         edges {
           node {
@@ -201,6 +202,7 @@ const MainContent = () => {
               <Text
                 sx={{
                   fontFamily: 'label',
+                  fontWeight: 'bold',
                   lineHeight: ["125%", "125%", "125%", "110%", "125%", "110%"],
                   fontSize: ["40px", "42px", "38px", "51px", "56px", "55px"],
                   pb: '16px'

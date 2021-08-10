@@ -1,17 +1,22 @@
 import * as React from 'react'
+import { Button } from '@theme-ui/components'
 
-import { Button as ThemeUIButton } from '@theme-ui/components'
-
-const Button = ({ style, clickHandler, children, ...rest }) => {
+const PrimaryButton = ({ onClick, children, sx, ...rest }) => {
   return (
-    <ThemeUIButton
-      className="button-container"
-      style={style}
+    <Button
+      // variant="primaryWhite"
       type="button"
-      onClick={clickHandler}
+      onClick={onClick}
+      sx={{
+        position: 'relative',
+        mask: 'url("../../images/button-vector.png")',
+        zIndex: '99',
+        backgroundColor: 'blue',
+        ...sx
+      }}
       {...rest}
-    >{children}</ThemeUIButton>
+    >{children}</Button>
   )
 }
 
-export default Button
+export default PrimaryButton

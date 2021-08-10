@@ -9,6 +9,8 @@ import bg3s from "../../images/bg3.svg";
 import bg4s from "../../images/bg4.svg";
 import bg5s from "../../images/bg5.svg";
 import bg6s from "../../images/bg6.svg";
+import PrimaryButton from '../../components/Button';
+import maskButton from '../../images/button-vector.png'
 
 const BottomContent = () => {
   const [bg1, setBg1] = React.useState(
@@ -188,11 +190,15 @@ const BottomContent = () => {
         left: ["50%", "50%", "14%", "50%", "50%"],
         transform: 'translate(-50%, -50%)'
       }}>
-        <button >Jetzt einkaufen</button>
+        <Button
+          variant="primaryWhite"
+          sx={{
+            mask: `url(${maskButton})`
+          }}
+        > Jetzt einkaufen</Button>
       </Box>
     </div >
 
   );
 };
-
 export default BottomContent;

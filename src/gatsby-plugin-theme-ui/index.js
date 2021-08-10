@@ -102,8 +102,8 @@ export default {
       },
     },
     primaryBlack: {
-      mask: 'url("../images/button-vector.png")',
-      webkitMask: 'url("../images/button-vector.png")',
+      mask: 'url("./images/button-vector.png")',
+      webkitMask: 'url("./images/button-vector.png")',
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
