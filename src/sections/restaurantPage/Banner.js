@@ -3,7 +3,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
 import Section from 'components/Box'
 // import Button from 'components/Button'
-import MenuButton from 'overlays/MenuOverlay/MenuButton'
+// import MenuButton from 'overlays/MenuOverlay/MenuButton'
+import { Button } from '@theme-ui/components'
+import MenuButton from '../../overlays/MenuOverlay/MenuButton'
 const Banner = () => {
 
 
@@ -99,35 +101,30 @@ const Banner = () => {
             <Box
               sx={{
                 display: 'flex',
-                flexDirection: ["column", "column", "row", "column", "row", "row"],
+                flexDirection: ["column", "column", "row", "column", "column", "row"],
                 justifyContent: 'space-between',
                 alignItems: ["flex-start", "flex-start", "flex-end", "flex-start", "center"],
-                width: ["100%", "100%", "100%"],
+                width: ["100%", "100%", "100%", "100%", "70%", "100%"],
               }}
             >
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: [3, 4, 2, 4],
-                  mb: ["50px", "50px", "0"],
-                  pr: ["0", "0", "100px", "200px", "300px", "400px"],
+                  fontSize: [3, 4, 2, 4, 4, 4],
+                  width: ["100%", "100%", "55%", "100%", "100%", "50%"],
+                  mb: ["50px", "50px", "50px"],
+                  pl: ["0", "0", "0", "0", "150px", "150px"],
                   color: 'white'
                 }}
               >Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.</Text>
-
-              {/* <Button
-                variant="primary"
-                className="btn-container-home btn-home"
-                clickHandler={handleMenuClicked}
-                sx={{
-                  color: 'text',
-                  '&:hover': {
-                    bg: '#FFFCF9;',
-                  },
-                }}
-              >Menü anzeigen</Button> */}
-
-              <MenuButton />
+              <Box sx={{
+                border: '1px solid white',
+                borderRadius: '13px',
+                width: ["186px", "211px", "200px", "211px", "211px", "211px"],
+                height: ["44px", "57px", "44px", "57px", "57px", "57px"]
+              }}>
+                <MenuButton />
+              </Box>
             </Box>
           </Box>
         </Box>

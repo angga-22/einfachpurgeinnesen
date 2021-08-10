@@ -1,4 +1,4 @@
-
+import maskButton from '../images/button-vector.png'
 export default {
   colors: {
     text: '#2E2E2E',
@@ -81,47 +81,51 @@ export default {
   ],
   buttons: {
     primaryWhite: {
+      mask: `url(${maskButton})`,
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
       lineHeights: '175%',
       fontWeight: 1,
-      width: '250px',
-      height: '44px',
+      height: '100%',
+      width: '100%',
       fontSize: [3, 4, 3, 3, 3, 4],
       textAlign: 'center',
       borderRadius: '12px',
       fontFamily: 'body',
       cursor: 'pointer',
-      '&:focus': {
-        outline: 'none'
-      },
       color: 'text',
+      backgroundColor: 'white',
+      border: '1px solid white',
+      transition: 'all 2s',
       '&:hover': {
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        mask: 'none',
+        transition: 'all 2s'
       },
     },
     primaryBlack: {
-      mask: 'url("./images/button-vector.png")',
-      webkitMask: 'url("./images/button-vector.png")',
+      mask: `url(${maskButton})`,
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
       lineHeights: '175%',
+      height: '100%',
+      width: '100%',
       fontWeight: 1,
-      width: '250px',
-      height: '44px',
       fontSize: [3, 4, 3, 3, 3, 4],
       textAlign: 'center',
       borderRadius: '12px',
       fontFamily: 'body',
       cursor: 'pointer',
-      '&:focus': {
-        outline: 'none'
-      },
       color: 'white',
+      backgroundColor: 'text',
+      border: '1px solid text',
+      transition: 'all 2s',
       '&:hover': {
-        backgroundColor: 'text'
+        backgroundColor: 'text',
+        mask: 'none',
+        transition: 'all 2s'
       },
     }
 

@@ -8,7 +8,7 @@ const MenuButton = ({ sx = {} }) => {
   const [showOverlay, setShowOverlay] = React.useState(false)
 
   return <>
-    <Button variant="primaryWhite" sx={sx} onClick={() => { setShowOverlay(true) }}>Open Menu</Button>
+    <Button variant="primaryWhite" sx={sx} onClick={() => { setShowOverlay(true) }}>Menu Open</Button>
     {showOverlay &&
       <MenuOverlay handleClose={() => { setShowOverlay(false) }} />
     }

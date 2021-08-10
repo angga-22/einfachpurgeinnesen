@@ -9,8 +9,6 @@ import bg3s from "../../images/bg3.svg";
 import bg4s from "../../images/bg4.svg";
 import bg5s from "../../images/bg5.svg";
 import bg6s from "../../images/bg6.svg";
-import PrimaryButton from '../../components/Button';
-import maskButton from '../../images/button-vector.png'
 
 const BottomContent = () => {
   const [bg1, setBg1] = React.useState(
@@ -187,15 +185,19 @@ const BottomContent = () => {
         position: 'absolute',
         zIndex: '1',
         top: ["60%", "60%", "80%", "80%"],
-        left: ["50%", "50%", "14%", "50%", "50%"],
-        transform: 'translate(-50%, -50%)'
+        left: ["50%", "50%", "24%", "50%", "50%", "50%"],
+        transform: 'translate(-50%, -50%)',
+        border: '1px solid #2E2E2E',
+        borderRadius: '13px',
       }}>
-        <Button
-          variant="primaryWhite"
-          sx={{
-            mask: `url(${maskButton})`
-          }}
-        > Jetzt einkaufen</Button>
+        <Box sx={{
+          border: '1px solid #2E2E2E',
+          borderRadius: '13px',
+          width: ["186px", "211px", "200px", "211px", null, null],
+          height: ["44px", "57px", "44px", "57px", null, null]
+        }}>
+          <Button variant="primaryBlack">Jetzt einkaufen</Button>
+        </Box>
       </Box>
     </div >
 

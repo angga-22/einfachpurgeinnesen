@@ -42,11 +42,22 @@ const MainContent = () => {
           </Box>
         ))}
       </Box>
-      <Box>
-        <StaticImage
-          src={'../../images/leaves.png'}
-          alt="leaves"
-        />
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: ["column", "column", "row-reverse", "row-reverse"]
+        }}
+      >
+        <Box
+          sx={{
+            width: [""]
+          }}
+        >
+          <StaticImage
+            src={'../../images/leaves.png'}
+            alt="leaves"
+          />
+        </Box>
         <Text
           sx={{
             fontFamily: 'label',

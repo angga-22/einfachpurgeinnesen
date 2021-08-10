@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
-// import ButtonCustom from 'components/Button'
 import { Button } from '@theme-ui/components'
-
 const Footer = () => {
 
   return (
@@ -48,12 +46,14 @@ const Footer = () => {
             Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
             <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
           </Text>
-          {/* <ButtonCustom
-            style={{
-              marginLeft: '-1px',
-            }}
-          >Jetzt einkaufen</ButtonCustom> */}
-          <button >Jetzt einkaufen</button>
+          <Box sx={{
+            border: '1px solid #2E2E2E',
+            borderRadius: '13px',
+            width: ["186px", "211px", "200px", "211px", null, null],
+            height: ["44px", "57px", "44px", "57px", null, null]
+          }}>
+            <Button variant="primaryBlack">Jetzt einkaufen</Button>
+          </Box>
         </Box>
         <Box sx={{
           margin: ['0 auto', '0 auto', '0', null, null, null],
