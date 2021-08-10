@@ -127,8 +127,17 @@ export default {
         mask: 'none',
         transition: 'all 2s'
       },
+    },
+    forms: {
+      label: {
+        fontSize: 1,
+        fontWeight: 'normal'
+      },
+      input: {
+        border: 'none',
+        outline: 'none'
+      }
     }
-
   },
   styles: {
     root: {

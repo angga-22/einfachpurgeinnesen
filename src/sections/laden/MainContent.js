@@ -67,7 +67,39 @@ const MainContent = () => {
           }}
         >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
       </Box>
-
+      <Box sx={{
+        display: 'grid',
+        gridTemplateColumns: ["repeat(3, 1fr)"],
+        gridGap: '2'
+      }}>
+        {data.allPurLadenJson.edges.slice(1, 10).map(item => (
+          <Box sx={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <Box
+              sx={{
+                width: '100%',
+                backgroundColor: 'red'
+              }}
+            >
+              <StaticImage
+                src={'../images/line.png'}
+                alt="line"
+              />
+            </Box>
+            <Text sx={{
+              fontFamily: 'label',
+              fontWeight: '700',
+              fontSize: ["28px"],
+              color: '#DA3C6E'
+            }}>{item.node.label}</Text>
+            <Text
+              variant="paragraph"
+            >{item.node.content}</Text>
+          </Box>
+        ))}
+      </Box>
     </Section>
   )
 }

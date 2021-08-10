@@ -1,9 +1,11 @@
 import * as React from 'react'
-import { MainContent } from 'sections/laden'
+import { MainContent, Banner, Form } from 'sections/laden'
 const Laden = () => {
   return (
     <div>
       <MainContent />
+      <Banner />
+      <Form />
     </div>
   )
 }
