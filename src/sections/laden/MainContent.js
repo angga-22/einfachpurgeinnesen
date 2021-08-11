@@ -21,7 +21,12 @@ const MainContent = () => {
 
 
   return (
-    <Section>
+    <Section
+      sx={{
+        mt: ["74px", "74px", "50px", "110px", "166px", "119px"]
+      }}
+
+    >
       <Box sx={{
         pb: ["152px", "120px", "114px", "196px", "228px", "174px"]
       }}>
@@ -36,7 +41,6 @@ const MainContent = () => {
               lineHeight: ["40px", "62px", "50px", "50px", "70px", "74px"],
               pb: ["40px", "0", "40px", "48px", "64px", "150px"],
               width: ["100%", "100%", "90%", "90%", "95%", "90%"],
-              backgroundColor: 'red',
               margin: '0 auto'
             }}>{item.node.label}</Text>
 
@@ -57,6 +61,11 @@ const MainContent = () => {
           display: 'flex',
           flexDirection: ["column", "column", "row-reverse", "row-reverse"],
           justifyContent: 'space-between',
+          alignItems: 'center',
+          '@media screen and (max-width: 640px)': {
+            alignItems: 'flex-start',
+            justifyContent: 'flex-start',
+          },
           margin: '0 auto',
           width: ["100%", "100%", "100%", "100%", "100%", "80%"],
           pb: ["48px", "64px", "48px", "64px", "80px"]
@@ -64,7 +73,7 @@ const MainContent = () => {
       >
         <Box
           sx={{
-            width: ["103px", "118px", "108px", "165px", "160px", "239px"]
+            maxWidth: ["103px", "118px", "108px", "165px", "160px", "239px"],
           }}
         >
           <StaticImage
@@ -87,30 +96,24 @@ const MainContent = () => {
       </Box>
       <Box sx={{
         display: 'grid',
-        gridTemplateColumns: ["100%", "repeat(2, 1fr)", "repeat(3, 1fr)"],
+        gridTemplateColumns: ["repeat(2, 1fr)"],
         gridGap: '2',
-        width: ["100%", "100%", "100%", "100%", "100%", "80%"],
-        margin: '0 auto'
-        // gridTemplateRows: ["50%, 50%"],
+        width: ["100%", "100%", "100%", "100%", "90%", "80%"],
+        margin: '0 auto',
+        '@media screen and (max-width: 640px)': {
+          gridTemplateRows: "repeat(2, 1fr)"
+        },
+        '@media screen and (min-width: 812px)': {
+          gridTemplateColumns: ["repeat(3, 1fr)"],
+        },
       }}>
         {data.allPurLadenJson.edges.slice(1, 9).map(item => (
           <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             pb: ["40px"],
-            backgroundColor: 'yellow'
           }}>
-            {/* <Box
-              sx={{
-                width: '100%',
-                backgroundColor: 'red'
-              }}
-            >
-              <StaticImage
-                src={'../images/line.png'}
-                alt="line"
-              />
-            </Box> */}
+
             <Text sx={{
               fontFamily: 'label',
               fontWeight: '700',

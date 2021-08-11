@@ -7,34 +7,28 @@ import MenuButton from '../../overlays/MenuOverlay/MenuButton'
 
 const Banner = () => {
 
-  const [bp376, setBp376] = React.useState({
-    matches: window.innerWidth < 376 ? true : false
-  })
-  const [bp640, setBp640] = React.useState({
-    matches: window.innerWidth < 640 ? true : false
-  })
-  const [bp1194, setBp1194] = React.useState({
-    matches: window.innerWidth < 1194 ? true : false
-  })
+  const [bg1, setBg1] = React.useState(
+    window.matchMedia("(min-width: 376px)").matches
+  );
+  const [bg2, setBg2] = React.useState(
+    window.matchMedia("(min-width: 640px)").matches
+  );
+  const [bg3, setBg3] = React.useState(
+    window.matchMedia("(min-width: 1194px)").matches
+  );
+
 
   React.useEffect(() => {
-    let bp376 = window.matchMedia("(min-width: 376px)")
-    bp376.addListener(setBp376)
-    return () => bp376.removeListener(setBp376)
-  }, [])
-
-  React.useEffect(() => {
-    let bp640 = window.matchMedia("(min-width: 640px)")
-    bp640.addListener(setBp640)
-    return () => bp640.removeListener(setBp640)
-  }, [])
-  React.useEffect(() => {
-    let bp1194 = window.matchMedia("(min-width: 1194px)")
-    bp1194.addListener(setBp1194)
-    return () => bp1194.removeListener(setBp1194)
-  }, [])
-
-
+    window.addEventListener("resize", () => {
+      setBg1(window.matchMedia("(min-width: 376px)").matches);
+    });
+    window.addEventListener("resize", () => {
+      setBg2(window.matchMedia("(min-width: 640px)").matches);
+    });
+    window.addEventListener("resize", () => {
+      setBg3(window.matchMedia("(min-width: 1194px)").matches);
+    });
+  });
 
   return (
     <Section
@@ -143,15 +137,15 @@ const Banner = () => {
             }}
           >
             {
-              bp376 && !bp376.matches ?
+              bg1 ?
                 <StaticImage
-                  src={'../../images/crusta-nova.png'}
+                  src={'../../images/crusta-nova-stripes.png'}
                   alt="crusta-nova" />
-                : bp640 && !bp640.matches ?
+                : bg2 ?
                   <StaticImage
                     src={'../../images/crusta-nova-stripes.png'}
                     alt="crusta-nova" />
-                  : bp1194 && !bp1194.matches ?
+                  : bg3 ?
                     <StaticImage
                       src={'../../images/crusta-nova-stripes.png'}
                       alt="crusta-nova" />

@@ -82,7 +82,7 @@ const Form = () => {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           position: 'relative',
-          backgroundColor: 'red',
+          backgroundColor: 'primary'
         }}
         as="form" onSubmit={handleSubmit}>
         <Box sx={{
@@ -90,9 +90,10 @@ const Form = () => {
           width: ["76px", "152px", "121px", "121px", "197px", "197px", "254px"],
           top: ["-5em", "-4em", "-7em", "-5.5em", "-12em"],
           right: ['1em', "-2em", "-1.6em", "-2.5em", "-5em"],
-          zIndex: '-1'
+          zIndex: '-99'
         }}>
           <StaticImage
+
             src={'../../images/pink-crown.png'}
             alt="pink-crown" />
         </Box>
