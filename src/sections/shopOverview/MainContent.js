@@ -9,7 +9,7 @@ import BottomContent from './BottomContent'
 const MainContent = () => {
 
   const data = useStaticQuery(graphql`
-    query PurShopOverviewData {
+    query PurShopOverview {
       allPurShopOverviewJson {
         edges {
           node {
@@ -183,7 +183,7 @@ const MainContent = () => {
         <Box sx={{
           '@media screen and (min-width: 640px)': {
             position: 'absolute',
-            bottom: '-34em',
+            bottom: '-38em',
             zIndex: '1'
           },
           '@media screen and (min-width: 834px)': {

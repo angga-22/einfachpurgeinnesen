@@ -68,7 +68,7 @@ const MainContent = () => {
           }}
         >
           <StaticImage
-            src={'../../images/leaves.png'}
+            src={'../../images/leaves-star.png'}
             alt="leaves"
           />
         </Box>

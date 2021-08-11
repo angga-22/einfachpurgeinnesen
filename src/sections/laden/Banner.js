@@ -6,6 +6,7 @@ import { Button } from '@theme-ui/components'
 import Section from 'components/Box'
 const Banner = () => {
   const [bp376, setBp376] = React.useState('')
+
   return (
     <Section sx={{
       backgroundColor: 'secondary'
