@@ -22,7 +22,7 @@ const TopContent = () => {
   return (
     <Section
       sx={{
-        marginTop: ["40px", "32px", "16px", "65px", "64px", "155px"]
+        marginTop: ["40px", "40px", "32px", "16px", "65px", "64px", "155px"]
 
       }}
     >
@@ -59,9 +59,10 @@ const TopContent = () => {
                   lineHeight: "110%",
                   fontFamily: 'label',
                   margin: '0 auto',
-                  mb: ["18px"]
+                  mb: ["18px"],
+                  pl: ["0", "25px", "30px", "35px", "30px", "50px"],
                 }}
-              > <b>Tu etwas Gutes rein,</b> dann kommt etwas Gutes raus.</Text>
+              > <Text sx={{ fontWeight: 'bold' }}>Tu etwas Gutes rein,</Text> dann kommt etwas Gutes raus.</Text>
               <Text
                 variant="parapraph"
                 sx={{
@@ -69,7 +70,8 @@ const TopContent = () => {
                   lineHeight: '125%',
                   fontSize: ["18px", "22px", "18px", "20px", "18px", "22px"],
                   fontFamily: 'body',
-                  paddingBottom: ["71px", "41px", "48px", "80px", "60px", "35px"]
+                  pl: ["0", "25px", "30px", "35px", "30px", "50px"],
+                  pb: ["71px", "41px", "48px", "80px", "60px", "35px"]
                 }}
               >Worte unseres Urgroßvaters</Text>
             </Box>

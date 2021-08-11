@@ -87,7 +87,9 @@ const Dishes = () => {
               variant="paragraph"
               sx={{
                 marginBottom: '30px',
-
+                '&>b': {
+                  fontWeight: 'bold'
+                }
               }}
               dangerouslySetInnerHTML={{ __html: item.node.description }}
             >

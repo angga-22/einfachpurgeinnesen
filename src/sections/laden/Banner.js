@@ -32,11 +32,11 @@ const Banner = () => {
       margin: ["100px 0", "226px 0 120px 0", "90px 0", "133px 0 107px 0", "197px 0 120px 0", "152px 0"],
       padding: [
         "10vh 7.5vw",
-        "10vh 9.4vw",
+        "15vh 9.4vw",
         "10vh 7.6vw",
         "13vh 7.6vw",
-        "1vh 8.1vw",
-        "1vh 9.6vw",
+        "5vh 8.1vw",
+        "10vh 9.6vw",
       ],
     }}>
       <Box
@@ -186,11 +186,11 @@ const Banner = () => {
             height: ["44px", "57px", "44px", "57px", null, null],
             '@media screen and (min-width: 1194px)': {
               position: 'absolute',
-              top: '20em',
+              top: '22em',
             },
             '@media screen and (min-width: 1440px)': {
               position: 'absolute',
-              top: '22em',
+              top: '23em',
             },
           }}>
             <Button variant="primaryBlack">Jetzt einkaufen</Button>

@@ -92,6 +92,9 @@ const MainContent = () => {
                   fontFamily: 'label',
                   fontSize: ["40px", "50px", "38px", "50", "67px", "68px"],
                   lineHeight: ["125%", "125%", "125%", "110%", "110%", "110%"],
+                  '&>b': {
+                    fontWeight: 'bold'
+                  }
                 }}
                   dangerouslySetInnerHTML={{ __html: item.node.label }}
                 >

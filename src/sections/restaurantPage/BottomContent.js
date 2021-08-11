@@ -23,8 +23,7 @@ const BottomContent = () => {
   return (
     <Section
       sx={{
-        mb: ["126px", "505px", "102px", "179px", "83px", "480px"],
-
+        mb: ["126px", "126px", "502px", "102px", "179px", "83px", "480px"],
       }}
     >
       {/* //content section */}

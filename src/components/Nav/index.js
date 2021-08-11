@@ -31,13 +31,15 @@ const Nav = () => {
         as="nav"
         sx={{
           flexDirection: "row",
-          justifyContent: ["space-around",
-            "space-around",
-            "space-around",
-            "space-between",
-            "space-around",
-            "space-around"
-          ],
+
+          justifyContent:
+            ["space-around",
+              "space-around",
+              "space-around",
+              "space-between",
+              "space-around",
+              "space-around"
+            ],
           alignItems: "center",
           height: ["91px", "100px", "80px", "100px", "100px", "100px"],
           position: "relative",
@@ -110,6 +112,7 @@ const Nav = () => {
             alt="logo-pur"
           />
         </Box>
+        {/* // navigation list  */}
         <Box
           sx={{
             display: "flex",

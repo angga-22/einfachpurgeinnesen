@@ -3,8 +3,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { Box, Text } from 'theme-ui'
 import Section from 'components/Box'
 import MenuButton from '../../overlays/MenuOverlay/MenuButton'
-
-
+import bgBannerRestaurant from '../../images/bg-banner-restaurant.svg'
+import bgBannerRestaurantSmall from '../../images/bg-banner-restaurant-small.svg'
 const Banner = () => {
 
   const [bg1, setBg1] = React.useState(
@@ -33,6 +33,9 @@ const Banner = () => {
   return (
     <Section
       sx={{
+        background: bg2 ? `url(${bgBannerRestaurant})` : `url(${bgBannerRestaurantSmall})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         margin: [
           '120px 0',
           "88px 0",
@@ -50,7 +53,6 @@ const Banner = () => {
           "0 13vw",
         ],
         position: 'relative',
-        backgroundColor: 'banner',
       }}
     >
       {/* //section wrapper */}
@@ -73,7 +75,7 @@ const Banner = () => {
             sx={{
               display: 'flex',
               flexDirection: ["column"],
-              marginBottom: ["67px"],
+              // marginBottom: ["67px"],
               width: ["100%"]
             }}
           >
@@ -85,16 +87,17 @@ const Banner = () => {
                 fontSize: ["72px", "100px", "82px", "100px", "120px"],
                 wordWrap: ["break-word"],
                 fontFamily: 'label',
+                mt: ["0", "50px"],
                 mb: ["24px"]
               }}
             >Bistroküche?!</Text>
-            {/* //button wrapper */}
+            {/* //button & paragraph wrapper */}
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: ["column", "column", "row", "column", "column", "row"],
                 justifyContent: 'space-between',
-                alignItems: ["flex-start", "flex-start", "flex-end", "flex-start", "center"],
+                alignItems: ["flex-start", "flex-start", "center", "flex-start", "center", "center"],
                 width: ["100%", "100%", "100%", "100%", "70%", "100%"],
               }}
             >
@@ -102,8 +105,8 @@ const Banner = () => {
                 variant="paragraph"
                 sx={{
                   fontSize: [3, 4, 2, 4, 4, 4],
-                  width: ["100%", "100%", "55%", "100%", "100%", "50%"],
-                  mb: ["50px", "50px", "50px"],
+                  width: ["100%", "100%", "55%", "100%", "100%", "60%"],
+                  mb: ["50px", "50px", "50px", null, null, null],
                   pl: ["0", "0", "0", "0", "150px", "150px"],
                   color: 'white'
                 }}
@@ -112,7 +115,8 @@ const Banner = () => {
                 border: '1px solid white',
                 borderRadius: '13px',
                 width: ["186px", "211px", "200px", "211px", "211px", "211px"],
-                height: ["44px", "57px", "44px", "57px", "57px", "57px"]
+                height: ["44px", "57px", "44px", "57px", "57px", "57px"],
+                mb: ["-4em", "-4em", "0", null, null, null]
               }}>
                 <MenuButton />
               </Box>
@@ -121,39 +125,41 @@ const Banner = () => {
         </Box>
 
         {/* // shrimp section */}
+
+        {/* {mediaQuery && !mediaQuery.matches ? "haha" : "slala"} */}
         <Box
           sx={{
-            width: ["50%"],
-            position: ["absolute"],
-            right: '0',
-            top: '0'
+            width: ["151px", "198px", "166px", "198px", "198px", "198px"],
+            position: 'absolute',
+            top: ["0", "4"],
+            right: ["0", "0", "5", "6"],
           }}
         >
-          {/* {mediaQuery && !mediaQuery.matches ? "haha" : "slala"} */}
-          <Box
-            sx={{
-              width: ["150px", "196px", "166px", "198px"],
-              m: ["0 auto"],
-            }}
-          >
-            {
-              bg1 ?
+          {
+            bg1 ?
+              <StaticImage
+                src={'../../images/crusta-nova-stripes.png'}
+                width="100%"
+                alt="crusta-nova" />
+              : bg2 ?
                 <StaticImage
                   src={'../../images/crusta-nova-stripes.png'}
-                  alt="crusta-nova" />
-                : bg2 ?
+                  alt="crusta-nova"
+                  width="100%"
+                />
+
+                : bg3 ?
                   <StaticImage
                     src={'../../images/crusta-nova-stripes.png'}
+                    alt="crusta-nova"
+                    width="100%"
+                  />
+
+                  : <StaticImage
+                    src={'../../images/crusta-nova.png'}
+                    width="100%"
                     alt="crusta-nova" />
-                  : bg3 ?
-                    <StaticImage
-                      src={'../../images/crusta-nova-stripes.png'}
-                      alt="crusta-nova" />
-                    : <StaticImage
-                      src={'../../images/crusta-nova.png'}
-                      alt="crusta-nova" />
-            }
-          </Box>
+          }
         </Box>
       </Box>
     </Section>
