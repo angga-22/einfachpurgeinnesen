@@ -20,11 +20,11 @@ const Content = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: ["column", "column", "row", "column-reverse", "column"],
+        flexDirection: ["column", "column", "row", "column", "column", "column"],
         alignItems: [null, null, 'flex-end'],
         margin: ["0 auto"],
-        width: ["80%", "70%", "100%", "100%", "100%"],
-        marginTop: ["0", "0", "40px", "62px"]
+        maxWidth: ["220px", "300px", "100%", "100%", "100%", "100%"],
+        marginTop: ["0", "0", "40px", "62px"],
       }}
     >
       {/* //label */}
@@ -38,7 +38,8 @@ const Content = () => {
         <Text
           variant="subHeading"
           sx={{
-            fontSize: ["16px", "20px", "16px", "18px"]
+            lineHeight: "175%",
+            fontSize: ["16px", "20px", "16px", "20px", "18px"]
           }}
         >Restaurant </Text>
         {data.allPurFooterJson.edges.slice(0, 2).map(item => {
@@ -47,7 +48,8 @@ const Content = () => {
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: ["16px", "20px", "16px", "18px"]
+                  lineHeight: "175%",
+                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
                 }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
@@ -57,17 +59,17 @@ const Content = () => {
       {/* //label */}
       <Box
         sx={{
-          padding: ["0 0 24px 0", "0 0 40px 0", "0 5vw 0 0"],
+          padding: ["0 0 24px 0", "0 0 40px 0", "0 5vw 0 0", "77px 0 0 0", "0"],
           textAlign: ["center", "center", "left"],
-          marginBottom: ["0", "0", "0", "77px"],
-          margin: ["0", "0", "0", "0 0 77px 0", "32px 0"],
+          margin: ["0", "0", "0", "0", "32px 0", "32px 0"],
           width: ["100%", "100%", "50%", "100%"]
         }}
       >
         <Text
           variant="subHeading"
           sx={{
-            fontSize: ["16px", "20px", "16px", "18px"]
+            lineHeight: "175%",
+            fontSize: ["16px", "20px", "16px", "20px", "18px"]
           }}
         >Ladengeschäft </Text>
         {data.allPurFooterJson.edges.slice(2, 3).map(item => {
@@ -76,7 +78,8 @@ const Content = () => {
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: ["16px", "20px", "16px", "18px"]
+                  lineHeight: "175%",
+                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
                 }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
@@ -96,7 +99,8 @@ const Content = () => {
         <Text
           variant="subHeading"
           sx={{
-            fontSize: ["16px", "20px", "16px", "18px"]
+            lineHeight: "175%",
+            fontSize: ["16px", "20px", "16px", "20px", "18px"]
           }}
         >Kontakt & Anfahrt </Text>
         {data.allPurFooterJson.edges.slice(3, 5).map(item => {
@@ -105,7 +109,8 @@ const Content = () => {
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: ["16px", "20px", "16px", "18px"]
+                  lineHeight: "175%",
+                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
                 }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>

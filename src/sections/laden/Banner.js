@@ -29,7 +29,7 @@ const Banner = () => {
       background: `url(${bgBannerLaden})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      margin: ["100px 0", "226px 0 120px 0", "90px 0", "133px 0 107px 0", "197px 0 120px 0", "152px 0"],
+      margin: ["100px 0", "100px 0", "226px 0 120px 0", "90px 0", "133px 0 107px 0", "197px 0 120px 0", "152px 0"],
       padding: [
         "10vh 7.5vw",
         "15vh 9.4vw",
@@ -86,8 +86,8 @@ const Banner = () => {
             position: 'static',
             fontFamily: 'label',
             fontWeight: 'normal',
-            fontSize: ["40px", "50px", "38px", "40px", "40px", "43px"],
-            lineHeight: ["50px", "62px", "47px", "50px", "40px", "53px"]
+            fontSize: ["40px", "40px", "50px", "38px", "40px", "40px", "43px"],
+            lineHeight: ["50px", "50px", "62px", "47px", "50px", "40px", "53px"]
           }}
         >
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.
@@ -153,7 +153,7 @@ const Banner = () => {
           <Text
             variant="paragraph"
             sx={{
-              fontSize: ["18px", "22px", "22px", "20px", "20px", "20px"],
+              fontSize: ["18px", "18px", "22px", "22px", "20px", "20px", "20px"],
             }}
           >
             Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.
@@ -166,8 +166,8 @@ const Banner = () => {
               borderRadius: '13px',
               position: 'static',
               mt: ["48px", "32px", "32px", "28px", null, null],
-              width: ["186px", "211px", "200px", "211px", null, null],
-              height: ["44px", "57px", "44px", "57px", null, null],
+              width: ["186px", "186px", "211px", "200px", "211px", null, null],
+              height: ["44px", "44px", "57px", "44px", "57px", null, null],
               '@media screen and (min-width: 1194px)': {
                 position: 'absolute',
                 top: '0',

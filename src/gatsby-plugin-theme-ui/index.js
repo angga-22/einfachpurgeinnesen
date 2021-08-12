@@ -72,7 +72,7 @@ export default {
   // 18 22 18 20 20 20
 
   breakpoints: [
-    '@media screen and (min-width: 376px)',
+
     '@media screen and (min-width: 640px)',
     '@media screen and (min-width: 812px) and (orientation: landscape)',
     '@media screen and (min-width: 834px)',

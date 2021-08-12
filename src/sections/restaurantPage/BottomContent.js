@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { jsx, Box, Text } from 'theme-ui'
 
 import Section from 'components/Box'
+import FormAdd from '../productDetails/FormAdd'
 
 const BottomContent = () => {
 
@@ -61,10 +62,6 @@ const BottomContent = () => {
           )
         })}
       </Box>
-
-
-
-
       {/* // quotes section */}
       <Box
         sx={{
@@ -107,7 +104,7 @@ const BottomContent = () => {
           </Text>
         </Box>
       </Box>
-
+      <FormAdd />
     </Section>
   )
 }

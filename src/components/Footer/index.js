@@ -12,13 +12,15 @@ const Footer = () => {
       sx={{
         position: 'relative',
         display: ["flex"],
-        flexDirection: ["column", "column", "column", "row", "row"],
+        flexDirection: ["column", "column", "column", "row", "row", "row", "row"],
         justifyContent: 'space-between',
         backgroundColor: 'footer',
         padding: [
           "0 7.5vw 48px 7.5vw",
           "0 9.4vw 81px 9.4vw",
           "60px 7.6vw 81px 7.6vw",
+          "0 7.6vw 81px 7.6vw",
+          "0 7.6vw 81px 7.6vw",
           "0 7.6vw 81px 7.6vw",
           // "0 9.4vw",
           // "0 7.6vw",
@@ -37,14 +39,14 @@ const Footer = () => {
           justifyContent: 'space-between',
           textAlign: ["center", "center", "left"],
           marginTop: ["0", "0", "0", "62px"],
-          width: ["100%", "100%", "100%", "100%", "52%", "60%"]
+          width: ["100%", "100%", "100%", "130%", "50%", "60%"]
         }}
       >
         {/* //logo */}
         <Box
           sx={{
             margin: ["56px auto", "80px auto", "0", "0"],
-            width: ["100%", "100%", "20%", "30%", "40%"],
+            width: ["100%", "100%", "20%", "30%", "40%", "40%"],
           }}
         >
           <Box
@@ -64,7 +66,7 @@ const Footer = () => {
               textAlign: ["center", "center", "left"],
               fontSize: ["14px", "20px", "16px", "18px"]
             }}
-          >Ganz bewusst, gewusst was.</Text>
+          >Ganz <Text sx={{ fontWeight: 'bold' }}> bewusst, gewusst </Text> was.</Text>
         </Box>
         {/* //seitan */}
         <Box
@@ -72,8 +74,11 @@ const Footer = () => {
             display: ["flex"],
             flexDirection: ["column", "column", "column"],
             textAlign: ["center"],
-            padding: ["0 0 56px 0", "0 0 81px 0", "0", "0 5vw ", "0 5vw 0 0"],
-            width: ["100%", "100%", "75%", "45%", "40%", "100%"],
+            padding: ["0 0 56px 0", "0 0 81px 0", "0 60px 0 0", "0 7vw ", "0 5vw 0 0", "0 5vw 0 0"],
+            width: ["300px", "500px", "80%", "45%", "40%", "100%"],
+            '@media screen and (max-width: 1194px)': {
+              margin: '0 auto',
+            }
           }}
         >
           <Text
@@ -82,6 +87,7 @@ const Footer = () => {
               marginBottom: ["16px", "16px", "0"],
               fontSize: ["16px", "20px", "16px", "20px", "18px"],
               textAlign: ["center", "center", "left"],
+              lineHeight: "175%",
               fontWeight: 'bold'
             }}
           >Seiten</Text>
@@ -89,8 +95,8 @@ const Footer = () => {
             variant="paragraph"
             sx={{
               textAlign: ["center", "center", "left"],
-              wordSpacing: ["1rem", "4rem", "1px", "0", "0", "10px"],
-              lineHeight: ["2.5", "2.5", "1.5", "2.5"],
+              wordSpacing: ["1rem", "2.5rem", ".8rem", "0", "0", "42px"],
+              lineHeight: ["175%", "175%", "320%", "280%"],
               fontSize: ["16px", "20px", "16px", "20px", "18px"]
             }}
           >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Text>
@@ -105,7 +111,7 @@ const Footer = () => {
           position: 'absolute',
           left: "0",
           bottom: "0",
-          width: ["250px", "350px", "220px", "220px", "270px"],
+          width: ["250px", "450px", "220px", "220px", "270px", "270px"],
           height: 'auto'
         }}
       >

@@ -31,7 +31,6 @@ const Nav = () => {
         as="nav"
         sx={{
           flexDirection: "row",
-
           justifyContent:
             ["space-around",
               "space-around",
