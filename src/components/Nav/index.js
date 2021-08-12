@@ -35,7 +35,7 @@ const Nav = () => {
             ["space-around",
               "space-around",
               "space-around",
-              "space-between",
+              "space-around",
               "space-around",
               "space-around"
             ],
@@ -49,7 +49,7 @@ const Nav = () => {
           sx={{
             backgroundColor: "primary",
             cursor: "pointer",
-            "@media screen and (min-width: 834px)": {
+            "@media screen and (min-width: 1194px)": {
               display: "none",
             },
           }}
@@ -127,7 +127,7 @@ const Nav = () => {
               "absolute",
               "absolute",
               "absolute",
-              "static",
+              "absolute",
               "static",
               "static",
             ],

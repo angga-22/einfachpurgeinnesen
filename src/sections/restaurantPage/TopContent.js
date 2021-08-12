@@ -33,7 +33,7 @@ const TopContent = () => {
           <Box
             sx={{
               margin: '0 auto',
-              width: ["100%", "90%", "90%", "80%", "80%", "70%"]
+              maxWidth: ["319px", "517px", "658px", "659px", "706px", "956px"]
             }}
           >
             <Box
@@ -89,8 +89,10 @@ const TopContent = () => {
           </Box>
           <Box
             sx={{
-              maxWidth: ["374px", "640px", "514px", "708px", "832px", "794px"],
-              height: 'auto',
+              maxWidth: ["100%", "100%", "514px", "708px", "832px", "794px"],
+              position: ["absolute", "absolute", "static"],
+              left: '0',
+              right: '0',
               margin: '0 auto'
             }}
           >
@@ -106,9 +108,10 @@ const TopContent = () => {
         <Box
           sx={{
             display: 'flex',
-            paddingTop: ["48px", "71px", "63px", "48px", "80px", "54px"],
+            mt: [],
+            pt: ["100%", "100%", "63px", "48px", "80px", "54px"],
             flexDirection: ["column", "column", "row", "column", "column", "column"],
-            width: ["100%", "100%", "90%", "80%", "80%", "60%"],
+            width: ["100%", "100%", "90%", "80%", "65%", "60%"],
             m: ["0 auto"]
           }}
         >

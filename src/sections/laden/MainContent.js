@@ -6,6 +6,20 @@ import { StaticImage } from 'gatsby-plugin-image'
 import underline from '../../images/underline-inactive.svg'
 const MainContent = () => {
 
+
+  const [bigLeaves, setBigLeaves] = React.useState(
+    window.matchMedia("(min-width: 1440px)").matches
+  );
+
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => {
+      setBigLeaves(window.matchMedia("(min-width: 1440px)").matches);
+    });
+
+  });
+
+
   const data = useStaticQuery(graphql`
     query LadenDataPage {
       allPurLadenJson {
@@ -25,10 +39,18 @@ const MainContent = () => {
     <Section
       sx={{
         mt: ["74px", "74px", "50px", "110px", "166px", "119px"],
+        padding: [
+          "0 7.5vw",
+          "0 9.4vw",
+          "0 92px",
+          "0 93px",
+          "0 139px",
+          "0 188px",
+        ],
       }}>
 
       <Box sx={{
-        pb: ["152px", "152px", "120px", "114px", "196px", "228px", "174px"],
+        pb: ["152px", "120px", "114px", "196px", "228px", "174px"],
         position: 'relative'
       }}>
         <Box
@@ -46,23 +68,28 @@ const MainContent = () => {
         {data.allPurLadenJson.edges.slice(0, 1).map(item => (
           <Box sx={{
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
           }}>
-            <Text sx={{
-              fontFamily: 'label',
-              fontSize: ["32px", "32px", "50px", "40px", "40px", "56px", "68px"],
-              lineHeight: ["125%", "125%", "62px", "50px", "50px", "70px", "74px"],
-              pb: ["40px", "40px", "0", "40px", "48px", "64px", "150px"],
-              maxWidth: '1064px',
-              margin: '0 auto'
-            }}>{item.node.label}</Text>
+            <Box
+              sx={{
+                maxWidth: ["100%", "100%", "569px", "588px", "916px", "1064px"],
+                margin: '0 auto',
+                mb: ["40px", "0", "40px", "48px", "64px", "150px"],
+              }}
+            >
 
+              <Text sx={{
+                fontFamily: 'label',
+                fontSize: ["32px", "50px", "40px", "40px", "56px", "68px"],
+                lineHeight: ["125%", "62px", "50px", "50px", "70px", "74px"],
+                margin: '0 auto'
+              }}>{item.node.label}</Text>
+            </Box>
             <Text
               sx={{
-                width: ["100%", "100%", "100%", "90%", "70%", "65%", "50%"],
-                fontSize: ["16px", "16px", "22px", "18px", "20px", "20px", "20px"],
+                maxWidth: ["100%", "100%", "569px", "468px", "538px", "632px"],
+                fontSize: ["16px", "22px", "18px", "20px", "20px", "20px"],
                 margin: '0 auto',
-                backgroundColor: 'red'
               }}
               variant="paragraph"
               dangerouslySetInnerHTML={{ __html: item.node.content }}
@@ -71,7 +98,7 @@ const MainContent = () => {
               sx={{
                 width: ["37px", "50px", "50px", "76px", "118px", "118px"],
                 position: 'absolute',
-                top: ["7", "8", "7", "6", "7"],
+                top: ["6", "7", "7", "6", "7"],
                 right: ["-2", "-4", "-4", "-4", "-2", "5"]
               }}
             >
@@ -86,8 +113,7 @@ const MainContent = () => {
       <Box
         sx={{
           display: 'flex',
-          backgroundColor: 'red',
-          flexDirection: ["column", "column", "column", "row-reverse", "row-reverse", "row-reverse", "row-reverse"],
+          flexDirection: ["column", "column", "row-reverse", "row-reverse", "row-reverse", "row-reverse"],
           justifyContent: 'space-between',
           // alignItems: 'center',
           '@media screen and (max-width: 640px)': {
@@ -95,29 +121,40 @@ const MainContent = () => {
             justifyContent: 'flex-start',
           },
           margin: '0 auto',
-          mb: ["48px", "48px", "64px", "48px", "64px", "80px", "64px"],
+          mb: ["48px", "64px", "48px", "64px", "80px", "64px"],
           width: ["100%", "100%", "100%", "100%", "100%", "80%"],
         }}
       >
         <Box
           sx={{
-            // maxWidth: ["103px", "118px", "108px", "165px", "160px", "239px"],
+            maxWidth: ["103px", "118px", "108px", "165px", "160px", "239px"],
           }}
         >
-          <StaticImage
-            src={'../../images/leaves-star.png'}
-            alt="leaves"
-          />
+          {bigLeaves
+
+            ?
+            <StaticImage
+              src={'../../images/leaves-big.png'}
+              alt="leaves"
+            />
+            :
+            <StaticImage
+              src={'../../images/leaves-star.png'}
+              alt="leaves"
+            />
+
+          }
+
         </Box>
         <Box sx={{
-          // width: ["100%", "80%", "70%", "50%", "50%", "40%"],
+          width: ["100%", "100%", "70%", "50%", "40%", "40%"],
         }}>
           <Text
             sx={{
               fontFamily: 'label',
-              fontSize: ["32x", "32px", "42px", "28px", "40px", "40px", "43px"],
+              fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"],
               fontWeight: 'bold',
-              lineHeight: ["40px", "40px", "52px", "35px", "50px", "50px", "53px"]
+              lineHeight: ["40px", "52px", "35px", "50px", "50px", "53px"]
             }}
           >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
         </Box>
@@ -164,12 +201,12 @@ const MainContent = () => {
               <Text sx={{
                 fontFamily: 'label',
                 fontWeight: '700',
-                fontSize: ["22px", "22px", "28px", "22px", "28px", "26px", "28px"],
+                fontSize: ["22px", "28px", "22px", "28px", "26px", "28px"],
                 color: '#DA3C6E'
               }}>{item.node.label}</Text>
               <Text
                 sx={{
-                  fontSize: ["16px", "16px", "20px", "16px", "18px", "18px", "18px"],
+                  fontSize: ["16px", "20px", "16px", "18px", "18px", "18px"],
                   fontWeight: 'normal'
                 }}
                 variant="paragraph"

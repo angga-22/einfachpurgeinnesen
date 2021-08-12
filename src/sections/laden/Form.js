@@ -25,12 +25,12 @@ const Form = () => {
     <Section
       sx={{
         padding: [
-          "0 7.5vw",
-          "0 9.4vw",
-          "0 7.6vw",
-          "0 10vw",
-          "0 12vw",
-          "0 13vw",
+          "0 7.5vw 10px 7.5vw",
+          "0 9.4vw   127px 9.4vw",
+          "0 7.6vw 106px 7.6vw",
+          "0 10vw 136px 10vw",
+          "0 12vw 215px 12vw",
+          "0 13vw 211px 13vw",
         ],
       }}
     >
@@ -87,7 +87,7 @@ const Form = () => {
         as="form" onSubmit={handleSubmit}>
         <Box sx={{
           position: 'absolute',
-          width: ["76px", "152px", "121px", "121px", "197px", "197px", "254px"],
+          width: ["152px", "121px", "121px", "197px", "197px", "254px"],
           top: ["-5em", "-4em", "-7em", "-5.5em", "-12em"],
           right: ['1em', "-2em", "-1.6em", "-2.5em", "-5em"],
           zIndex: '-99'
