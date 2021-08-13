@@ -53,18 +53,7 @@ const MainContent = () => {
         pb: ["152px", "120px", "114px", "196px", "228px", "174px"],
         position: 'relative'
       }}>
-        <Box
-          sx={{
-            width: ["43px", "60px", "60px", "60px", "80px", "80px"],
-            position: 'absolute',
-            top: ["-3", "-4", "-4", "-4", "-5", "-4"],
-            left: ["66px", '116px', '116px', '116px', '146px', '275px']
-          }}
-        >
-          <StaticImage
-            src={'../../images/wave-line.png'}
-            alt="wave-line" />
-        </Box>
+
         {data.allPurLadenJson.edges.slice(0, 1).map(item => (
           <Box sx={{
             display: 'flex',
@@ -75,8 +64,21 @@ const MainContent = () => {
                 maxWidth: ["100%", "100%", "569px", "588px", "916px", "1064px"],
                 margin: '0 auto',
                 mb: ["40px", "0", "40px", "48px", "64px", "150px"],
+                position: 'relative'
               }}
             >
+              <Box
+                sx={{
+                  width: ["43px", "60px", "60px", "60px", "80px", "80px"],
+                  position: 'absolute',
+                  top: ["-1.5em", "-4", "-4", "-4", "-2.6em", "-2.7em"],
+                  left: ["5", "6em", "6em", "5em", "7em", "10em"]
+                }}
+              >
+                <StaticImage
+                  src={'../../images/wave-line.png'}
+                  alt="wave-line" />
+              </Box>
 
               <Text sx={{
                 fontFamily: 'label',

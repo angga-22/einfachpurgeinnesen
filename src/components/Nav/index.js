@@ -3,7 +3,6 @@ import { Flex, Text, Box } from "@theme-ui/components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-
 const Nav = () => {
   const [hamburgerClicked, setHamburgerClicked] = React.useState(false);
 

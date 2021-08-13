@@ -27,6 +27,7 @@ const Banner = () => {
   return (
     <Section sx={{
       background: `url(${bgBannerLaden})`,
+      position: 'relative',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       margin: ["100px 0", "226px 0 120px 0", "90px 0", "133px 0 107px 0", "197px 0 120px 0", "152px 0"],
@@ -43,7 +44,6 @@ const Banner = () => {
         sx={{
           display: 'flex',
           flexDirection: ["column", "column", "column", "column", "row", "row"],
-          position: 'relative',
           '@media screen and (min-width: 812px)': {
             flexDirection: 'row',
             height: '380px'
@@ -94,21 +94,44 @@ const Banner = () => {
         </Text>
         <Box
           sx={{
-            width: ["110%", "100%", "100%", "100%", "385px", "454px"],
-            margin: ["-4em 0 -4em 0", "-8em 0 -2em 0", "-5em auto -5em auto", "0 0 0 0", "150px auto 200px auto", "150px auto 200px auto"],
+            position: 'absolute',
+            right: '0'
           }}
         >
           {bg1 ?
-            <StaticImage
-              src={'../../images/header-img-2.png'}
-              alt="bottle"
-            />
+            <Box sx={{
+              overflow: 'hidden',
+              backgroundColor: 'red',
+              maxWidth: '345px',
+              maxHeight: '580px'
+            }}>
+              <StaticImage
+                sx={{
+                  width: '109%',
+                  margin: '-100px -35px -40px -30px',
+                }}
+                src={'../../images/header-img-2.png'}
+                alt="bottle"
+              />
+            </Box>
             :
-            <StaticImage
-              src={'../../images/header-img.png'}
-              alt="bottle"
-            />
+
+            <Box sx={{
+              overflow: 'hidden',
+              backgroundColor: 'red',
+              width: '245px',
+              height: '310px'
+            }}>
+              <StaticImage
+                sx={{
+                  margin: '-70px -35px -40px -30px',
+                }}
+                src={'../../images/header-img.png'}
+                alt="bottle"
+              />
+            </Box>
           }
+
         </Box>
         {/* // button and text  */}
         <Box
