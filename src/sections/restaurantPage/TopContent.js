@@ -1,9 +1,12 @@
 /** @jsx jsx */
 import { StaticImage } from 'gatsby-plugin-image'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { jsx, Box, Text } from 'theme-ui'
 
 import Section from 'components/Box'
+import { TextContainer } from './components'
+import { GridWrapper } from '@thepuzzlers/pieces'
 
 const TopContent = () => {
   const data = useStaticQuery(graphql`
@@ -20,14 +23,13 @@ const TopContent = () => {
   `);
 
   return (
-    <Section
-      sx={{
-        marginTop: ["40px", "40px", "32px", "16px", "65px", "64px", "155px"]
+    <>
+      <Section
+        sx={{
+          marginTop: ["40px", "40px", "32px", "16px", "65px", "64px", "155px"]
 
-      }}
-    >
-      {/* // section wrapper */}
-      <Box>
+        }}
+      >
         {/* //hero section */}
         <Box>
           <Box
@@ -103,17 +105,12 @@ const TopContent = () => {
           </Box>
 
         </Box>
+      </Section>
 
-        {/* //article section */}
-        <Box
-          sx={{
-            display: 'flex',
-            mt: [],
-            pt: ["100%", "100%", "63px", "48px", "80px", "54px"],
-            flexDirection: ["column", "column", "row", "column", "column", "column"],
-            width: ["100%", "100%", "90%", "80%", "65%", "60%"],
-            m: ["0 auto"]
-          }}
+      {/* //article section */}
+      <GridWrapper>
+        <TextContainer
+          sx={{ pt: ["100%", "100%", "63px", "48px", "80px", "54px"] }}
         >
           {data.allPurArticleJson.edges.slice(0, 1).map(item => {
             return (
@@ -138,9 +135,9 @@ const TopContent = () => {
               </div>
             )
           })}
-        </Box>
-      </Box>
-    </Section>
+        </TextContainer>
+      </GridWrapper>
+    </>
   )
 }
 

@@ -1,4 +1,6 @@
+import { theme as defaultTheme } from '@thepuzzlers/pieces'
 import maskButton from '../images/button-vector.png'
+
 export default {
   colors: {
     text: '#2E2E2E',
@@ -55,30 +57,14 @@ export default {
       fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
     }
   },
-
-  // //top content
-  //   40, 50, 50, 50, 56, 68
-
-  //   //article content
-  //   18, 22, 16, 20, 20, 22
-
-  // //banner
-  //     18, 20, 16, 20, 20, 20
-  // 3, 4, 2, 4, 
-  //     //footer font
-  //     16, 20, 16, 20, 18, 18
-
-  // shop overview
-  // 18 22 18 20 20 20
-
   breakpoints: [
-
-    '@media screen and (min-width: 640px)',
-    '@media screen and (min-width: 812px) and (orientation: landscape)',
-    '@media screen and (min-width: 834px)',
+    '@media screen and (min-width: 500px)',
+    '@media screen and (min-width: 700px) and (orientation: landscape)',
+    '@media screen and (min-width: 750px) and (orientation: portrait)',
     '@media screen and (min-width: 1194px) and (orientation: landscape)',
     '@media screen and (min-width: 1440px)',
   ],
+  grids: defaultTheme.grids,
   buttons: {
     primaryWhite: {
       mask: `url(${maskButton})`,
