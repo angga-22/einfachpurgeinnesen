@@ -8,13 +8,13 @@ import bgBannerRestaurantSmall from '../../images/bg-banner-restaurant-small.svg
 const Banner = () => {
 
   const [shrimpSmall, setShrimpSmall] = React.useState(
-    window.matchMedia("(max-width: 640px)").matches
+    window.matchMedia("(max-width: 500px)").matches
   );
   const [labelBanner, setLabelBanner] = React.useState(
-    window.matchMedia("(min-width: 812px)").matches
+    window.matchMedia("(min-width: 700px)").matches
   );
   const [shrimpBig, setShrimpBig] = React.useState(
-    window.matchMedia("(min-width: 641px) and (max-width: 1439px)").matches
+    window.matchMedia("(min-width: 500px) and (max-width: 1439px)").matches
   );
   const [shrimpSmallDesktop, setShrimSmallDesktop] = React.useState(
     window.matchMedia("(min-width: 1440px)").matches
@@ -23,16 +23,16 @@ const Banner = () => {
 
   React.useEffect(() => {
     window.addEventListener("resize", () => {
-      setShrimpSmall(window.matchMedia("(max-width: 640px)").matches);
+      setShrimpSmall(window.matchMedia("(max-width: 500px)").matches);
     });
     window.addEventListener("resize", () => {
-      setShrimpBig(window.matchMedia("(min-width: 641px) and (max-width: 1439px)").matches);
+      setShrimpBig(window.matchMedia("(min-width: 500px) and (max-width: 1439px)").matches);
     });
     window.addEventListener("resize", () => {
       setShrimSmallDesktop(window.matchMedia("(min-width: 1440px)").matches);
     });
     window.addEventListener("resize", () => {
-      setLabelBanner(window.matchMedia("(min-width: 812px)").matches);
+      setLabelBanner(window.matchMedia("(min-width: 700px)").matches);
     });
   });
 
@@ -52,7 +52,7 @@ const Banner = () => {
         ],
         padding: [
           "0 7.5vw",
-          "0 100px",
+          "0 12.5vw",
           "0 7.6vw",
           "0 100px",
           "0 8.1vw",

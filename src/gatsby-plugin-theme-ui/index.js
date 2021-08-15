@@ -1,4 +1,7 @@
+import { theme as defaultTheme } from '@thepuzzlers/pieces'
 import maskButton from '../images/button-vector.png'
+import { Breakpoints } from '../components/Breakpoints'
+
 export default {
   colors: {
     text: '#2E2E2E',
@@ -23,6 +26,7 @@ export default {
     normal: "0",
     wide: "0.25em"
   },
+  //typography
   text: {
     heading: {
       color: "text",
@@ -53,15 +57,24 @@ export default {
       fontWeight: "normal",
       lineHeight: "175%",
       fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
+    },
+    footerContentText: {
+      color: "text",
+      fontFamily: 'body',
+      fontWeight: "normal",
+      lineHeight: ["28px", "35px", "28px", "31.5px", "31.5px", "31.5px"],
+      fontSize: [2, 4, 2, 3, 3, 3]
     }
   },
   breakpoints: [
-    '@media screen and (min-width: 500px)',
-    '@media screen and (min-width: 700px) and (orientation: landscape)',
-    '@media screen and (min-width: 750px) and (orientation: portrait)',
-    '@media screen and (min-width: 1000px) and (orientation: landscape)',
-    '@media screen and (min-width: 1400px)',
+    //phone portrait was the first value in container, total value is 6 for each container
+    Breakpoints.phonePortraitXl,
+    Breakpoints.phoneLandscape,
+    Breakpoints.tabletPortrait,
+    Breakpoints.tabletLandscape,
+    Breakpoints.desktop
   ],
+  grids: defaultTheme.grids,
   buttons: {
     primaryWhite: {
       mask: `url(${maskButton})`,
@@ -132,19 +145,3 @@ export default {
   }
 }
 
-// const primary = {
-//   display: 'inline-block',
-//   whiteSpace: 'nowrap',
-//   verticalAlign: 'middle',
-//   lineHeights: '175%',
-//   fontWeight: 1,
-//   fontSize: [3, 4, 3, 3, 3, 4],
-//   textAlign: 'center',
-//   borderRadius: '12px',
-//   fontFamily: 'body',
-//   cursor: 'pointer',
-//   overflow: 'hidden',
-//   '&:focus': {
-//     outline: 'none'
-//   },
-// }

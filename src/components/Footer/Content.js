@@ -20,7 +20,7 @@ const Content = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: ["column", "column", "row", "column", "column", "column"],
+        flexDirection: ["column", "column", "row", "column-reverse", "column", "column"],
         alignItems: [null, null, 'flex-end'],
         margin: ["0 auto"],
         maxWidth: ["220px", "300px", "100%", "100%", "100%", "100%"],
@@ -30,27 +30,22 @@ const Content = () => {
       {/* //label */}
       <Box
         sx={{
-          paddingBottom: ["24px", "40px", "0"],
-          paddingRight: ["0", "0", "5vw"],
-          textAlign: ["center", "center", "left"],
+          paddingBottom: ["24px", "40px", "0", "0"],
+          paddingRight: ["0", "0", "5vw", "0"],
+          textAlign: ["center", "center", "left", "Left"],
         }}
       >
         <Text
-          variant="subHeading"
+          variant="footerContentText"
           sx={{
-            lineHeight: "175%",
-            fontSize: ["16px", "20px", "16px", "20px", "18px"]
+            fontWeight: '700'
           }}
         >Restaurant </Text>
         {data.allPurFooterJson.edges.slice(0, 2).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="paragraph"
-                sx={{
-                  lineHeight: "175%",
-                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
-                }}
+                variant="footerContentText"
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )
@@ -59,28 +54,23 @@ const Content = () => {
       {/* //label */}
       <Box
         sx={{
-          padding: ["0 0 24px 0", "0 0 40px 0", "0 5vw 0 0", "77px 0 0 0", "0"],
-          textAlign: ["center", "center", "left"],
+          padding: ["0 0 24px 0", "0 0 40px 0", "0 5vw 0 0", "0 0 77px 0", "0"],
+          textAlign: ["center", "center", "left", "left"],
           margin: ["0", "0", "0", "0", "32px 0", "32px 0"],
           width: ["100%", "100%", "50%", "100%"]
         }}
       >
         <Text
-          variant="subHeading"
+          variant="footerContentText"
           sx={{
-            lineHeight: "175%",
-            fontSize: ["16px", "20px", "16px", "20px", "18px"]
+            fontWeight: '700'
           }}
         >Ladengeschäft </Text>
         {data.allPurFooterJson.edges.slice(2, 3).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="paragraph"
-                sx={{
-                  lineHeight: "175%",
-                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
-                }}
+                variant="footerContentText"
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )
@@ -89,7 +79,7 @@ const Content = () => {
       {/* //label */}
       <Box
         sx={{
-          textAlign: ["center", "center", "left"],
+          textAlign: ["center", "center", "left", "left"],
           position: ["static", "static", "static", "absolute", "static"],
           bottom: '81px',
           left: "7.6vw",
@@ -97,21 +87,16 @@ const Content = () => {
         }}
       >
         <Text
-          variant="subHeading"
+          variant="footerContentText"
           sx={{
-            lineHeight: "175%",
-            fontSize: ["16px", "20px", "16px", "20px", "18px"]
+            fontWeight: '700'
           }}
         >Kontakt & Anfahrt </Text>
         {data.allPurFooterJson.edges.slice(3, 5).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="paragraph"
-                sx={{
-                  lineHeight: "175%",
-                  fontSize: ["16px", "20px", "16px", "20px", "18px"]
-                }}
+                variant="footerContentText"
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )

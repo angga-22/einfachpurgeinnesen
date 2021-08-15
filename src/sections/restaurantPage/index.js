@@ -1,3 +1,4 @@
+export { default as Article } from './Article'
 export { default as Banner } from './Banner'
-export { default as BottomContent } from './BottomContent'
-export { default as TopContent } from './TopContent'
+export { default as Quote } from './Quote'
+export { default as Header } from './Header'
