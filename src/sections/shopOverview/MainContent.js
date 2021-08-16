@@ -3,13 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Box, Text } from 'theme-ui'
 import Section from 'components/Box'
 import { StaticImage } from 'gatsby-plugin-image'
-import BottomContent from './BottomContent'
 
 
 const MainContent = () => {
 
   const data = useStaticQuery(graphql`
-    query PurShopOverview {
+    query getPurShopOverview {
       allPurShopOverviewJson {
         edges {
           node {
@@ -184,14 +183,14 @@ const MainContent = () => {
         </Box>
         {/* // section 3  */}
         <Box sx={{
-          '@media screen and (min-width: 640px)': {
-            position: 'absolute',
-            bottom: '-38em',
-            zIndex: '1'
-          },
-          '@media screen and (min-width: 834px)': {
-            position: 'static'
-          }
+          // '@media screen and (min-width: 640px)': {
+          //   position: 'absolute',
+          //   bottom: '-38em',
+          //   zIndex: '1'
+          // },
+          // '@media screen and (min-width: 834px)': {
+          //   position: 'static'
+          // }
         }}>
           {data.allPurShopOverviewJson.edges.slice(2, 3).map(item => (
             <Box
@@ -219,7 +218,6 @@ const MainContent = () => {
         </Box>
       </Section>
       {/* // footer section */}
-      <BottomContent />
     </div >
   )
 }

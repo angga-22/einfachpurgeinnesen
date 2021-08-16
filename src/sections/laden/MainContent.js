@@ -4,6 +4,8 @@ import { Box, Text } from 'theme-ui'
 import Section from 'components/Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import underline from '../../images/underline-inactive.svg'
+import { Breakpoints } from '../../components/Breakpoints'
+
 const MainContent = () => {
 
 
@@ -87,6 +89,18 @@ const MainContent = () => {
                 margin: '0 auto'
               }}>{item.node.label}</Text>
             </Box>
+            <Box
+              sx={{
+                width: ["37px", "50px", "50px", "76px", "118px", "118px"],
+                position: 'absolute',
+                top: ["10em", "20em", "12em", "6", "7", "7"],
+                right: ["-2", "-4", "-4", "-4", "-2", "5"]
+              }}
+            >
+              <StaticImage
+                src={'../../images/curly-line2.png'}
+                alt="curly-line2" />
+            </Box>
             <Text
               sx={{
                 maxWidth: ["100%", "100%", "569px", "468px", "538px", "632px"],
@@ -96,18 +110,6 @@ const MainContent = () => {
               variant="paragraph"
               dangerouslySetInnerHTML={{ __html: item.node.content }}
             ></Text>
-            <Box
-              sx={{
-                width: ["37px", "50px", "50px", "76px", "118px", "118px"],
-                position: 'absolute',
-                top: ["6", "7", "7", "6", "7"],
-                right: ["-2", "-4", "-4", "-4", "-2", "5"]
-              }}
-            >
-              <StaticImage
-                src={'../../images/curly-line2.png'}
-                alt="curly-line2" />
-            </Box>
           </Box>
         ))}
 
@@ -118,7 +120,7 @@ const MainContent = () => {
           flexDirection: ["column", "column", "row-reverse", "row-reverse", "row-reverse", "row-reverse"],
           justifyContent: 'space-between',
           // alignItems: 'center',
-          '@media screen and (max-width: 640px)': {
+          '@media screen and (max-width: 500px)': {
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
           },
@@ -174,13 +176,16 @@ const MainContent = () => {
           display: 'grid',
           gridTemplateColumns: ["repeat(2, 1fr)"],
           gridGap: '2',
-          width: ["100%", "100%", "100%", "100%", "90%", "70%"],
+          width: ["100%", "100%", "100%", "650px", "916px", "956px"],
           margin: '0 auto',
-          '@media screen and (max-width: 640px)': {
+          '@media screen and (max-width: 500px)': {
             gridTemplateColumns: "repeat(4, 1fr)",
             width: '966px',
           },
-          '@media screen and (min-width: 812px)': {
+          [Breakpoints.phoneLandscape]: {
+            gridTemplateColumns: ["repeat(3, 1fr)"],
+          },
+          [Breakpoints.tabletPortrait]: {
             gridTemplateColumns: ["repeat(3, 1fr)"],
           },
 
@@ -195,7 +200,11 @@ const MainContent = () => {
               backgroundRepeat: 'no-repeat',
               margin: '10px',
               pt: '20px',
-              '@media screen and (min-width: 1440px)': {
+
+              [Breakpoints.tabletPortrait]: {
+                maxWidth: '200px'
+              },
+              [Breakpoints.tabletLandscape]: {
                 maxWidth: '254px'
               }
             }}>

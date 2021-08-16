@@ -3,8 +3,8 @@ import { jsx, Box, Heading, Text } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
 import Section from 'components/Box'
-
-
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces';
+import { Breakpoints } from '../../components/Breakpoints'
 const Dishes = () => {
   const data = useStaticQuery(graphql`
     query getMenuData {
@@ -22,125 +22,203 @@ const Dishes = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
-    <Section
-      sx={{
-        display: 'grid',
-        gridTemplateColumns: `repeat(1fr, 1fr))`,
-        '@media screen and (min-width: 812px)': {
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gridGap: '4'
-        },
-        padding: [
-          "0 7.5vw",
-          "0 9.4vw",
-          "0 7.6vw",
-          "0 7.6vw",
-          "0 8.1vw",
-          "0 9vw",
-        ],
-        marginTop: ["48px", "35px", "48px", "64px", "64px", "68px"]
-      }}
-    >
-      {data.allPurDataJson.edges.map(item => {
-        return (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              width: 'auto',
-              height: 'fit-content',
-              marginBottom: ["64px", "64px", "64px", "80px", "80px", "80px"],
-              marginRight: '0',
-              '@media screen and (minWidth: 812px)': {
-                marginRight: '40px',
-              },
-            }}
-          >
-            <Heading
-              variant="heading"
-              sx={{
-                fontSize: ["32px", "35px", "32px", "35px", "35px", "35px"],
-                lineHeight: "125%"
-              }}
-            >
-              {item.node.label}{" "}
-              <span >
-                {item.node.type === "vegan"
-                  ? <StaticImage
-                    alt="vegan"
-                    width="20"
-                    src={'../../images/vegan.png'}
-                  />
-                  : item.node.type === "vegetarian"
+    <GridWrapper sx={{
+      m: ["48px 0 0 0", "35px 0 0 0", "48px 0 0 0", "64px 0 0 0", "64px 0 0 0", "68px 0 0 0"]
+    }}>
+      <GridItem
+        sx={{
+          gridColumn: ["1 / span 12", "2 / span 10", "1 /  13", "1 /  13", "1 /  13", "3 / 11"],
+          width: 'auto',
+          height: 'fit-content',
+        }}
+      >
+        {data.allPurDataJson.edges.slice(0, 3).map(item => {
+          return (
+            <Box sx={{
+              mb: ["64px", "64px", "64px", "80px", "80px", "80px"],
+            }}>
+              <Heading
+                variant="heading"
+                sx={{
+                  fontSize: ["32px", "35px", "32px", "35px", "35px", "35px"],
+                  lineHeight: "125%",
+                }}
+              >
+                {item.node.label}{" "}
+                <span >
+                  {item.node.type === "vegan"
                     ? <StaticImage
                       alt="vegan"
-                      width="12"
-                      src={'../../images/vegetarian.png'}
+                      width="20"
+                      src={'../../images/vegan.png'}
                     />
-                    : null}
-              </span>
-            </Heading>
-            <Text
-              variant="paragraph"
-              sx={{
-                marginBottom: '30px',
-                '&>b': {
-                  fontWeight: 'bold'
-                }
-              }}
-              dangerouslySetInnerHTML={{ __html: item.node.description }}
-            >
-            </Text>
-            <Text
-              sx={{
-                fontFamily: "label",
-                fontSize: "18px",
-                lineHeight: "100%",
-                marginBottom: '12px',
-                display: 'flex',
-                alignItems: 'center'
-              }}
-            >
-              <StaticImage
-                alt="vegan"
-                width="30"
+                    : item.node.type === "vegetarian"
+                      ? <StaticImage
+                        alt="vegan"
+                        width="12"
+                        src={'../../images/vegetarian.png'}
+                      />
+                      : null}
+                </span>
+              </Heading>
+              <Text
+                variant="paragraph"
                 sx={{
-                  marginRight: "10px"
+                  marginBottom: '30px',
+                  '&>b': {
+                    fontWeight: 'bold'
+                  }
                 }}
-                src={'../../images/bullet-small.png'}
-              />
-              {item.node.currentPrice}
-            </Text>
-            {
-              item.node.nextPrice !== null ?
-                <Text
+                dangerouslySetInnerHTML={{ __html: item.node.description }}
+              >
+              </Text>
+              <Text
+                sx={{
+                  fontFamily: "label",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  mt: ["24px"],
+                  marginBottom: '12px',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+              >
+                <StaticImage
+                  alt="vegan"
+                  width="30"
                   sx={{
-                    fontFamily: "label",
-                    fontSize: "18px",
-                    lineHeight: "100%",
-                    display: 'flex',
-                    alignItems: 'center'
+                    marginRight: "10px"
                   }}
-                >
-                  <StaticImage
-                    alt="vegan"
-                    width="30"
+                  src={'../../images/bullet-small.png'}
+                />
+                {item.node.currentPrice}
+              </Text>
+              {
+                item.node.nextPrice !== null ?
+                  <Text
                     sx={{
-                      marginRight: "10px"
+                      fontFamily: "label",
+                      fontSize: "18px",
+                      lineHeight: "100%",
+                      display: 'flex',
+                      alignItems: 'center'
                     }}
-                    src={'../../images/bullet-big.png'}
-                  />
-                  {item.node.nextPrice}
-                </Text>
-                : ""
-            }
-          </Box>
-        );
-      })}
-    </Section >
+                  >
+                    <StaticImage
+                      alt="vegan"
+                      width="30"
+                      sx={{
+                        marginRight: "10px"
+                      }}
+                      src={'../../images/bullet-big.png'}
+                    />
+                    {item.node.nextPrice}
+                  </Text>
+                  : ""
+              }
+            </Box>
+          );
+        })}
+      </GridItem>
+      <GridItem
+        sx={{
+          gridColumn: ["1 / span 12", "2 / span 10", "14 /  25", "14 /  25", "14 /  25", "14 / 23"],
+          width: 'auto',
+          height: 'fit-content',
+        }}
+      >
+        {data.allPurDataJson.edges.slice(3, 6).map(item => {
+          return (
+            <Box sx={{
+              mb: ["64px", "64px", "64px", "80px", "80px", "80px"],
+            }}>
+              <Heading
+                variant="heading"
+                sx={{
+                  fontSize: ["32px", "35px", "32px", "35px", "35px", "35px"],
+                  lineHeight: "125%"
+                }}
+              >
+                {item.node.label}{" "}
+                <span >
+                  {item.node.type === "vegan"
+                    ? <StaticImage
+                      alt="vegan"
+                      width="20"
+                      src={'../../images/vegan.png'}
+                    />
+                    : item.node.type === "vegetarian"
+                      ? <StaticImage
+                        alt="vegan"
+                        width="12"
+                        src={'../../images/vegetarian.png'}
+                      />
+                      : null}
+                </span>
+              </Heading>
+              <Text
+                variant="paragraph"
+                sx={{
+                  marginBottom: '30px',
+                  '&>b': {
+                    fontWeight: 'bold'
+                  }
+                }}
+                dangerouslySetInnerHTML={{ __html: item.node.description }}
+              >
+              </Text>
+              <Text
+                sx={{
+                  fontFamily: "label",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  marginBottom: '12px',
+                  mt: ["24px"],
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+              >
+                <StaticImage
+                  alt="vegan"
+                  width="30"
+                  sx={{
+                    marginRight: "10px"
+                  }}
+                  src={'../../images/bullet-small.png'}
+                />
+                {item.node.currentPrice}
+              </Text>
+              {
+                item.node.nextPrice !== null ?
+                  <Text
+                    sx={{
+                      fontFamily: "label",
+                      fontSize: "18px",
+                      lineHeight: "100%",
+                      display: 'flex',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <StaticImage
+                      alt="vegan"
+                      width="30"
+                      sx={{
+                        marginRight: "10px"
+                      }}
+                      src={'../../images/bullet-big.png'}
+                    />
+                    {item.node.nextPrice}
+                  </Text>
+                  : ""
+              }
+            </Box>
+          );
+        })}
+      </GridItem>
+    </GridWrapper >
   );
 };
 

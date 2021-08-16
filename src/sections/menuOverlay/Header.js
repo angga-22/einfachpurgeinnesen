@@ -50,8 +50,8 @@ const Header = ({ handleClose }) => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: ["column", "column", "column", "column", "column", "row"],
-            justifyContent: "space-between"
+            flexDirection: ["column", "column", "column", "column", "row", "row"],
+            justifyContent: "space-between",
           }}
         >
           <Box>
@@ -87,10 +87,10 @@ const Header = ({ handleClose }) => {
           <Box
             sx={{
               display: 'flex',
-              flexDirection: ["column", "row", "row", "row", "row", "column", "row"],
+              flexDirection: ["column", "row", "row", "row", "column", "row"],
               pt: ["24px", "16px", "12px", "12px", null, null],
               pr: [null, null, "10px", "10px", "5em", "7em"],
-              mt: [null, null, null, null, "13px", "-3em", "-3em"]
+              mt: [null, null, null, "13px", "-3em", "-3em"]
             }}
           >
             <Box sx={{

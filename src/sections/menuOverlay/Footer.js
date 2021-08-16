@@ -58,7 +58,6 @@ const Footer = () => {
         <Box sx={{
           margin: ['0 auto', '0 auto', '0', null, null, null],
           overflow: 'hidden',
-          backgroundColor: 'red'
         }}>
           <StaticImage
             sx={{
