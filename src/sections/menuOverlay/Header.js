@@ -141,7 +141,7 @@ const Header = ({ handleClose }) => {
         <button
           onClick={handleClose}
           sx={{
-            top: [0, 0, 0, 0, 0, "2em", "2.5em"],
+            top: [0, 0, 0, 0, "2em", "2.5em"],
             right: [0],
             position: "absolute",
             cursor: "pointer",

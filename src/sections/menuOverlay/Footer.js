@@ -11,7 +11,8 @@ const Footer = () => {
           backgroundColor: 'secondary',
           display: 'flex',
           justifyContent: "space-between",
-          flexDirection: ["column-reverse", "column-reverse", "row"],
+          alignItems: 'center',
+          flexDirection: ["column-reverse", "column-reverse", "row", "row", "row", "row"],
           maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
           margin: [null, "20px auto", "0 auto", "20px auto", "40px auto", "50px auto"],
           padding: [
@@ -22,6 +23,7 @@ const Footer = () => {
             "2vw 85px",
             "1vw 15vw",
           ],
+          height: ["auto", "auto", "345px", "392px", "392px", "392px"],
           borderTopLeftRadius: ["1em"],
           borderTopRightRadius: ["1em"],
           borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
@@ -31,7 +33,7 @@ const Footer = () => {
         <Box sx={{
           display: 'flex',
           flexDirection: 'column',
-          maxWidth: ["100%", "100%", "50%"],
+          maxWidth: ["100%", "100%", "50%", "50%"],
         }}>
           <Text variant="subHeading"
             sx={{
@@ -61,7 +63,7 @@ const Footer = () => {
         }}>
           <StaticImage
             sx={{
-              width: '20em',
+              width: '22em',
               margin: '-30px -35px -40px -20px',
             }}
             src={'../../images/header-img.png'}

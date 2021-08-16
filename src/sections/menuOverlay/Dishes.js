@@ -2,9 +2,7 @@
 import { jsx, Box, Heading, Text } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
-import Section from 'components/Box'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces';
-import { Breakpoints } from '../../components/Breakpoints'
 const Dishes = () => {
   const data = useStaticQuery(graphql`
     query getMenuData {
@@ -30,7 +28,7 @@ const Dishes = () => {
     }}>
       <GridItem
         sx={{
-          gridColumn: ["1 / span 12", "2 / span 10", "1 /  13", "1 /  13", "1 /  13", "3 / 11"],
+          gridColumn: ["1 / span 12", "2 / span 10", "1 /  13", "1 /  13", "1 /  13", "3 / 12"],
           width: 'auto',
           height: 'fit-content',
         }}
