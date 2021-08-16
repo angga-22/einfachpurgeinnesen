@@ -11,7 +11,7 @@ const ShopOverview = () => {
         <link rel="einfachpurgeinnesen" href="https://localhost:8000/" />
       </Helmet>
       <MainContent />
-      <Banner />
+      {/* <Banner /> */}
     </>
   )
 }
