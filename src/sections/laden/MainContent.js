@@ -5,6 +5,9 @@ import Section from 'components/Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import underline from '../../images/underline-inactive.svg'
 import { Breakpoints } from '../../components/Breakpoints'
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+// import { Breakpoints } from '../../components/Breakpoints'
+
 
 const MainContent = () => {
 
@@ -38,20 +41,12 @@ const MainContent = () => {
 
 
   return (
-    <Section
-      sx={{
-        mt: ["74px", "74px", "50px", "110px", "166px", "119px"],
-        padding: [
-          "0 7.5vw",
-          "0 9.4vw",
-          "0 92px",
-          "0 93px",
-          "0 139px",
-          "0 188px",
-        ],
-      }}>
-
-      <Box sx={{
+    <GridWrapper sx={{
+      mt: ["74px", "74px", "50px", "110px", "166px", "119px"],
+    }}>
+      {/* // section 1 */}
+      <GridItem sx={{
+        gridColumn: ["1 / span 12", "1 / span 12", "3 / span 21", "3 / span 21"],
         pb: ["152px", "120px", "114px", "196px", "228px", "174px"],
         position: 'relative'
       }}>
@@ -103,19 +98,21 @@ const MainContent = () => {
             </Box>
             <Text
               sx={{
-                maxWidth: ["100%", "100%", "569px", "468px", "538px", "632px"],
+                maxWidth: ["100%", "100%", "90%", "88%", "538px", "632px"],
                 fontSize: ["16px", "22px", "18px", "20px", "20px", "20px"],
-                margin: '0 auto',
+                margin: ["0", "0", "0", "0 auto"]
               }}
               variant="paragraph"
               dangerouslySetInnerHTML={{ __html: item.node.content }}
             ></Text>
           </Box>
         ))}
+      </GridItem>
 
-      </Box>
-      <Box
+      {/* // section 2 */}
+      <GridItem
         sx={{
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", "2 / span 23"],
           display: 'flex',
           flexDirection: ["column", "column", "row-reverse", "row-reverse", "row-reverse", "row-reverse"],
           justifyContent: 'space-between',
@@ -162,9 +159,13 @@ const MainContent = () => {
             }}
           >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
         </Box>
-      </Box>
-      <Box
+      </GridItem>
+
+
+      {/* // section 3 slider */}
+      <GridItem
         sx={{
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", , "2 / span 23"],
           overflowX: 'auto',
           'WebkitOverflowScrolling': 'touch',
           'WebkitScrollbar': {
@@ -200,7 +201,6 @@ const MainContent = () => {
               backgroundRepeat: 'no-repeat',
               margin: '10px',
               pt: '20px',
-
               [Breakpoints.tabletPortrait]: {
                 maxWidth: '200px'
               },
@@ -208,7 +208,6 @@ const MainContent = () => {
                 maxWidth: '254px'
               }
             }}>
-
               <Text sx={{
                 fontFamily: 'label',
                 fontWeight: '700',
@@ -225,8 +224,10 @@ const MainContent = () => {
             </Box>
           ))}
         </Box>
-      </Box>
-    </Section>
+      </GridItem>
+
+
+    </GridWrapper>
   )
 }
 
