@@ -1,25 +1,9 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Box, Text } from 'theme-ui'
-import Section from 'components/Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
-const MainContent = () => {
-
-  const data = useStaticQuery(graphql`
-    query getPurShopOverview {
-      allPurShopOverviewJson {
-        edges {
-          node {
-            id
-            label
-            content
-          }
-        }
-      }
-    }
-  `)
+const MainContent = ({ data }) => {
 
   return (
     <GridWrapper sx={{
@@ -45,13 +29,13 @@ const MainContent = () => {
             alt="abstract-img" />
         </Box>
 
-        {data.allPurShopOverviewJson.edges.slice(0, 1).map(item => (
+        {data.nodes.slice(0, 1).map(item => (
           <Box
             sx={{
               display: 'flex',
               flexDirection: 'column',
             }}
-            key={item.node.id}>
+            key={item.id}>
             <Box
               sx={{
                 pb: ["24px", "24px", "24px", "57px", "43px", "100px"],
@@ -67,7 +51,7 @@ const MainContent = () => {
                   fontWeight: 'bold'
                 }
               }}
-                dangerouslySetInnerHTML={{ __html: item.node.label }}
+                dangerouslySetInnerHTML={{ __html: item.label }}
               >
               </Text>
             </Box>
@@ -78,7 +62,7 @@ const MainContent = () => {
               }}
             >
               <Text variant="paragraphShopOverview">
-                {item.node.content}
+                {item.content}
               </Text>
             </Box>
           </Box>
@@ -106,7 +90,7 @@ const MainContent = () => {
           gridColumn: ["1 / span 12", "2 / span 12", "2 / span 24", "9 / span 18", "2 / span 21", "4 / span 17"],
         }}
       >
-        {data.allPurShopOverviewJson.edges.slice(1, 2).map(item => (
+        {data.nodes.slice(1, 2).map(item => (
           <Box
             sx={{
               display: 'flex',
@@ -114,7 +98,7 @@ const MainContent = () => {
 
               justifyContent: 'space-between',
             }}
-            key={item.node.id}>
+            key={item.id}>
             <Box sx={{
               width: ["100%", "100%", "80em", "85%", "190%", "230%",]
             }}>
@@ -125,7 +109,7 @@ const MainContent = () => {
                 pr: ["0", "0", "52px", "76px", "0", "124px"],
                 lineHeight: '125%'
               }}>
-                {item.node.label}
+                {item.label}
               </Text>
             </Box>
             <Box sx={{
@@ -135,7 +119,7 @@ const MainContent = () => {
             }}>
               <Text
                 variant="paragraphShopOverview">
-                {item.node.content}
+                {item.content}
               </Text>
             </Box>
           </Box>
@@ -154,15 +138,9 @@ const MainContent = () => {
           />
         </Box>
       </GridItem>
-
-
-
-
-
       {/* // section 3  */}
       <GridItem sx={{
         gridColumn: ["1 / span 12", "2 / span 10", "2 / span 12", "1 / span 16", " 1 / span 12", "2 / span 9"],
-
         position: 'static',
         '@media screen and (min-width: 700px) and (max-width: 749px)': {
           position: 'absolute',
@@ -171,13 +149,13 @@ const MainContent = () => {
           left: '0'
         }
       }}>
-        {data.allPurShopOverviewJson.edges.slice(2, 3).map(item => (
+        {data.nodes.slice(2, 3).map(item => (
           <Box
             sx={{
               display: 'flex',
               flexDirection: 'column',
             }}
-            key={item.node.id}>
+            key={item.id}>
             <Text
               sx={{
                 fontFamily: 'label',
@@ -186,10 +164,10 @@ const MainContent = () => {
                 fontSize: ["40px", "42px", "38px", "51px", "56px", "55px"],
                 pb: '16px'
               }}
-              dangerouslySetInnerHTML={{ __html: item.node.label }}
+              dangerouslySetInnerHTML={{ __html: item.label }}
             ></Text>
             <Text variant="paragraphShopOverview">
-              {item.node.content}
+              {item.content}
             </Text>
           </Box>
         ))}

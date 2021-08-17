@@ -1,20 +1,40 @@
+import { graphql } from 'gatsby'
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { MainContent, Banner } from 'sections/ShopOverview'
+import { Banner } from 'sections/ShopOverview'
 
-const ShopOverview = () => {
+const ShopOverview = ({ data }) => {
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
         <title data-react-helmet="true">einfachpurgeinnesen | Shop</title>
-        <link rel="einfachpurgeinnesen" href="https://localhost:8000/" />
       </Helmet>
-      <MainContent />
+      <Header data={data.pageDat.header} />
+      <Info data={data.pageData.info} />
+      <ProductShowcase data={data.pageData.productShowcase} />
       {/* <Banner /> */}
     </>
   )
 }
 
+
+export const query = graphql`
+      query getContentOfShopOverviewPage {
+        pageData: purShopOverviewJson {
+        header {
+        label
+      content
+    }
+      info {
+        label
+      content
+    }
+      productShowcase {
+        label
+      content
+    }
+  }
+}`
 
 export default ShopOverview
