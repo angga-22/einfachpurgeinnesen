@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Box, Text } from 'theme-ui'
-import Section from 'components/Box'
 import { StaticImage } from 'gatsby-plugin-image'
 import underline from '../../images/underline-inactive.svg'
 import { Breakpoints } from '../../components/Breakpoints'
@@ -13,13 +12,13 @@ const MainContent = () => {
 
 
   const [bigLeaves, setBigLeaves] = React.useState(
-    window.matchMedia("(min-width: 1440px)").matches
+    window.matchMedia("(min-width: 750px)").matches
   );
 
 
   React.useEffect(() => {
     window.addEventListener("resize", () => {
-      setBigLeaves(window.matchMedia("(min-width: 1440px)").matches);
+      setBigLeaves(window.matchMedia("(min-width: 750px)").matches);
     });
 
   });
@@ -46,7 +45,7 @@ const MainContent = () => {
     }}>
       {/* // section 1 */}
       <GridItem sx={{
-        gridColumn: ["1 / span 12", "1 / span 12", "3 / span 21", "3 / span 21"],
+        gridColumn: ["1 / span 12", "1 / span 12", "3 / span 21", "3 / span 20", "2 / span 21", "3 / span 21"],
         pb: ["152px", "120px", "114px", "196px", "228px", "174px"],
         position: 'relative'
       }}>
@@ -58,7 +57,7 @@ const MainContent = () => {
           }}>
             <Box
               sx={{
-                maxWidth: ["100%", "100%", "569px", "588px", "916px", "1064px"],
+                // maxWidth: ["100%", "100%", "569px", "588px", "916px", "1064px"],
                 margin: '0 auto',
                 mb: ["40px", "0", "40px", "48px", "64px", "150px"],
                 position: 'relative'
@@ -98,7 +97,7 @@ const MainContent = () => {
             </Box>
             <Text
               sx={{
-                maxWidth: ["100%", "100%", "90%", "88%", "538px", "632px"],
+                p: ["0", "0", "0 2em 0 0", "0 2em  0 3em", "0 8em 0 11em", "0 12em 0 12em"],
                 fontSize: ["16px", "22px", "18px", "20px", "20px", "20px"],
                 margin: ["0", "0", "0", "0 auto"]
               }}
@@ -112,18 +111,18 @@ const MainContent = () => {
       {/* // section 2 */}
       <GridItem
         sx={{
-          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", "2 / span 23"],
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", "2 / span 22", "2 / span 22", "4 / span 18"],
           display: 'flex',
           flexDirection: ["column", "column", "row-reverse", "row-reverse", "row-reverse", "row-reverse"],
           justifyContent: 'space-between',
-          // alignItems: 'center',
-          '@media screen and (max-width: 500px)': {
+          alignItems: 'center',
+          '@media screen and (max-width: 700px)': {
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
           },
           margin: '0 auto',
           mb: ["48px", "64px", "48px", "64px", "80px", "64px"],
-          width: ["100%", "100%", "100%", "100%", "100%", "80%"],
+          // width: ["100%", "100%", "100%", "100%", "100%", "80%"],
         }}
       >
         <Box
@@ -141,14 +140,14 @@ const MainContent = () => {
             :
             <StaticImage
               src={'../../images/leaves-star.png'}
+              width="100"
               alt="leaves"
             />
 
           }
-
         </Box>
         <Box sx={{
-          width: ["100%", "100%", "70%", "50%", "40%", "40%"],
+          width: ["100%", "100%", "70%", "60%", "40%", "40%"],
         }}>
           <Text
             sx={{
@@ -165,7 +164,7 @@ const MainContent = () => {
       {/* // section 3 slider */}
       <GridItem
         sx={{
-          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", , "2 / span 23"],
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 22", "2 / span 22", "2 / span 23", "4 / span 20"],
           overflowX: 'auto',
           'WebkitOverflowScrolling': 'touch',
           'WebkitScrollbar': {
@@ -177,7 +176,7 @@ const MainContent = () => {
           display: 'grid',
           gridTemplateColumns: ["repeat(2, 1fr)"],
           gridGap: '2',
-          width: ["100%", "100%", "100%", "650px", "916px", "956px"],
+          // width: ["100%", "100%", "100%", "650px", "916px", "956px"],
           margin: '0 auto',
           '@media screen and (max-width: 500px)': {
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -187,6 +186,7 @@ const MainContent = () => {
             gridTemplateColumns: ["repeat(3, 1fr)"],
           },
           [Breakpoints.tabletPortrait]: {
+            width: '100%',
             gridTemplateColumns: ["repeat(3, 1fr)"],
           },
 
@@ -211,7 +211,7 @@ const MainContent = () => {
               <Text sx={{
                 fontFamily: 'label',
                 fontWeight: '700',
-                fontSize: ["22px", "28px", "22px", "28px", "26px", "28px"],
+                fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
                 color: '#DA3C6E'
               }}>{item.node.label}</Text>
               <Text

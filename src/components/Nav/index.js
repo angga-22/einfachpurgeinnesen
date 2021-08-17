@@ -3,6 +3,9 @@ import { Flex, Text, Box } from "@theme-ui/components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { Breakpoints } from '../Breakpoints'
+
+
 const Nav = () => {
   const [hamburgerClicked, setHamburgerClicked] = React.useState(false);
 
@@ -48,7 +51,7 @@ const Nav = () => {
           sx={{
             backgroundColor: "primary",
             cursor: "pointer",
-            "@media screen and (min-width: 1194px)": {
+            [Breakpoints.tabletLandscape]: {
               display: "none",
             },
           }}
@@ -134,7 +137,7 @@ const Nav = () => {
             width: ["100%", "100%", "100%", "80%", "65%", "60%"],
             zIndex: "1",
             backgroundColor: 'primary',
-            '@media screen and (max-width: 834px)': {
+            '@media screen and (max-width: 700px)': {
               backgroundColor: 'red'
             },
             alignItems: "center",
@@ -164,9 +167,6 @@ const Nav = () => {
                 fontWeight: "normal",
                 fontSize: 2,
                 textDecoration: "none",
-                '@media screen and (minWidth: 812px)': {
-                  // height: '200px'
-                }
               }}
             >
               <Text variant="paragraph"> {menu.node.label} </Text>

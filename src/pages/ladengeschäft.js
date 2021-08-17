@@ -1,15 +1,33 @@
 import * as React from "react";
-import { MainContent, Banner, Form } from "sections/laden";
+import { graphql } from 'gatsby';
+import { MainContent, Banner, Form, ListCafe } from "sections/laden";
 
-const Laden = () => {
+const Laden = ({ data: { allPurLadenJson } }) => {
+  console.log(data, 'data')
   return (
     <>
       <MainContent />
+      {/* <ListCafe
+        label={allPurLadenJson.nodes.slice(1, 9).map(item => item.label)}
+        content={allPurLadenJson.nodes.slice(1, 9).map(item => item.content)}
+      /> */}
       <Banner />
       <Form />
     </>
   );
 };
+
+export const data = graphql`
+    query LadenDataPageAndLadenDataPage {
+     allPurLadenJson {
+        nodes {
+          id
+          label
+          content
+        }
+      }
+    }
+  `
 
 
 

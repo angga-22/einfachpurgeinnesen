@@ -9,6 +9,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Section from 'components/Box'
 import underlineActive from '../../images/underline-active.svg'
 import underlineInactive from '../../images/underline-inactive.svg'
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+import { Breakpoints } from '../../components/Breakpoints'
 
 const Form = () => {
   const [firstName, setFirstName] = React.useState('')
@@ -22,30 +24,25 @@ const Form = () => {
   }
 
   return (
-    <Section
-      sx={{
-        padding: [
-          "0 7.5vw 10px 7.5vw",
-          "0 9.4vw   127px 9.4vw",
-          "0 7.6vw 106px 7.6vw",
-          "0 10vw 136px 10vw",
-          "0 12vw 215px 12vw",
-          "0 13vw 211px 13vw",
-        ],
-      }}
-    >
-      <Box sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative'
-      }}>
+    <GridWrapper>
+      <GridItem
+        sx={{
+          gridColumn:
+            [
+              "1 / span 12",
+              "2 / span 11",
+              " 2 / span 18",
+              "3 / span 17",
+              "3 / span 12",
+              " 2 / span 8"
+            ]
+        }}>
 
         {/* // sentence section  */}
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            maxWidth: ["100%", "100%", "485px", "451px", "454px", "470px"]
           }}
         >
           <Text
@@ -68,28 +65,40 @@ const Form = () => {
             Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft nachgehen.
           </Text>
         </Box>
-      </Box>
+      </GridItem>
+
+
+
       {/* // form section  */}
-      <Box
+      <GridItem
         sx={{
-          maxWidth: ["375px", "430px", "630px", "438px", "454px", "470px"],
-          padding: ["34px"],
-          margin: ["0 auto", "0 auto", "0 auto", "0 auto", "0 0 0 30%", "-10em 0 0 50%"],
-          borderRadius: '12px',
-          boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.1)',
+          gridColumn:
+            [
+              "1 / span 12",
+              "2 / span 10",
+              "2 / span 22",
+              "5 / span 15",
+              "10 / span 11",
+              " 13 / span 9"
+            ],
+          padding: ["34px 0 80px 0", "34px 2.7em 80px 2.7em", "34px 1em", "38px 30px", "38px 33px", "38px 49px"],
           display: 'flex',
-          flexDirection: ["column", "column", "row"],
+          flexDirection: ["column", "column", "row", "row"],
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           position: 'relative',
-          backgroundColor: 'primary'
+          borderRadius: '12px',
+          boxShadow: ["none", '0px 12px 24px rgba(0, 0, 0, 0.1)'],
+          m: ["50px 0 0 0", "0 0 127px 0", "0 0 107px 0", "50px 0 136px 0", "0 0 215px 0", "180px 0 211px 0"],
+          backgroundColor: ["primary"]
         }}
         as="form" onSubmit={handleSubmit}>
+
         <Box sx={{
           position: 'absolute',
-          width: ["152px", "121px", "121px", "197px", "197px", "254px"],
-          top: ["-5em", "-4em", "-7em", "-5.5em", "-12em"],
-          right: ['1em', "-2em", "-1.6em", "-2.5em", "-5em"],
+          width: ["100px", "121px", "121px", "197px", "197px", "254px"],
+          top: ["-7em", "-3em", "-6em", "-8.5em", "-12em", "-12em"],
+          right: ['1.5em', "-2.4em", "-1.6em", "-5.4em", "-5em", "-8em"],
           zIndex: '-99'
         }}>
           <StaticImage
@@ -97,10 +106,11 @@ const Form = () => {
             src={'../../images/pink-crown.png'}
             alt="pink-crown" />
         </Box>
+
         {/* // firstName  */}
         <Box sx={{
           width: ["100%", "100%", "50%", "100%"],
-          p: [null, null, '10px'],
+          p: ["0", "0", '10px'],
         }}>
           <Label htmlFor="firstName"
             sx={{
@@ -111,7 +121,7 @@ const Form = () => {
               fontFamily: 'body',
               border: 'none',
               outline: 'none',
-              mb: '50px',
+              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: 'bottom',
               backgroundSize: '100%',
@@ -136,19 +146,18 @@ const Form = () => {
         <Box sx={{
           width: ["100%", "100%", "50%", "100%"],
 
-          p: [null, null, '10px']
+          p: ["0", "0", '10px']
         }}>
           <Label htmlFor="lastName"
             sx={{
               fontFamily: 'body',
-              width: ["100%", "100%", "50%"],
             }}>Last Name </Label>
           <Input
             sx={{
               fontFamily: 'body',
               border: 'none',
               outline: 'none',
-              mb: '50px',
+              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: 'bottom',
               backgroundRepeat: 'no-repeat',
@@ -170,9 +179,8 @@ const Form = () => {
         </Box>
         {/* // email  */}
         <Box sx={{
-          width: ["100%", "100%", "70%", "100%"],
-
-          p: [null, null, '10px']
+          width: ["100%", "100%", "65%", "100%"],
+          p: ["0", "0", '10px']
         }}>
           <Label htmlFor="email" sx={{ fontFamily: 'body' }}>email </Label>
           <Input
@@ -180,7 +188,7 @@ const Form = () => {
               fontFamily: 'body',
               border: 'none',
               outline: 'none',
-              mb: '50px',
+              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: 'bottom',
               backgroundRepeat: 'no-repeat',
@@ -208,9 +216,9 @@ const Form = () => {
         }}>
           <Button variant="primaryBlack" type="submit">Submit</Button>
         </Box>
-      </Box>
+      </GridItem>
 
-    </Section>
+    </GridWrapper >
   )
 }
 

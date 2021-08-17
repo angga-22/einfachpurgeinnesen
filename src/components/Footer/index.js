@@ -21,7 +21,6 @@ const Footer = () => {
           "0 7.6vw 81px 7.6vw",
           "0 7.6vw 81px 7.6vw",
           "0 7.6vw 81px 7.6vw",
-
         ],
       }}
     >
@@ -73,7 +72,7 @@ const Footer = () => {
             textAlign: ["center"],
             padding: ["0 0 56px 0", "0 0 81px 0", "0 60px 0 0", "0 30px 0 30px ", "0 5vw 0 0", "0 5vw 0 0"],
             maxWidth: ["300px", "500px", "100%", "100px", "40%", "100%"],
-            '@media screen and (max-width: 1194px)': {
+            '@media screen and (max-width: 1000px)': {
               margin: '0 auto',
             }
           }}
@@ -104,8 +103,6 @@ const Footer = () => {
           >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Text>
         </Box>
       </Box>
-
-
       {/* //content wrapper */}
       <Box>
         <Content />

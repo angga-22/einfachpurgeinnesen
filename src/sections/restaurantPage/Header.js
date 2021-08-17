@@ -1,26 +1,40 @@
-/** @jsx jsx */
+import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { jsx, Box, Text } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
-import Section from 'components/Box'
+const TopContent = () => {
 
-const TopContent = () => (
-  <Section
-    sx={{
-      marginTop: ["40px", "40px", "32px", "16px", "65px", "64px", "155px"],
-    }}
-  >
-    {/* //hero section */}
-    <Box>
-      <Box
+  const [heroImage, setHeroImage] = React.useState(
+    window.matchMedia("(min-width: 700px)").matches
+  );
+
+
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => {
+      setHeroImage(window.matchMedia("(min-width: 700px)").matches);
+    });
+
+  });
+
+  return (
+    <GridWrapper
+      sx={{
+        m: ["12px 0 0 0", "22px 0 0 0", "16px 0 0 0", "65px 0 0 0", "64px 0 0 0", "155px 0 0 0"]
+      }}
+    >
+      {/* //hero section */}
+      <GridItem
         sx={{
-          margin: '0 auto',
-          maxWidth: ["319px", "517px", "658px", "659px", "706px", "956px"]
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 22", "2 / span 21", " 4 / span 17", " 4 / span 17"]
+          // margin: '0 auto',
+          // maxWidth: ["319px", "517px", "658px", "659px", "706px", "956px"]
         }}
       >
         <Box
           sx={{
-            width: ["24px", "24px", "24px", "24px", "24px", "60px"],
+            width: ["24px", "30px", "24px", "24px", "24px", "47px"],
           }}
         >
           <StaticImage
@@ -42,7 +56,7 @@ const TopContent = () => (
               fontFamily: 'label',
               margin: '0 auto',
               mb: ["18px"],
-              pl: ["0", "25px", "30px", "35px", "30px", "50px"],
+              pl: ["0", "40px", "30px", "30px", "38px", "50px"],
             }}
           > <Text sx={{ fontWeight: 'bold' }}>Tu etwas Gutes rein,</Text> dann kommt etwas Gutes raus.</Text>
           <Text
@@ -52,41 +66,65 @@ const TopContent = () => (
               lineHeight: '125%',
               fontSize: ["18px", "22px", "18px", "20px", "18px", "22px"],
               fontFamily: 'body',
-              pl: ["0", "25px", "30px", "35px", "30px", "50px"],
+              pl: ["0", "40px", "30px", "30px", "38px", "50px"],
               pb: ["71px", "41px", "48px", "80px", "60px", "35px"]
             }}
           >Worte unseres Urgroßvaters</Text>
         </Box>
         <Box
           sx={{
-            width: ["24px", "24px", "24px", "24px", "24px", "78px"],
+            width: ["30px", "30px", "30px", "30px", "30px", "78px"],
             float: 'right',
-            marginTop: '-100px'
+            mr: ["20px", "0", "0"],
+            marginTop: ['-100px', "-100px", "-100px", "-130px", "-100px", "-70px"]
           }}
         >
           <StaticImage
             src={'../../images/quote-right.png'}
             alt="quote-right" />
         </Box>
-      </Box>
-      <Box
-        sx={{
-          maxWidth: ["100%", "100%", "514px", "708px", "832px", "794px"],
-          position: ["absolute", "absolute", "static", "static"],
-          left: '0',
-          right: '0',
-          margin: '0 auto'
-        }}
-      >
-        <StaticImage
-          src={'../../images/hero-img.png'}
-          alt="hero-img"
-        />
-      </Box>
+      </GridItem>
 
-    </Box>
-  </Section>
-)
+
+      {heroImage ?
+        <GridItem
+          sx={{
+            gridColumn: ["1 / span 12", "1 / span 12", "3 / span 18", "1 / span 24", "3 / span 20", " 6 / span 15"],
+            position: ["static"]
+          }}
+        >
+          <StaticImage
+            src={'../../images/hero-img.png'}
+            alt="hero-img"
+          />
+        </GridItem>
+
+        :
+        <Box
+          sx={{
+            maxWidth: ["100%"],
+            position: ["absolute"],
+            left: '0',
+            right: '0',
+            top: ['18em', ""],
+          }}
+        >
+          <StaticImage
+            src={'../../images/hero-img.png'}
+            alt="hero-img"
+          />
+        </Box>
+
+      }
+
+
+
+
+
+    </GridWrapper>
+
+  )
+}
 
 
 export default TopContent

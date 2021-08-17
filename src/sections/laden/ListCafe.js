@@ -1,17 +1,20 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
 import { Box, Text } from 'theme-ui'
 import underline from '../../images/underline-inactive.svg'
 import { Breakpoints } from '../../components/Breakpoints'
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
-const ListLocation = ({ label, content }) => {
+
+const ListCafe = ({ label, content }) => {
 
 
 
   return (
-    <>
-      <Box
+    <GridWrapper>
+      {/* // section 3 slider */}
+      <GridItem
         sx={{
+          gridColumn: ["1 / span 12", "1 / span 12", "2 / span 22", "2 / span 22", "2 / span 23", "4 / span 20"],
           overflowX: 'auto',
           'WebkitOverflowScrolling': 'touch',
           'WebkitScrollbar': {
@@ -20,17 +23,20 @@ const ListLocation = ({ label, content }) => {
         }}
       >
         <Box sx={{
-          backgroundColor: 'blue',
           display: 'grid',
           gridTemplateColumns: ["repeat(2, 1fr)"],
           gridGap: '2',
-          width: ["100%", "100%", "100%", "100%", "90%", "70%"],
+          // width: ["100%", "100%", "100%", "650px", "916px", "956px"],
           margin: '0 auto',
           '@media screen and (max-width: 500px)': {
             gridTemplateColumns: "repeat(4, 1fr)",
             width: '966px',
           },
           [Breakpoints.phoneLandscape]: {
+            gridTemplateColumns: ["repeat(3, 1fr)"],
+          },
+          [Breakpoints.tabletPortrait]: {
+            width: '100%',
             gridTemplateColumns: ["repeat(3, 1fr)"],
           },
 
@@ -44,14 +50,18 @@ const ListLocation = ({ label, content }) => {
             backgroundRepeat: 'no-repeat',
             margin: '10px',
             pt: '20px',
-            [Breakpoints.desktop]: {
+            backgroundColor: 'red',
+            [Breakpoints.tabletPortrait]: {
+              maxWidth: '200px'
+            },
+            [Breakpoints.tabletLandscape]: {
               maxWidth: '254px'
             }
           }}>
             <Text sx={{
               fontFamily: 'label',
               fontWeight: '700',
-              fontSize: ["22px", "28px", "22px", "28px", "26px", "28px"],
+              fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
               color: '#DA3C6E'
             }}>{label}</Text>
             <Text
@@ -63,9 +73,9 @@ const ListLocation = ({ label, content }) => {
             >{content}</Text>
           </Box>
         </Box>
-      </Box>
-    </>
+      </GridItem>
+    </GridWrapper >
   )
 }
 
-export default ListLocation
+export default ListCafe

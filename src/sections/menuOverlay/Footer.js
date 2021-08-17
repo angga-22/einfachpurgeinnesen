@@ -16,7 +16,7 @@ const Footer = () => {
           borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
           borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
         },
-        '@media screen and (min-width: 501px) and (max-width: 699px)': {
+        '@media screen and (min-width: 500px) and (max-width: 699px)': {
           backgroundColor: 'none',
           borderTopLeftRadius: "none",
           borderTopRightRadius: "none",
@@ -24,7 +24,7 @@ const Footer = () => {
           borderBottomRightRadius: "none",
         },
         mb: ["0", "30px", "0", "0"],
-        '@media screen and (min-width: 701px) and (max-width: 750px)': {
+        '@media screen and (min-width: 700px) and (max-width: 749px)': {
           backgroundColor: 'secondary',
           borderTopLeftRadius: ["1em"],
           borderTopRightRadius: ["1em"],

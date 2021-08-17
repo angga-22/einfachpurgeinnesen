@@ -71,7 +71,6 @@ const Banner = () => {
         m: ["2em 0 0 0", " 0", "-10em 0 0 0", "-3em 0 0 0", "-6em 0 0 0", "-7em 0 0 0"],
         overflow: ["hidden"],
       }}>
-
         {beverages ?
           <StaticImage
             sx={{
