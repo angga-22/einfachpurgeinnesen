@@ -1,77 +1,118 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Button } from '@theme-ui/components'
+import { Button, Grid } from '@theme-ui/components'
+import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+
 const Footer = () => {
 
   return (
-    <div>
-      <footer
-        sx={{
+    <GridWrapper
+      sx={{
+        '@media screen and (max-width: 500px)': {
           backgroundColor: 'secondary',
-          display: 'flex',
-          justifyContent: "space-between",
-          alignItems: 'center',
-          flexDirection: ["column-reverse", "column-reverse", "row", "row", "row", "row"],
-          maxWidth: ["100%", "80%", "100%", "85%", "85%", "90%"],
-          margin: [null, "20px auto", "0 auto", "20px auto", "40px auto", "50px auto"],
-          padding: [
-            "5vw 7.5vw",
-            "5vw 9.4vw",
-            "0 7.6vw",
-            "2vw 2.6vw",
-            "2vw 85px",
-            "1vw 15vw",
+          borderTopLeftRadius: ["1em"],
+          borderTopRightRadius: ["1em"],
+          borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
+          borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
+        },
+        '@media screen and (min-width: 501px) and (max-width: 699px)': {
+          backgroundColor: 'none',
+          borderTopLeftRadius: "none",
+          borderTopRightRadius: "none",
+          borderBottomLeftRadius: "none",
+          borderBottomRightRadius: "none",
+        },
+        mb: ["0", "30px", "0", "0"],
+        '@media screen and (min-width: 701px) and (max-width: 750px)': {
+          backgroundColor: 'secondary',
+          borderTopLeftRadius: ["1em"],
+          borderTopRightRadius: ["1em"],
+          borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
+          borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
+        }
+      }}
+    >
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 12",
+            "1 / span 12",
+            "1 / span 24",
+            "1 / span 24",
+            "1 / span 24",
+            "1 / span 24",
           ],
+          '@media screen and (max-width: 500px)': {
+            backgroundColor: 'none',
+            borderRadius: ["0"],
+            borderTopLeftRadius: ["1em"],
+            borderTopRightRadius: ["1em"],
+            borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
+            borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
+          },
+          display: 'flex',
+          alignItems: 'center',
           height: ["auto", "auto", "345px", "392px", "392px", "392px"],
+          backgroundColor: 'secondary',
           borderTopLeftRadius: ["1em"],
           borderTopRightRadius: ["1em"],
           borderBottomLeftRadius: [null, "1em", "0", "1em", "1em", "1em"],
           borderBottomRightRadius: [null, "1em", "0", "1em", "1em", "1em"],
         }}
       >
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          maxWidth: ["100%", "100%", "50%", "50%"],
-        }}>
-          <Text variant="subHeading"
-            sx={{
-              fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
-              lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
-              fontWeight: '400',
-              fontFamily: 'Quincy CF',
-              marginTop: '39px',
-              marginBottom: '40px'
-            }}
-          >
-            Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
-            <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
-          </Text>
+        <GridItem
+          sx={{
+            display: 'flex',
+            justifyContent: "space-between",
+            alignItems: 'center',
+            flexDirection: ["column-reverse", "column-reverse", "row", "row", "row", "row"],
+            p: ["0 0 45px 0", "0 3em 51px 3em", "0 2em", "0 3em", "0 5em", "0 14.5em"],
+          }}
+        >
           <Box sx={{
-            border: '1px solid #2E2E2E',
-            borderRadius: '13px',
-            width: ["186px", "211px", "200px", "211px", null, null],
-            height: ["44px", "57px", "44px", "57px", null, null]
+            display: 'flex',
+            flexDirection: 'column',
+            maxWidth: ["100%", "100%", "60%", "50%"],
           }}>
-            <Button variant="primaryBlack">Jetzt einkaufen</Button>
+            <Text variant="subHeading"
+              sx={{
+                fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
+                lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
+                fontWeight: '400',
+                fontFamily: 'Quincy CF',
+                mt: ["40px", "40px", "0", "0"],
+                marginBottom: '40px'
+              }}
+            >
+              Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
+              <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
+            </Text>
+            <Box sx={{
+              border: '1px solid #2E2E2E',
+              borderRadius: '13px',
+              width: ["186px", "211px", "200px", "211px", null, null],
+              height: ["44px", "57px", "44px", "57px", null, null]
+            }}>
+              <Button variant="primaryBlack">Jetzt einkaufen</Button>
+            </Box>
           </Box>
-        </Box>
-        <Box sx={{
-          margin: ['0 auto', '0 auto', '0', null, null, null],
-          overflow: 'hidden',
-        }}>
-          <StaticImage
-            sx={{
-              width: '22em',
-              margin: '-30px -35px -40px -20px',
-            }}
-            src={'../../images/header-img.png'}
-            alt="bottle"
-          />
-        </Box>
-      </footer>
-    </div>
+          <Box sx={{
+            margin: ['0 auto', '0 auto', '0', null, null, null],
+            overflow: 'hidden',
+          }}>
+            <StaticImage
+              sx={{
+                width: ['25em', '25em', "15em", "20em", "22em"],
+                margin: '-30px -35px -40px -20px',
+              }}
+              src={'../../images/header-img.png'}
+              alt="bottle"
+            />
+          </Box>
+        </GridItem>
+      </GridItem>
+    </GridWrapper>
   )
 }
 
