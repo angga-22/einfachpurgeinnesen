@@ -1,12 +1,10 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
 const MainContent = ({ data }) => {
 
-  console.log('dataa', data)
   return (
     <GridWrapper sx={{
       m: ["87px 0 148px 0", "126px 0 188px 0", "92px 0 150px 0", "260px 0 360px 0", "169px 0 0 0", "160px 0 43px 0"]
