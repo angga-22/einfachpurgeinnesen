@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 import { Button } from '@theme-ui/components'

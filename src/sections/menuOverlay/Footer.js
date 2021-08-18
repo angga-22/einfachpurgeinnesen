@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Text } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Button, Grid } from '@theme-ui/components'
+import { Button } from '@theme-ui/components'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
 const Footer = () => {

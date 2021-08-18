@@ -3,7 +3,6 @@ import { jsx, Flex, Box, Heading, Text } from "theme-ui"
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
-import { Breakpoints } from '../../components/Breakpoints'
 const Header = ({ handleClose }) => {
   const data = useStaticQuery(graphql`
     query getOpeningHours {

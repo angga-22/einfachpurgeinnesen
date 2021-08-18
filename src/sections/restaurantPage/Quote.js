@@ -2,7 +2,6 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Box, Text } from "theme-ui";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
-import { Breakpoints } from '../../components/Breakpoints'
 const Quote = ({ sx }) => {
 
   const [coupleTwo, setCoupletwo] = React.useState(

@@ -6,11 +6,9 @@ import {
 } from 'theme-ui'
 import { Button } from '@theme-ui/components'
 import { StaticImage } from 'gatsby-plugin-image'
-import Section from 'components/Box'
 import underlineActive from '../../images/underline-active.svg'
 import underlineInactive from '../../images/underline-inactive.svg'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
-import { Breakpoints } from '../../components/Breakpoints'
 
 const Form = () => {
   const [firstName, setFirstName] = React.useState('')

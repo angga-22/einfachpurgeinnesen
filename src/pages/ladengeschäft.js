@@ -1,33 +1,43 @@
 import * as React from "react";
 import { graphql } from 'gatsby';
-import { MainContent, Banner, Form, ListCafe } from "sections/laden";
+import { Banner, Form, Products, Header, CopyWriter } from "sections/laden";
 
-const Laden = ({ data: { allPurLadenJson } }) => {
-  console.log(data, 'data')
+const Laden = ({ data }) => {
+
   return (
     <>
-      <MainContent />
-      {/* <ListCafe
-        label={allPurLadenJson.nodes.slice(1, 9).map(item => item.label)}
-        content={allPurLadenJson.nodes.slice(1, 9).map(item => item.content)}
-      /> */}
+      <Header
+        label={data.pageData.nodes[0].header.label}
+        content={data.pageData.nodes[0].header.content}
+      />
+      <CopyWriter />
+      <Products
+        data={data.pageData}
+      />
       <Banner />
       <Form />
     </>
   );
 };
 
-export const data = graphql`
-    query LadenDataPageAndLadenDataPage {
-     allPurLadenJson {
-        nodes {
-          id
-          label
+export const query = graphql`
+  query MyQuery {
+    pageData: allPurLadenJson {
+      nodes {
+        header {
           content
+          label
+        }
+        products {
+          
+          content
+          label
         }
       }
     }
+  }
   `
+
 
 
 
