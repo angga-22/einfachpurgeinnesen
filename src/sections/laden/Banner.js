@@ -41,10 +41,9 @@ const Banner = () => {
         <Text
           variant="subHeading"
           sx={{
-            fontFamily: 'label',
             fontWeight: 'normal',
             fontSize: ["40px", "50px", "38px", "40px", "40px", "43px"],
-            lineHeight: ["50px", "62px", "47px", "50px", "40px", "53px"],
+            lineHeight: ["125%"]
           }}
         >
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.

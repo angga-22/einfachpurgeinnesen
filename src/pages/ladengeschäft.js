@@ -7,8 +7,8 @@ const Laden = ({ data }) => {
   return (
     <>
       <Header
-        label={data.pageData.nodes[0].header.label}
-        content={data.pageData.nodes[0].header.content}
+        label={data.pageData.header.label}
+        content={data.pageData.header.content}
       />
       <CopyWriter />
       <Products
@@ -21,18 +21,15 @@ const Laden = ({ data }) => {
 };
 
 export const query = graphql`
-  query MyQuery {
-    pageData: allPurLadenJson {
-      nodes {
-        header {
-          content
-          label
-        }
-        products {
-          
-          content
-          label
-        }
+  query getLadenData {
+    pageData: purLadenJson {
+      header {
+        content
+        label
+      }
+      products {
+        content
+        label
       }
     }
   }

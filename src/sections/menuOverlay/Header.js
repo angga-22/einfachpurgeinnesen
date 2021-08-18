@@ -19,7 +19,6 @@ const Header = ({ handleClose }) => {
   return (
     <GridWrapper
       sx={{
-        // idth: ["100%", "100%", "100%", "85%", "85%", "90%"],
         '@media screen and (max-width: 750px)': {
           backgroundColor: 'primary',
           boxShadow: [
@@ -38,14 +37,6 @@ const Header = ({ handleClose }) => {
             "26px 0",
             "26px 0",
           ],
-          // m: [
-          //   "0",
-          //   "0",
-          //   "0",
-          //   "49px 0 0 0",
-          //   "56px 0 0 0",
-          //   "41px 0 0 0",
-          // ],
           gridColumn: [
             "1 / span 12",
             "1 / span 12",
@@ -112,7 +103,7 @@ const Header = ({ handleClose }) => {
                         sx={{
                           mr: "1em",
                           lineHeight: "175%",
-                          fontSize: [2, 2, 2, 3, 3, 3,]
+                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
                         }}
                       >{item.label}</Text>
                       <Text
@@ -120,8 +111,7 @@ const Header = ({ handleClose }) => {
                         sx={{
                           lineHeight: "175%",
                           fontWeight: '400',
-                          fontSize: [2, 2, 2, 3, 3, 3,]
-
+                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
                         }}
                       >{item.hours}</Text>
                     </Box>
@@ -155,7 +145,7 @@ const Header = ({ handleClose }) => {
                     variant="subHeading"
                     sx={{
                       pr: "48px",
-                      fontSize: [2, 2, 2, 3, 3, 3,]
+                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
                     }}
                   >Vegan oder vegane Option</Text>
                 </Box>
@@ -175,9 +165,10 @@ const Header = ({ handleClose }) => {
                     }}
                     src={'../../images/vegetarian.png'}
                   />
-                  <Text variant="subHeading" sx={{
-                    fontSize: [2, 2, 2, 3, 3, 3,]
-                  }}>
+                  <Text variant="subHeading"
+                    sx={{
+                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
+                    }}>
                     Vegatarisch</Text>
                 </Box>
               </Box>

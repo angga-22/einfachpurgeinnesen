@@ -38,7 +38,7 @@ const Content = () => {
         <Text
           variant="footerContentText"
           sx={{
-            fontWeight: '700'
+            fontWeight: 'ceraBold'
           }}
         >Restaurant </Text>
         {data.allPurFooterJson.edges.slice(0, 2).map(item => {
@@ -63,7 +63,7 @@ const Content = () => {
         <Text
           variant="footerContentText"
           sx={{
-            fontWeight: '700'
+            fontWeight: 'ceraBold'
           }}
         >Ladengeschäft </Text>
         {data.allPurFooterJson.edges.slice(2, 3).map(item => {
@@ -89,7 +89,7 @@ const Content = () => {
         <Text
           variant="footerContentText"
           sx={{
-            fontWeight: '700'
+            fontWeight: 'ceraBold'
           }}
         >Kontakt & Anfahrt </Text>
         {data.allPurFooterJson.edges.slice(3, 5).map(item => {

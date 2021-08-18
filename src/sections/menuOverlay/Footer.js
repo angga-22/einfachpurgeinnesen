@@ -75,12 +75,13 @@ const Footer = () => {
             flexDirection: 'column',
             maxWidth: ["100%", "100%", "60%", "50%"],
           }}>
-            <Text variant="subHeading"
+            <Text
               sx={{
                 fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
-                lineHeight: ["25px", "35px", "30px", "32px", "40px", "35px"],
+                lineHeight: "125%",
                 fontWeight: '400',
-                fontFamily: 'Quincy CF',
+                color: 'text',
+                fontFamily: 'label',
                 mt: ["40px", "40px", "0", "0"],
                 marginBottom: '40px'
               }}

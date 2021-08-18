@@ -90,7 +90,7 @@ const Banner = () => {
                 sx={{
                   color: 'white',
                   fontWeight: '500',
-                  lineHeight: [1],
+                  lineHeight: ["90%"],
                   fontSize: ["72px", "100px", "80px", "100px", "120px"],
                   wordWrap: ["break-word"],
                   fontFamily: 'label',
@@ -105,7 +105,7 @@ const Banner = () => {
                 sx={{
                   color: 'white',
                   fontWeight: '500',
-                  lineHeight: [1],
+                  lineHeight: ["90%"],
                   fontSize: ["72px", "100px", "82px", "100px", "120px"],
                   wordWrap: ["break-word"],
                   fontFamily: 'label',
@@ -132,7 +132,7 @@ const Banner = () => {
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: [3, 4, 2, 4, 4, 4],
+                  fontSize: ["18px", "20px", "16px", "20px", "20px", "20px"],
                   width: ["90%", "100%", "55%", "100%", "55%", "60%"],
                   mb: ["55px", "50px", "50px", null, null, null],
                   pl: ["0", "0", "0", "0", "150px", "0"],

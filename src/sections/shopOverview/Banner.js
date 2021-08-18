@@ -5,6 +5,9 @@ import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 import { Button } from '@theme-ui/components'
 import bgToSmall from '../../images/bg-to-small-shopOverview.svg'
 import bgToBig from '../../images/bg-to-big-shopOverview.svg'
+
+
+
 const Banner = () => {
   const [bgBannerMedium, setBgBannerMedium] = React.useState(
     window.matchMedia("(max-width: 700px)").matches

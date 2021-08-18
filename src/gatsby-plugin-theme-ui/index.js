@@ -16,8 +16,12 @@ export default {
     label: 'Quincy CF',
     body: 'Cera Round Pro',
   },
-  fontWeights: [400, 800, 700, 800],
-  fontSizes: [12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
+  fontWeights: {
+    ceraBold: 700,
+    quincyBold: 800
+  },
+  // remove this one.
+  // fontSizes: [12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
   lineHeights: {
     body: 1,
     heading: 1.2,
@@ -30,20 +34,20 @@ export default {
   text: {
     heading: {
       color: "text",
-      fontSize: 3,
+      // fontSize: 3,
       fontFamily: 'label',
     },
     subHeading: {
       color: "text",
       fontFamily: 'body',
-      fontWeight: 1,
-      fontSize: 3,
+      // fontWeight: 1,
+      // fontSize: 3,
     },
     paragraph: {
       color: "text",
       fontFamily: 'body',
       lineHeight: "175%",
-      fontSize: 2,
+      // fontSize: 2,
     },
     mainArticle: {
       color: "text",
@@ -62,8 +66,8 @@ export default {
       color: "text",
       fontFamily: 'body',
       fontWeight: "normal",
-      lineHeight: ["28px", "35px", "28px", "31.5px", "31.5px", "31.5px"],
-      fontSize: [2, 4, 2, 3, 3, 3]
+      lineHeight: "175%",
+      fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
     }
   },
   breakpoints: [
@@ -82,10 +86,10 @@ export default {
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
       lineHeights: '175%',
-      fontWeight: 1,
+      fontWeight: "ceraBold",
       height: '100%',
       width: '100%',
-      fontSize: [3, 4, 3, 3, 3, 4],
+      fontSize: ["18px", "20px", "18px", "18px", "18px", "20px"],
       textAlign: 'center',
       borderRadius: '12px',
       fontFamily: 'body',
@@ -108,8 +112,8 @@ export default {
       lineHeights: '175%',
       height: '100%',
       width: '100%',
-      fontWeight: 1,
-      fontSize: [3, 4, 3, 3, 3, 4],
+      fontWeight: "ceraBold",
+      fontSize: ["18px", "20px", "18px", "18px", "18px", "20px"],
       textAlign: 'center',
       borderRadius: '12px',
       fontFamily: 'body',

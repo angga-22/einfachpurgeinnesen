@@ -7,9 +7,6 @@ import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
 const ListCafe = ({ data }) => {
 
-  console.log(data, 'data barus')
-
-
   return (
     <GridWrapper>
       <GridItem
@@ -40,7 +37,7 @@ const ListCafe = ({ data }) => {
           },
 
         }}>
-          {data.nodes[0].products.map(item => (
+          {data.products.map(item => (
 
             <Box sx={{
               display: 'flex',

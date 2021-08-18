@@ -60,8 +60,8 @@ const CopyWriter = () => {
             sx={{
               fontFamily: 'label',
               fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"],
-              fontWeight: 'bold',
-              lineHeight: ["40px", "52px", "35px", "50px", "50px", "53px"]
+              fontWeight: 'ceraBold',
+              lineHeight: ["125%"]
             }}
           >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
         </Box>

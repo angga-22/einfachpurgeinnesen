@@ -82,7 +82,7 @@ const Footer = () => {
             sx={{
               marginBottom: ["16px", "16px", "0"],
               textAlign: ["center", "center", "left", "left"],
-              fontWeight: '700'
+              fontWeight: 'ceraBold'
             }}
           >Seiten</Text>
           <Text
@@ -90,7 +90,7 @@ const Footer = () => {
             sx={{
               textAlign: ["center", "center", "left", "left"],
               [Breakpoints.tabletPortrait]: {
-                lineHeight: '50px',
+                lineHeight: '125%',
                 whiteSpace: 'normal',
                 textAlign: 'left'
               },
