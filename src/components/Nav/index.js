@@ -160,16 +160,19 @@ const Nav = () => {
               key={menu.node.id}
               to={menu.node.link}
               activeStyle={{
-                borderBottom: '1px solid black'
+                borderBottom: '1px solid text'
               }}
               style={{
                 color: "#000",
-                fontWeight: "normal",
-                fontSize: ["16px"],
                 textDecoration: "none",
               }}
             >
-              <Text variant="paragraph"> {menu.node.label} </Text>
+              <Text sx={{
+                fontFamily: 'body',
+                fontWeight: "normal",
+                lineHeight: "100%",
+                fontSize: ["16px", "16px", "16px", "16px", "16px", "18px"],
+              }}> {menu.node.label} </Text>
             </Link>
           ))}
         </Box>

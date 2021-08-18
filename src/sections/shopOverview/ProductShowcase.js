@@ -34,7 +34,7 @@ const ProductShowcase = ({ data }) => {
             }}
             dangerouslySetInnerHTML={{ __html: data.label }}
           ></Text>
-          <Text variant="paragraphShopOverview">
+          <Text variant="paragraph">
             {data.content}
           </Text>
         </Box>

@@ -61,7 +61,7 @@ const Footer = () => {
               textAlign: ["center", "center", "left"],
               fontSize: ["14px", "20px", "16px", "18px", "18px", "18px"]
             }}
-          >Ganz <Text sx={{ fontWeight: 'bold' }}> bewusst, gewusst </Text> was.</Text>
+          >Ganz <Text sx={{ fontWeight: 'ceraBold' }}> bewusst, gewusst </Text> was.</Text>
         </Box>
 
         {/* //seitan */}
@@ -78,17 +78,19 @@ const Footer = () => {
           }}
         >
           <Text
-            variant="footerContentText"
+            variant="paragraph"
             sx={{
               marginBottom: ["16px", "16px", "0"],
               textAlign: ["center", "center", "left", "left"],
+              fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"],
               fontWeight: 'ceraBold'
             }}
           >Seiten</Text>
           <Text
-            variant="footerContentText"
+            variant="paragraph"
             sx={{
               textAlign: ["center", "center", "left", "left"],
+              fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"],
               [Breakpoints.tabletPortrait]: {
                 lineHeight: '300%',
                 whiteSpace: 'normal',

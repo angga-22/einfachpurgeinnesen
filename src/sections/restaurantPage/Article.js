@@ -13,10 +13,10 @@ const Article = ({ firstParagraph, secondParagraph, sx }) => {
             pr: ["0", "0", "37px", "0", "0", "0"],
             pb: ["20px", "20px", "0", "20px", "20px", "20px"]
           }}
-          variant="mainArticle"
+          variant="paragraph"
         >{firstParagraph}</Text>
         <Text
-          variant="mainArticle"
+          variant="paragraph"
         >{secondParagraph}</Text>
       </TextContainer>
     </GridWrapper>

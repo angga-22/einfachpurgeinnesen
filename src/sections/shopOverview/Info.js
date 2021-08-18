@@ -14,7 +14,6 @@ const Info = ({ data }) => {
           gridColumn: ["1 / span 12", "2 / span 12", "2 / span 24", "9 / span 18", "2 / span 21", "4 / span 17"],
         }}
       >
-
         <Box
           sx={{
             display: 'flex',
@@ -39,10 +38,9 @@ const Info = ({ data }) => {
           <Box sx={{
             mt: ["16px", "24px", "0", "24px", "0", "0"],
             ml: ["0", "0", "0", "0", "140px", "100px"],
-            // mr: ["0", "0", "0", "180px", "0", "0"]
           }}>
             <Text
-              variant="paragraphShopOverview">
+              variant="paragraph">
               {data.content}
             </Text>
           </Box>

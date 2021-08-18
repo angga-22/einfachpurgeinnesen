@@ -1,12 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-
 import Footer from '../Footer'
 import Nav from '../Nav'
-
-// General css reset
-import 'reset-css'
-
 
 // General css reset
 import 'reset-css'

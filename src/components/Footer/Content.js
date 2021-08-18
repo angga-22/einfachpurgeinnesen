@@ -36,16 +36,20 @@ const Content = () => {
         }}
       >
         <Text
-          variant="footerContentText"
+          variant="paragraph"
           sx={{
-            fontWeight: 'ceraBold'
+            fontWeight: 'ceraBold',
+            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
         >Restaurant </Text>
         {data.allPurFooterJson.edges.slice(0, 2).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="footerContentText"
+                variant="paragraph"
+                sx={{
+                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
+                }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )
@@ -61,16 +65,20 @@ const Content = () => {
         }}
       >
         <Text
-          variant="footerContentText"
+          variant="paragraph"
           sx={{
-            fontWeight: 'ceraBold'
+            fontWeight: 'ceraBold',
+            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
         >Ladengeschäft </Text>
         {data.allPurFooterJson.edges.slice(2, 3).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="footerContentText"
+                variant="paragraph"
+                sx={{
+                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
+                }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )
@@ -87,16 +95,20 @@ const Content = () => {
         }}
       >
         <Text
-          variant="footerContentText"
+          variant="paragraph"
           sx={{
-            fontWeight: 'ceraBold'
+            fontWeight: 'ceraBold',
+            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
         >Kontakt & Anfahrt </Text>
         {data.allPurFooterJson.edges.slice(3, 5).map(item => {
           return (
             <Box key={item.node.id}>
               <Text
-                variant="footerContentText"
+                variant="paragraph"
+                sx={{
+                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
+                }}
               >{item.node.label + " " + item.node.content}</Text>
             </Box>
           )

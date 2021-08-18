@@ -12,7 +12,6 @@ const Header = ({ data }) => {
         gridColumn: ["1 / span 12", "1 / span 12", "2 / span 23", "2 / span 24", "2 / span 22", "2 / span 22"],
         position: 'relative',
         mb: ["158px", "173px", "138px", "166px", "161px", "109px"],
-
       }}>
         <Box
           sx={{
@@ -26,8 +25,6 @@ const Header = ({ data }) => {
             src={'../../images/abstract-img.png'}
             alt="abstract-img" />
         </Box>
-
-
         <Box
           sx={{
             display: 'flex',
@@ -61,7 +58,7 @@ const Header = ({ data }) => {
               margin: '0 auto',
             }}
           >
-            <Text variant="paragraphShopOverview">
+            <Text variant="paragraph">
               {data.content}
             </Text>
           </Box>

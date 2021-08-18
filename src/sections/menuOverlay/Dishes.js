@@ -63,11 +63,11 @@ const Dishes = () => {
                 </span>
               </Heading>
               <Text
-                variant="paragraph"
+                variant="smallParagraph"
                 sx={{
                   marginBottom: '30px',
                   '&>b': {
-                    fontWeight: 'bold'
+                    fontWeight: '700'
                   }
                 }}
                 dangerouslySetInnerHTML={{ __html: item.node.description }}
@@ -158,7 +158,7 @@ const Dishes = () => {
                 </span>
               </Heading>
               <Text
-                variant="paragraph"
+                variant="smallParagraph"
                 sx={{
                   marginBottom: '30px',
                   '&>b': {

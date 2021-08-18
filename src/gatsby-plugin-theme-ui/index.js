@@ -18,7 +18,8 @@ export default {
   },
   fontWeights: {
     ceraBold: 700,
-    quincyBold: 800
+    quincyBold: 800,
+    normal: 'normal'
   },
   // remove this one.
   // fontSizes: [12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
@@ -34,41 +35,28 @@ export default {
   text: {
     heading: {
       color: "text",
-      // fontSize: 3,
       fontFamily: 'label',
+      fontWeight: 'normal'
+      // fontSize: ["40px", "50px"]
     },
     subHeading: {
       color: "text",
       fontFamily: 'body',
-      // fontWeight: 1,
-      // fontSize: 3,
     },
     paragraph: {
       color: "text",
       fontFamily: 'body',
       lineHeight: "175%",
-      // fontSize: 2,
-    },
-    mainArticle: {
-      color: "text",
-      fontFamily: 'body',
-      lineHeight: "175%",
-      fontSize: ["18px", "22px", "16px", "20px", "20px", "22px"]
-    },
-    paragraphShopOverview: {
-      color: "text",
-      fontFamily: "body",
-      fontWeight: "normal",
-      lineHeight: "175%",
+      fontWeight: 'normal',
       fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"]
     },
-    footerContentText: {
+    smallParagraph: {
       color: "text",
       fontFamily: 'body',
-      fontWeight: "normal",
-      lineHeight: "175%",
-      fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
-    }
+      lineHeight: "150%",
+      fontWeight: 'normal',
+      fontSize: ["16px"]
+    },
   },
   breakpoints: [
     //phone portrait was the first value in container, total value is 6 for each container
@@ -130,7 +118,7 @@ export default {
     },
     forms: {
       label: {
-        fontSize: 1,
+        fontSize: "16px",
         fontWeight: 'normal'
       },
       input: {

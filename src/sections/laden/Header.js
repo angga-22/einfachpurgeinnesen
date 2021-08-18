@@ -62,7 +62,6 @@ const Header = ({ label, content }) => {
           <Text
             sx={{
               p: ["0", "0", "0 2em 0 0", "0 2em  0 3em", "0 8em 0 11em", "0 12em 0 12em"],
-              fontSize: ["16px", "22px", "18px", "20px", "20px", "20px"],
               margin: ["0", "0", "0", "0 auto"]
             }}
             variant="paragraph"
