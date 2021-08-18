@@ -17,7 +17,7 @@ const Banner = () => {
     window.matchMedia("(min-width: 500px) and (max-width: 1439px)").matches
   );
   const [shrimpSmallDesktop, setShrimSmallDesktop] = React.useState(
-    window.matchMedia("(min-width: 1440px)").matches
+    window.matchMedia("(min-width: 1400px)").matches
   );
 
 
@@ -29,7 +29,7 @@ const Banner = () => {
       setShrimpBig(window.matchMedia("(min-width: 500px) and (max-width: 1439px)").matches);
     });
     window.addEventListener("resize", () => {
-      setShrimSmallDesktop(window.matchMedia("(min-width: 1440px)").matches);
+      setShrimSmallDesktop(window.matchMedia("(min-width: 1400px)").matches);
     });
     window.addEventListener("resize", () => {
       setLabelBanner(window.matchMedia("(min-width: 700px)").matches);
@@ -99,7 +99,6 @@ const Banner = () => {
                 }}
                 dangerouslySetInnerHTML={{ __html: ' Bistroküche?! ' }}
               >
-
               </Text>
               :
               <Text
@@ -158,10 +157,10 @@ const Banner = () => {
         {/* {mediaQuery && !mediaQuery.matches ? "haha" : "slala"} */}
         <Box
           sx={{
-            width: ["199px", "250px", "200px", "240px", "250px", "198px"],
+            width: ["199px", "250px", "180px", "240px", "250px", "198px"],
             position: 'absolute',
-            top: ["5", "5", "6em", "4", "10em"],
-            right: ["4", "6", "5", "150px"],
+            top: ["5", "5", "5em", "4", "6em", "6em"],
+            right: ["4", "4", "3", "150px", "2em", "10em"],
           }}
         >
           {
