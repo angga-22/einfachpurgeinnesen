@@ -39,9 +39,10 @@ const Banner = () => {
         m: ["130px 0 0 0", "115px 0 0 0", "82px 0 0 0", "92px 0 0 0", "10em 0 -5em 0", "10em 0 -10em 0"],
       }}>
         <Text
-          variant="subHeading"
           sx={{
             fontWeight: 'normal',
+            fontFamily: 'label',
+            color: 'text',
             fontSize: ["40px", "50px", "38px", "40px", "40px", "43px"],
             lineHeight: ["125%"]
           }}

@@ -90,7 +90,7 @@ const Footer = () => {
             sx={{
               textAlign: ["center", "center", "left", "left"],
               [Breakpoints.tabletPortrait]: {
-                lineHeight: '125%',
+                lineHeight: '300%',
                 whiteSpace: 'normal',
                 textAlign: 'left'
               },

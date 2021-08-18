@@ -3,7 +3,10 @@ import { jsx, Flex, Box, Heading, Text } from "theme-ui"
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+
+
 const Header = ({ handleClose }) => {
+
   const data = useStaticQuery(graphql`
     query getOpeningHours {
     allPurHoursJson {
@@ -103,7 +106,8 @@ const Header = ({ handleClose }) => {
                         sx={{
                           mr: "1em",
                           lineHeight: "175%",
-                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
+                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
+                          fontWeight: ["ceraBold"]
                         }}
                       >{item.label}</Text>
                       <Text
@@ -145,7 +149,8 @@ const Header = ({ handleClose }) => {
                     variant="subHeading"
                     sx={{
                       pr: "48px",
-                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
+                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
+                      fontWeight: ["ceraBold"]
                     }}
                   >Vegan oder vegane Option</Text>
                 </Box>
@@ -167,7 +172,8 @@ const Header = ({ handleClose }) => {
                   />
                   <Text variant="subHeading"
                     sx={{
-                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
+                      fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
+                      fontWeight: ["ceraBold"]
                     }}>
                     Vegatarisch</Text>
                 </Box>
@@ -193,7 +199,6 @@ const Header = ({ handleClose }) => {
                 src={'../../images/close.png'}
               />
             </button>
-
           </Flex>
         </GridItem>
       </GridItem>
