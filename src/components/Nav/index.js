@@ -165,7 +165,7 @@ const Nav = () => {
               style={{
                 color: "#000",
                 fontWeight: "normal",
-                fontSize: 2,
+                fontSize: ["16px"],
                 textDecoration: "none",
               }}
             >
