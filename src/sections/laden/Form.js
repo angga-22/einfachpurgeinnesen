@@ -46,9 +46,10 @@ const Form = () => {
           <Text
             sx={{
               fontFamily: 'label',
-              fontWeight: 'bold',
+              fontWeight: 'quincyBold',
               wordWrap: 'break-word',
               pb: '24px',
+              pr: ['2em', "0", "0"],
               fontSize: ["54px", "65px", "50px", "51px", "67px", "68px"]
             }}
           >
@@ -113,10 +114,15 @@ const Form = () => {
           <Label htmlFor="firstName"
             sx={{
               fontFamily: 'body',
+              fontSize: '14px'
             }}>First Name </Label>
           <Input
             sx={{
               fontFamily: 'body',
+              fontWeight: "ceraBold",
+              fontSize: "20px",
+              paddingLeft: '0',
+              color: 'text',
               border: 'none',
               outline: 'none',
               mb: ["50px", "50px", "32px", "50px", "50px"],
@@ -149,10 +155,14 @@ const Form = () => {
           <Label htmlFor="lastName"
             sx={{
               fontFamily: 'body',
+              fontSize: '14px'
             }}>Last Name </Label>
           <Input
             sx={{
               fontFamily: 'body',
+              fontWeight: "ceraBold",
+              fontSize: "20px",
+              paddingLeft: '0',
               border: 'none',
               outline: 'none',
               mb: ["50px", "50px", "32px", "50px", "50px"],
@@ -180,10 +190,18 @@ const Form = () => {
           width: ["100%", "100%", "65%", "100%"],
           p: ["0", "0", '10px']
         }}>
-          <Label htmlFor="email" sx={{ fontFamily: 'body' }}>email </Label>
+          <Label htmlFor="email"
+            sx={{
+              fontFamily: 'body',
+              fontSize: '14px'
+            }}
+          >email </Label>
           <Input
             sx={{
               fontFamily: 'body',
+              fontWeight: "ceraBold",
+              fontSize: "20px",
+              paddingLeft: '0',
               border: 'none',
               outline: 'none',
               mb: ["50px", "50px", "32px", "50px", "50px"],
@@ -209,10 +227,10 @@ const Form = () => {
         <Box sx={{
           border: '1px solid #2E2E2E',
           borderRadius: '13px',
-          width: ["186px", "211px", "200px", "211px", null, null],
-          height: ["44px", "57px", "44px", "57px", null, null]
+          width: ["211px"],
+          height: ["57px"]
         }}>
-          <Button variant="primaryBlack" type="submit">Submit</Button>
+          <Button variant="primaryBlack" type="submit"> Jetzt einkaufen</Button>
         </Box>
       </GridItem>
 

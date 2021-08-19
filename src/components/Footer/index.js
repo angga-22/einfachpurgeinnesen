@@ -96,11 +96,11 @@ const Footer = () => {
                 whiteSpace: 'normal',
                 textAlign: 'left'
               },
-              [Breakpoints.phoneLandscape]: {
-                whiteSpace: 'nowrap',
+              // [Breakpoints.phoneLandscape]: {
+              //   whiteSpace: 'nowrap',
 
-              },
-              wordSpacing: ["1rem", "2.5rem", ".5rem", "0", "0", "42px"],
+              // },
+              wordSpacing: ["1rem", "2.5rem", ".8rem", "0", "0", "42px"],
             }}
           >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Text>
         </Box>

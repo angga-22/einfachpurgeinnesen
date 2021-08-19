@@ -43,6 +43,9 @@ export default {
       color: "text",
       fontFamily: 'body',
     },
+    quote: {
+
+    },
     paragraph: {
       color: "text",
       fontFamily: 'body',
@@ -57,6 +60,12 @@ export default {
       fontWeight: 'normal',
       fontSize: ["16px"]
     },
+    button: {
+      lineHeights: '175%',
+      fontWeight: "ceraBold",
+      fontSize: ["18px", "20px", "18px", "18px", "18px", "20px"],
+      fontFamily: 'body',
+    }
   },
   breakpoints: [
     //phone portrait was the first value in container, total value is 6 for each container
@@ -69,23 +78,20 @@ export default {
   grids: defaultTheme.grids,
   buttons: {
     primaryWhite: {
+      variant: 'text.button',
+      color: 'text',
       mask: `url(${maskButton})`,
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
-      lineHeights: '175%',
-      fontWeight: "ceraBold",
       height: '100%',
       width: '100%',
-      fontSize: ["18px", "20px", "18px", "18px", "18px", "20px"],
       textAlign: 'center',
       borderRadius: '12px',
-      fontFamily: 'body',
       cursor: 'pointer',
-      color: 'text',
       backgroundColor: 'white',
       border: '1px solid white',
-      transition: 'all 2s',
+      transition: 'all 2s ease-out',
       '&:hover': {
         backgroundColor: 'white',
         mask: 'none',
@@ -93,23 +99,20 @@ export default {
       },
     },
     primaryBlack: {
+      variant: 'text.button',
+      color: 'white',
       mask: `url(${maskButton})`,
       display: 'inline-block',
       whiteSpace: 'nowrap',
       verticalAlign: 'middle',
-      lineHeights: '175%',
       height: '100%',
       width: '100%',
-      fontWeight: "ceraBold",
-      fontSize: ["18px", "20px", "18px", "18px", "18px", "20px"],
       textAlign: 'center',
       borderRadius: '12px',
-      fontFamily: 'body',
       cursor: 'pointer',
-      color: 'white',
       backgroundColor: 'text',
       border: '1px solid text',
-      transition: 'all 2s',
+      transition: 'all 2s ease-out',
       '&:hover': {
         backgroundColor: 'text',
         mask: 'none',

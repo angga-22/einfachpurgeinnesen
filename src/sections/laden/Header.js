@@ -7,7 +7,7 @@ const Header = ({ label, content }) => {
 
   return (
     <GridWrapper sx={{
-      mt: ["74px", "74px", "50px", "110px", "166px", "119px"],
+      mt: ["54px", "74px", "50px", "110px", "166px", "119px"],
     }}>
       <GridItem sx={{
         gridColumn: ["1 / span 12", "1 / span 12", "3 / span 21", "3 / span 20", "2 / span 21", "3 / span 21"],
@@ -49,10 +49,10 @@ const Header = ({ label, content }) => {
           </Box>
           <Box
             sx={{
-              width: ["37px", "50px", "50px", "76px", "118px", "118px"],
+              width: ["37px", "50px", "70px", "76px", "118px", "118px"],
               position: 'absolute',
-              top: ["10em", "20em", "12em", "6", "7", "7"],
-              right: ["-2", "-4", "-4", "-4", "-2", "5"]
+              top: ["10em", "20em", "12em", "10em", "7", "7"],
+              right: ["-2", "-4", "-4", "-4", "-2", "5"],
             }}
           >
             <StaticImage
@@ -61,7 +61,7 @@ const Header = ({ label, content }) => {
           </Box>
           <Text
             sx={{
-              p: ["0", "0", "0 2em 0 0", "0 2em  0 3em", "0 8em 0 11em", "0 12em 0 12em"],
+              p: ["0", "0", "0 2em 0 0", "0 2em  0 3em", "0 8em 0 11em", "0 14em 0 11.5em"],
               margin: ["0", "0", "0", "0 auto"]
             }}
             variant="paragraph"
