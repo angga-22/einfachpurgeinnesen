@@ -1,5 +1,32 @@
 import * as React from 'react'
 import { Text, Box } from '@theme-ui/components'
+
+
+const items = [
+  {
+    "id": "5",
+    "name": "Kirsche",
+    "price": 4.5,
+    "quantity": 2
+  },
+  {
+    "id": "7",
+    "name": "Schwarze",
+    "price": 5,
+    "quantity": 1
+  },
+  {
+    "id": "3",
+    "name": "Banene",
+    "price": 5.5,
+    "quantity": 1
+  },
+
+]
+
+
+
+
 const FormAdd = () => {
   const [add, setAdd] = React.useState(0)
   const [adds, setAdds] = React.useState(0)
@@ -29,10 +56,19 @@ const FormAdd = () => {
     setAdds(parseFloat(adds - 1))
   }
 
+
+
+
+
   return (
     <div>
       <Box>
-
+        {items.map(item => (
+          <>
+            <h1>{item.name}</h1>
+            <h1>{item.price + add}</h1>
+          </>
+        ))}
         <Text>{add}</Text>
         <button onClick={handlePlus}>tambah</button>
         <button onClick={handleMinus}>kurang</button>
