@@ -25,14 +25,17 @@ const Info = ({ data }) => {
           <Box sx={{
             width: ["100%", "100%", "80em", "85%", "190%", "230%",]
           }}>
-            <Text sx={{
-              fontFamily: 'label',
-              fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"],
-              pb: ["16px", "24px", "0", "24px", "0", "0"],
-              pr: ["0", "0", "52px", "76px", "0", "124px"],
-              lineHeight: '125%'
-            }}>
-              {data.label}
+            <Text
+              variant="subHeading"
+              dangerouslySetInnerHTML={{ __html: data.label }}
+              sx={{
+                pb: ["16px", "24px", "0", "24px", "0", "0"],
+                pr: ["0", "0", "52px", "76px", "0", "124px"],
+                '& > b': {
+                  fontWeight: 'bold'
+                }
+              }}
+            >
             </Text>
           </Box>
           <Box sx={{

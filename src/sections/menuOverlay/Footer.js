@@ -77,9 +77,9 @@ const Footer = () => {
           }}>
             <Text
               sx={{
-                fontSize: ["20px", "28px", "24px", "26px", "32px", "28px"],
+                fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
                 lineHeight: "125%",
-                fontWeight: '400',
+                fontWeight: 'normal',
                 color: 'text',
                 fontFamily: 'label',
                 mt: ["40px", "40px", "0", "0"],

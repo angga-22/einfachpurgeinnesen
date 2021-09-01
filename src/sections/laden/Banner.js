@@ -38,15 +38,7 @@ const Banner = () => {
         gridColumn: ["1 / span 11", "1 / span 12", "2 / span 13", "12 / 24", "1 / 10", "2 / 9"],
         m: ["130px 0 0 0", "115px 0 0 0", "82px 0 0 0", "92px 0 0 0", "10em 0 -5em 0", "10em 0 -10em 0"],
       }}>
-        <Text
-          sx={{
-            fontWeight: 'normal',
-            fontFamily: 'label',
-            color: 'text',
-            fontSize: ["40px", "50px", "38px", "40px", "40px", "43px"],
-            lineHeight: ["125%"]
-          }}
-        >
+        <Text variant="subHeading">
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.
         </Text>
         {buttonPosition ?
@@ -101,12 +93,7 @@ const Banner = () => {
         gridColumn: ["1 / span 11", "1 / span 11", "2 / span 11", "8 /  20", "17 / span 8", "18 / span 6"],
         m: ["0 0 80px 0", "0 0 110px 0", "-14em 0 125px 0", "0 0 0 115px 0", "-5em 0 120px 0", "-21em 0 236px 0"]
       }}>
-        <Text
-          variant="paragraph"
-          sx={{
-            fontSize: ["18px", "22px", "16px", "20px", "20px", "20px"],
-          }}
-        >
+        <Text variant="paragraph">
           Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.
         </Text>
         {buttonPosition ?

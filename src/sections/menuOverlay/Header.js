@@ -80,11 +80,12 @@ const Header = ({ handleClose }) => {
               position: 'relative',
             }}
           >
-            <Heading sx={{
-              mb: ["24px", "8px", "12px", "12px", "12px", "12px"],
-              fontSize: ["32px", "42px", "38px", "40px", "40px", "43px"],
-              lineHeight: "125%"
-            }}>Bistrokuche?!</Heading>
+            <Heading
+              variant="subHeading"
+              sx={{
+                mb: ["24px", "8px", "12px", "12px", "12px", "12px"],
+                fontWeight: 'bold'
+              }}>Bistrokuche?!</Heading>
             <Box
               sx={{
                 display: 'flex',
@@ -102,20 +103,20 @@ const Header = ({ handleClose }) => {
                       }}
                     >
                       <Text
-                        variant="subHeading"
+                        variant="paragraph"
                         sx={{
                           mr: "1em",
                           lineHeight: "175%",
-                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
+                          fontSize: ["14px", "20px", "16px", "18px", "18px", "16px"],
                           fontWeight: ["ceraBold"]
                         }}
                       >{item.label}</Text>
                       <Text
-                        variant="subHeading"
+                        variant="paragraph"
                         sx={{
                           lineHeight: "175%",
-                          fontWeight: '400',
-                          fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"]
+                          fontWeight: 'normal',
+                          fontSize: ["14px", "20px", "16px", "18px", "18px", "16px"],
                         }}
                       >{item.hours}</Text>
                     </Box>
@@ -146,7 +147,7 @@ const Header = ({ handleClose }) => {
                     src={'../../images/vegan.png'}
                   />
                   <Text
-                    variant="subHeading"
+                    variant="paragraph"
                     sx={{
                       pr: "48px",
                       fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
@@ -170,7 +171,7 @@ const Header = ({ handleClose }) => {
                     }}
                     src={'../../images/vegetarian.png'}
                   />
-                  <Text variant="subHeading"
+                  <Text variant="paragraph"
                     sx={{
                       fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
                       fontWeight: ["ceraBold"]

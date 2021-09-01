@@ -56,16 +56,11 @@ const TopContent = () => {
           <Text
             variant="heading"
             sx={{
-              fontSize: ["40px", "50px", "50px", "50px", "56px", "68px"],
-              fontWeight: "normal",
-              lineHeight: "110%",
-              fontFamily: "label",
               margin: "0 auto",
               mb: ["18px"],
               pl: ["0", "40px", "30px", "30px", "38px", "50px"],
             }}
           >
-            {" "}
             <Text sx={{ fontWeight: "bold" }}>Tu etwas Gutes rein,</Text> dann
             kommt etwas Gutes raus.
           </Text>

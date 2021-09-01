@@ -38,7 +38,6 @@ const ListCafe = ({ data }) => {
 
         }}>
           {data.products.map(item => (
-
             <Box sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -55,20 +54,20 @@ const ListCafe = ({ data }) => {
                 maxWidth: '254px'
               }
             }}>
-              <Text sx={{
-                fontFamily: 'label',
-                fontWeight: '700',
-                fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
-                color: '#DA3C6E'
-              }}>
+              <Text
+                variant="heading"
+                sx={{
+                  fontWeight: 'bold',
+                  fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
+                  color: '#DA3C6E'
+                }}>
                 {item.label}
               </Text>
               <Text
+                variant="paragraph"
                 sx={{
                   fontSize: ["16px", "20px", "16px", "18px", "18px", "18px"],
-                  fontWeight: 'normal'
                 }}
-                variant="paragraph"
               >
                 {item.content}
               </Text>

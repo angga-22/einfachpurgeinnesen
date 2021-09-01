@@ -43,9 +43,8 @@ const Form = () => {
             flexDirection: 'column',
           }}
         >
-          <Text
+          <Text variant="heading"
             sx={{
-              fontFamily: 'label',
               fontWeight: 'quincyBold',
               wordWrap: 'break-word',
               pb: '24px',
@@ -58,7 +57,6 @@ const Form = () => {
           <Text
             variant="paragraph"
             sx={{
-              fontSize: ["18px", "22px", "18px", "20px", "20px", "20px"],
               mb: ["122px", "80px", "77px", "120px", "80px", null]
             }}>
             Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft nachgehen.

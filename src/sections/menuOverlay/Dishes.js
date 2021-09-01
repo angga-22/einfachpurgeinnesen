@@ -41,8 +41,9 @@ const Dishes = () => {
               <Heading
                 variant="heading"
                 sx={{
-                  fontSize: ["32px", "35px", "32px", "35px", "35px", "35px"],
+                  fontSize: ["32px", "42px", "28px", "40px", "40px", "40px"],
                   lineHeight: "125%",
+                  fontWeight: 'bold'
                 }}
               >
                 {item.node.label}{" "}
@@ -75,9 +76,10 @@ const Dishes = () => {
               </Text>
               <Text
                 sx={{
-                  fontFamily: "label",
-                  fontSize: "18px",
-                  lineHeight: "100%",
+                  fontFamily: 'label',
+                  fontSize: "22px",
+                  lineHeight: "125%",
+                  fontWeight: 'bold',
                   mt: ["24px"],
                   marginBottom: '12px',
                   display: 'flex',
@@ -98,9 +100,10 @@ const Dishes = () => {
                 item.node.nextPrice !== null ?
                   <Text
                     sx={{
-                      fontFamily: "label",
-                      fontSize: "18px",
-                      lineHeight: "100%",
+                      fontFamily: 'label',
+                      fontSize: "22px",
+                      lineHeight: "125%",
+                      fontWeight: 'bold',
                       display: 'flex',
                       alignItems: 'center'
                     }}
@@ -136,8 +139,9 @@ const Dishes = () => {
               <Heading
                 variant="heading"
                 sx={{
-                  fontSize: ["32px", "35px", "32px", "35px", "35px", "35px"],
-                  lineHeight: "125%"
+                  fontSize: ["32px", "42px", "28px", "40px", "40px", "40px"],
+                  lineHeight: "125%",
+                  fontWeight: 'bold'
                 }}
               >
                 {item.node.label}{" "}
@@ -170,9 +174,10 @@ const Dishes = () => {
               </Text>
               <Text
                 sx={{
-                  fontFamily: "label",
-                  fontSize: "18px",
-                  lineHeight: "100%",
+                  fontFamily: 'label',
+                  fontSize: "22px",
+                  lineHeight: "125%",
+                  fontWeight: 'bold',
                   marginBottom: '12px',
                   mt: ["24px"],
                   display: 'flex',
@@ -193,9 +198,10 @@ const Dishes = () => {
                 item.node.nextPrice !== null ?
                   <Text
                     sx={{
-                      fontFamily: "label",
-                      fontSize: "18px",
-                      lineHeight: "100%",
+                      fontFamily: 'label',
+                      fontSize: "22px",
+                      lineHeight: "125%",
+                      fontWeight: 'bold',
                       display: 'flex',
                       alignItems: 'center'
                     }}

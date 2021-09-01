@@ -56,14 +56,11 @@ const CopyWriter = () => {
         <Box sx={{
           width: ["100%", "100%", "70%", "60%", "40%", "40%"],
         }}>
-          <Text
-            sx={{
-              fontFamily: 'label',
-              fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"],
-              fontWeight: 'ceraBold',
-              lineHeight: ["125%"]
-            }}
-          >Alles für Ihren guten Geschmack. Jetzt auch online.</Text>
+          <Text variant="subHeading" sx={{
+            fontWeight: 'bold'
+          }}>
+            Alles für Ihren guten Geschmack. Jetzt auch online.
+          </Text>
         </Box>
       </GridItem>
 

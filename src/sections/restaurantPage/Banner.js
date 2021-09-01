@@ -132,7 +132,6 @@ const Banner = () => {
               <Text
                 variant="paragraph"
                 sx={{
-                  fontSize: ["18px", "20px", "16px", "20px", "20px", "20px"],
                   width: ["90%", "100%", "55%", "100%", "55%", "60%"],
                   mb: ["55px", "50px", "50px", null, null, null],
                   pl: ["0", "0", "0", "0", "150px", "0"],

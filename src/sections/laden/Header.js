@@ -38,10 +38,8 @@ const Header = ({ label, content }) => {
                 alt="wave-line" />
             </Box>
 
-            <Text sx={{
-              fontFamily: 'label',
+            <Text variant="heading" sx={{
               fontSize: ["32px", "50px", "40px", "40px", "56px", "68px"],
-              lineHeight: ["125%", "62px", "50px", "50px", "70px", "74px"],
               margin: '0 auto'
             }}>
               {label}

@@ -61,13 +61,7 @@ const Quote = ({ sx }) => {
           pr: [null, null, null, null, "100px", "300px"],
           width: ["100%", "100%", null, "695px", "100%", "100%"]
         }}>
-          <Text
-            variant="heading"
-            sx={{
-              fontSize: ["32px", "42px", "32px", "40px", "40px", "42px"],
-              lineHeight: "125%",
-            }}
-          >
+          <Text variant="subHeading">
             “Gemeinsam stark. Lokale Produkte von kleinen Unternehmen.”
           </Text>
         </Box>

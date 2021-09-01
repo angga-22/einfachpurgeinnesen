@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from 'gatsby';
 import { Banner, Form, Products, Header, CopyWriter } from "sections/laden";
-import CardItem from '../components/CardItem';
+import ItemLists from '../components/CardItem/ItemLists';
 
 const Laden = ({ data }) => {
 
@@ -17,7 +17,7 @@ const Laden = ({ data }) => {
       />
       <Banner />
       <Form />
-      <CardItem />
+      <ItemLists />
     </>
   );
 };

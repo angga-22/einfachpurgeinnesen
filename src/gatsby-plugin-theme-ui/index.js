@@ -21,8 +21,6 @@ export default {
     quincyBold: 800,
     normal: 'normal'
   },
-  // remove this one.
-  // fontSizes: [12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
   lineHeights: {
     body: 1,
     heading: 1.2,
@@ -31,20 +29,20 @@ export default {
     normal: "0",
     wide: "0.25em"
   },
-  //typography
   text: {
     heading: {
       color: "text",
+      lineHeight: '125%',
       fontFamily: 'label',
-      fontWeight: 'normal'
-      // fontSize: ["40px", "50px"]
+      fontWeight: 'normal',
+      fontSize: ["40px", "50px", "38px", "51px", "56px", "55px"]
     },
     subHeading: {
       color: "text",
-      fontFamily: 'body',
-    },
-    quote: {
-
+      fontFamily: 'label',
+      fontWeight: 'normal',
+      lineHeight: '125%',
+      fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"]
     },
     paragraph: {
       color: "text",
@@ -56,9 +54,9 @@ export default {
     smallParagraph: {
       color: "text",
       fontFamily: 'body',
-      lineHeight: "150%",
+      lineHeight: "175%",
       fontWeight: 'normal',
-      fontSize: ["16px"]
+      fontSize: ["16px", "20px", "16px", "16px", "18px", "18px"]
     },
     button: {
       lineHeights: '175%',

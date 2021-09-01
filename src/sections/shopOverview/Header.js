@@ -39,10 +39,7 @@ const Header = ({ data }) => {
               margin: '0 auto',
             }}
           >
-            <Text sx={{
-              fontFamily: 'label',
-              fontSize: ["40px", "50px", "38px", "50", "67px", "68px"],
-              lineHeight: ["125%", "125%", "125%", "110%", "110%", "110%"],
+            <Text variant="heading" sx={{
               '&>b': {
                 fontWeight: 'bold'
               }

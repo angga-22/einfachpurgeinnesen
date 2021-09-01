@@ -24,13 +24,10 @@ const ProductShowcase = ({ data }) => {
           }}
           key={data.id}
         >
-          <Text
+          <Text variant="heading"
             sx={{
-              fontFamily: 'label',
-              fontWeight: 'bold',
-              lineHeight: ["125%", "125%", "125%", "110%", "125%", "110%"],
-              fontSize: ["40px", "42px", "38px", "51px", "56px", "55px"],
-              pb: '16px'
+              pb: '16px',
+              fontWeight: 700
             }}
             dangerouslySetInnerHTML={{ __html: data.label }}
           ></Text>
