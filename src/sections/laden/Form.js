@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {
-  Box, Text,
+  Box,
+  Heading,
+  Paragraph,
   Label,
   Input,
 } from 'theme-ui'
@@ -43,7 +45,7 @@ const Form = () => {
             flexDirection: 'column',
           }}
         >
-          <Text variant="heading"
+          <Heading variant="h2"
             sx={{
               fontWeight: 'quincyBold',
               wordWrap: 'break-word',
@@ -53,14 +55,14 @@ const Form = () => {
             }}
           >
             Kooperation?!
-          </Text>
-          <Text
+          </Heading>
+          <Paragraph
             variant="paragraph"
             sx={{
               mb: ["122px", "80px", "77px", "120px", "80px", null]
             }}>
             Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft nachgehen.
-          </Text>
+          </Paragraph>
         </Box>
       </GridItem>
 

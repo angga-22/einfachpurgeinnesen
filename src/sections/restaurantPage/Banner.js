@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Box, Text } from 'theme-ui'
+import { Box, Heading, Paragraph } from 'theme-ui'
 import Section from 'components/Box'
 import MenuButton from '../../overlays/MenuOverlay/MenuButton'
 import bgBannerRestaurant from '../../images/bg-banner-restaurant.svg'
@@ -86,7 +86,7 @@ const Banner = () => {
             }}
           >
             {labelBanner ?
-              <Text
+              <Heading
                 sx={{
                   color: 'white',
                   fontWeight: '500',
@@ -99,9 +99,9 @@ const Banner = () => {
                 }}
                 dangerouslySetInnerHTML={{ __html: ' Bistroküche?! ' }}
               >
-              </Text>
+              </Heading>
               :
-              <Text
+              <Heading
                 sx={{
                   color: 'white',
                   fontWeight: '500',
@@ -114,7 +114,7 @@ const Banner = () => {
                 }}
                 dangerouslySetInnerHTML={{ __html: ' Bistro- <br />küche?! ' }}
               >
-              </Text>
+              </Heading>
             }
 
             {/* //button & paragraph wrapper */}
@@ -129,7 +129,7 @@ const Banner = () => {
                 mb: ["0", "0", "0", "-13%", "0"]
               }}
             >
-              <Text
+              <Paragraph
                 variant="paragraph"
                 sx={{
                   width: ["90%", "100%", "55%", "100%", "55%", "60%"],
@@ -137,7 +137,7 @@ const Banner = () => {
                   pl: ["0", "0", "0", "0", "150px", "0"],
                   color: 'white'
                 }}
-              >Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.</Text>
+              >Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.</Paragraph>
               <Box sx={{
                 border: '1px solid white',
                 borderRadius: '13px',

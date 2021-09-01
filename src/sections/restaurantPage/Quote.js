@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Box, Text } from "theme-ui";
+import { Box, Heading } from "theme-ui";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 const Quote = ({ sx }) => {
 
@@ -61,9 +61,9 @@ const Quote = ({ sx }) => {
           pr: [null, null, null, null, "100px", "300px"],
           width: ["100%", "100%", null, "695px", "100%", "100%"]
         }}>
-          <Text variant="subHeading">
+          <Heading variant="h4">
             “Gemeinsam stark. Lokale Produkte von kleinen Unternehmen.”
-          </Text>
+          </Heading>
         </Box>
       </GridItem>
     </GridWrapper >

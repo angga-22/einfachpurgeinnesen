@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import * as React from 'react'
-import { jsx, Box, Text } from 'theme-ui'
+import { Box, Paragraph, Heading } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Button } from '@theme-ui/components'
 import bgBannerLaden from '../../images/bg-banner-laden.svg'
@@ -38,9 +37,9 @@ const Banner = () => {
         gridColumn: ["1 / span 11", "1 / span 12", "2 / span 13", "12 / 24", "1 / 10", "2 / 9"],
         m: ["130px 0 0 0", "115px 0 0 0", "82px 0 0 0", "92px 0 0 0", "10em 0 -5em 0", "10em 0 -10em 0"],
       }}>
-        <Text variant="subHeading">
+        <Heading variant="h4">
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.
-        </Text>
+        </Heading>
         {buttonPosition ?
 
           <Box sx={{
@@ -93,9 +92,9 @@ const Banner = () => {
         gridColumn: ["1 / span 11", "1 / span 11", "2 / span 11", "8 /  20", "17 / span 8", "18 / span 6"],
         m: ["0 0 80px 0", "0 0 110px 0", "-14em 0 125px 0", "0 0 0 115px 0", "-5em 0 120px 0", "-21em 0 236px 0"]
       }}>
-        <Text variant="paragraph">
+        <Paragraph variant="paragraph">
           Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.
-        </Text>
+        </Paragraph>
         {buttonPosition ?
           null :
           <Box sx={{

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Flex, Text, Box } from "@theme-ui/components";
+import { Text } from "@theme-ui/components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
@@ -30,16 +30,6 @@ const Nav = () => {
     <GridWrapper
       // as="nav"
       sx={{
-        // display: 'flex',
-        // flexDirection: "row",
-        // justifyContent:
-        //   ["space-around",
-        //     "space-around",
-        //     "space-around",
-        //     "space-around",
-        //     "space-around",
-        //     "space-around"
-        //   ],
         alignItems: "center",
         height: ["91px", "100px", "80px", "100px", "100px", "100px"],
         position: "relative",

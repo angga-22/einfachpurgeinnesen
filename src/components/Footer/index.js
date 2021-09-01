@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Section from '../Box'
-import { Text, Box } from 'theme-ui'
+import { Text, Box, Paragraph } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import Content from './Content';
 import { Breakpoints } from '../Breakpoints';
@@ -55,13 +55,13 @@ const Footer = () => {
               src={'../../images/logo-pur.png'}
               alt="logo-pur" />
           </Box>
-          <Text
+          <Paragraph
             variant="paragraph"
             sx={{
               textAlign: ["center", "center", "left"],
               fontSize: ["14px", "20px", "16px", "18px", "18px", "18px"]
             }}
-          >Ganz <Text sx={{ fontWeight: 'ceraBold' }}> bewusst, gewusst </Text> was.</Text>
+          >Ganz <Text sx={{ fontWeight: 'ceraBold' }}> bewusst, gewusst </Text> was.</Paragraph>
         </Box>
 
         {/* //seitan */}
@@ -78,19 +78,17 @@ const Footer = () => {
           }}
         >
           <Text
-            variant="paragraph"
+            variant="footerText"
             sx={{
               marginBottom: ["16px", "16px", "0"],
               textAlign: ["center", "center", "left", "left"],
-              fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"],
-              fontWeight: 'ceraBold'
+              fontWeight: 'bold'
             }}
           >Seiten</Text>
-          <Text
-            variant="paragraph"
+          <Paragraph
+            variant="footerText"
             sx={{
               textAlign: ["center", "center", "left", "left"],
-              fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"],
               [Breakpoints.tabletPortrait]: {
                 lineHeight: '300%',
                 whiteSpace: 'normal',
@@ -102,7 +100,7 @@ const Footer = () => {
               // },
               wordSpacing: ["1rem", "2.5rem", ".8rem", "0", "0", "42px"],
             }}
-          >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Text>
+          >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Paragraph>
         </Box>
       </Box>
       {/* //content wrapper */}

@@ -17,7 +17,7 @@ const Laden = ({ data }) => {
       />
       <Banner />
       <Form />
-      <ItemLists />
+      {/* <ItemLists /> */}
     </>
   );
 };

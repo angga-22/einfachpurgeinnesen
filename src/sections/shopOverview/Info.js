@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box, Heading, Paragraph } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
@@ -25,8 +25,8 @@ const Info = ({ data }) => {
           <Box sx={{
             width: ["100%", "100%", "80em", "85%", "190%", "230%",]
           }}>
-            <Text
-              variant="subHeading"
+            <Heading
+              variant="h4"
               dangerouslySetInnerHTML={{ __html: data.label }}
               sx={{
                 pb: ["16px", "24px", "0", "24px", "0", "0"],
@@ -36,16 +36,16 @@ const Info = ({ data }) => {
                 }
               }}
             >
-            </Text>
+            </Heading>
           </Box>
           <Box sx={{
             mt: ["16px", "24px", "0", "24px", "0", "0"],
             ml: ["0", "0", "0", "0", "140px", "100px"],
           }}>
-            <Text
+            <Paragraph
               variant="paragraph">
               {data.content}
-            </Text>
+            </Paragraph>
           </Box>
         </Box>
         {/* // custom line  */}

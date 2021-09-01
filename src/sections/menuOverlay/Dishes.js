@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Heading, Text } from "theme-ui"
+import { jsx, Box, Heading, Paragraph } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces';
@@ -39,7 +39,7 @@ const Dishes = () => {
               mb: ["64px", "64px", "64px", "80px", "80px", "80px"],
             }}>
               <Heading
-                variant="heading"
+                variant="h2"
                 sx={{
                   fontSize: ["32px", "42px", "28px", "40px", "40px", "40px"],
                   lineHeight: "125%",
@@ -63,7 +63,7 @@ const Dishes = () => {
                       : null}
                 </span>
               </Heading>
-              <Text
+              <Paragraph
                 variant="smallParagraph"
                 sx={{
                   marginBottom: '30px',
@@ -73,8 +73,8 @@ const Dishes = () => {
                 }}
                 dangerouslySetInnerHTML={{ __html: item.node.description }}
               >
-              </Text>
-              <Text
+              </Paragraph>
+              <Paragraph
                 sx={{
                   fontFamily: 'label',
                   fontSize: "22px",
@@ -95,10 +95,10 @@ const Dishes = () => {
                   src={'../../images/bullet-small.png'}
                 />
                 {item.node.currentPrice}
-              </Text>
+              </Paragraph>
               {
                 item.node.nextPrice !== null ?
-                  <Text
+                  <Paragraph
                     sx={{
                       fontFamily: 'label',
                       fontSize: "22px",
@@ -117,7 +117,7 @@ const Dishes = () => {
                       src={'../../images/bullet-big.png'}
                     />
                     {item.node.nextPrice}
-                  </Text>
+                  </Paragraph>
                   : ""
               }
             </Box>
@@ -137,7 +137,7 @@ const Dishes = () => {
               mb: ["64px", "64px", "64px", "80px", "80px", "80px"],
             }}>
               <Heading
-                variant="heading"
+                variant="h2"
                 sx={{
                   fontSize: ["32px", "42px", "28px", "40px", "40px", "40px"],
                   lineHeight: "125%",
@@ -161,7 +161,7 @@ const Dishes = () => {
                       : null}
                 </span>
               </Heading>
-              <Text
+              <Paragraph
                 variant="smallParagraph"
                 sx={{
                   marginBottom: '30px',
@@ -171,8 +171,8 @@ const Dishes = () => {
                 }}
                 dangerouslySetInnerHTML={{ __html: item.node.description }}
               >
-              </Text>
-              <Text
+              </Paragraph>
+              <Paragraph
                 sx={{
                   fontFamily: 'label',
                   fontSize: "22px",
@@ -193,10 +193,10 @@ const Dishes = () => {
                   src={'../../images/bullet-small.png'}
                 />
                 {item.node.currentPrice}
-              </Text>
+              </Paragraph>
               {
                 item.node.nextPrice !== null ?
-                  <Text
+                  <Paragraph
                     sx={{
                       fontFamily: 'label',
                       fontSize: "22px",
@@ -215,7 +215,7 @@ const Dishes = () => {
                       src={'../../images/bullet-big.png'}
                     />
                     {item.node.nextPrice}
-                  </Text>
+                  </Paragraph>
                   : ""
               }
             </Box>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+// import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 import { Box, Text } from 'theme-ui'
 import CardItem from './CardItem'
 import { Button } from '@theme-ui/components'
@@ -64,7 +64,7 @@ const CardOverview = ({ initialItems }) => {
     }}>
       <Box>
         <Box>
-          <Text variant="heading">We viel darf es sein?</Text>
+          <Text variant="h2">We viel darf es sein?</Text>
         </Box>
         {items.map(item => (
           <>
@@ -82,7 +82,7 @@ const CardOverview = ({ initialItems }) => {
         justifyContent: 'space-between'
       }}>
         <Text variant="paragraph">Total</Text>
-        <Text variant="paragraph" >
+        <Text variant="paragraph">
           {total} £
         </Text>
       </Box>

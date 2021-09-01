@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Heading, Text } from "theme-ui"
+import { jsx, Flex, Box, Heading, Paragraph } from "theme-ui"
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
@@ -81,7 +81,7 @@ const Header = ({ handleClose }) => {
             }}
           >
             <Heading
-              variant="subHeading"
+              variant="h4"
               sx={{
                 mb: ["24px", "8px", "12px", "12px", "12px", "12px"],
                 fontWeight: 'bold'
@@ -102,7 +102,7 @@ const Header = ({ handleClose }) => {
                         flexDirection: ["column", "row", "row", "row", "row", "row"],
                       }}
                     >
-                      <Text
+                      <Paragraph
                         variant="paragraph"
                         sx={{
                           mr: "1em",
@@ -110,15 +110,15 @@ const Header = ({ handleClose }) => {
                           fontSize: ["14px", "20px", "16px", "18px", "18px", "16px"],
                           fontWeight: ["ceraBold"]
                         }}
-                      >{item.label}</Text>
-                      <Text
+                      >{item.label}</Paragraph>
+                      <Paragraph
                         variant="paragraph"
                         sx={{
                           lineHeight: "175%",
                           fontWeight: 'normal',
                           fontSize: ["14px", "20px", "16px", "18px", "18px", "16px"],
                         }}
-                      >{item.hours}</Text>
+                      >{item.hours}</Paragraph>
                     </Box>
                   )
                 })}
@@ -146,14 +146,14 @@ const Header = ({ handleClose }) => {
                     }}
                     src={'../../images/vegan.png'}
                   />
-                  <Text
+                  <Paragraph
                     variant="paragraph"
                     sx={{
                       pr: "48px",
                       fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
                       fontWeight: ["ceraBold"]
                     }}
-                  >Vegan oder vegane Option</Text>
+                  >Vegan oder vegane Option</Paragraph>
                 </Box>
                 <Box
                   sx={{
@@ -171,12 +171,12 @@ const Header = ({ handleClose }) => {
                     }}
                     src={'../../images/vegetarian.png'}
                   />
-                  <Text variant="paragraph"
+                  <Paragraph variant="paragraph"
                     sx={{
                       fontSize: ["16px", "16px", "16px", "18px", "18px", "18px"],
                       fontWeight: ["ceraBold"]
                     }}>
-                    Vegatarisch</Text>
+                    Vegatarisch</Paragraph>
                 </Box>
               </Box>
             </Box>

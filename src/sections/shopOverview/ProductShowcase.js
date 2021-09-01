@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box, Heading, Paragraph } from 'theme-ui'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
 
@@ -24,16 +24,16 @@ const ProductShowcase = ({ data }) => {
           }}
           key={data.id}
         >
-          <Text variant="heading"
+          <Heading variant="h2"
             sx={{
               pb: '16px',
               fontWeight: 700
             }}
             dangerouslySetInnerHTML={{ __html: data.label }}
-          ></Text>
-          <Text variant="paragraph">
+          ></Heading>
+          <Paragraph variant="paragraph">
             {data.content}
-          </Text>
+          </Paragraph>
         </Box>
       </GridItem>
     </GridWrapper>

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Text } from 'theme-ui'
+import { jsx, Box, Heading } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Button } from '@theme-ui/components'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
@@ -75,20 +75,16 @@ const Footer = () => {
             flexDirection: 'column',
             maxWidth: ["100%", "100%", "60%", "50%"],
           }}>
-            <Text
+            <Heading
+              variant="h5"
               sx={{
-                fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
-                lineHeight: "125%",
-                fontWeight: 'normal',
-                color: 'text',
-                fontFamily: 'label',
                 mt: ["40px", "40px", "0", "0"],
                 marginBottom: '40px'
               }}
             >
               Für die Schwiegermutter, Kinder, Freude oder für sich selbst, wenn sie einmal nicht vorbei kommen können.
               <span sx={{ fontWeight: 'bold' }}> Unser Onlineshop. </span>
-            </Text>
+            </Heading>
             <Box sx={{
               border: '1px solid #2E2E2E',
               borderRadius: '13px',

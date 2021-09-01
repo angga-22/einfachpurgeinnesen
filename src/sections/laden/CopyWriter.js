@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box, Heading } from 'theme-ui'
 import { StaticImage } from 'gatsby-plugin-image'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
 
@@ -56,11 +56,11 @@ const CopyWriter = () => {
         <Box sx={{
           width: ["100%", "100%", "70%", "60%", "40%", "40%"],
         }}>
-          <Text variant="subHeading" sx={{
+          <Heading variant="h4" sx={{
             fontWeight: 'bold'
           }}>
             Alles für Ihren guten Geschmack. Jetzt auch online.
-          </Text>
+          </Heading>
         </Box>
       </GridItem>
 

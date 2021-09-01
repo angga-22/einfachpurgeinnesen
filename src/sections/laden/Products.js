@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Box, Text } from 'theme-ui'
+import { Box, Heading, Paragraph } from 'theme-ui'
 import underline from '../../images/underline-inactive.svg'
 import { Breakpoints } from '../../components/Breakpoints'
 import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
@@ -54,23 +54,22 @@ const ListCafe = ({ data }) => {
                 maxWidth: '254px'
               }
             }}>
-              <Text
-                variant="heading"
+              <Heading
+                variant="h5"
                 sx={{
                   fontWeight: 'bold',
-                  fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
                   color: '#DA3C6E'
                 }}>
                 {item.label}
-              </Text>
-              <Text
+              </Heading>
+              <Paragraph
                 variant="paragraph"
                 sx={{
                   fontSize: ["16px", "20px", "16px", "18px", "18px", "18px"],
                 }}
               >
                 {item.content}
-              </Text>
+              </Paragraph>
             </Box>
           ))}
         </Box>

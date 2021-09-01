@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Box, Text } from "theme-ui";
+import { Box, Heading, Paragraph } from "theme-ui";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 
 const TopContent = () => {
@@ -53,18 +53,18 @@ const TopContent = () => {
             flexDirection: ["column"],
           }}
         >
-          <Text
-            variant="heading"
+          <Heading
+            variant="h2"
             sx={{
               margin: "0 auto",
               mb: ["18px"],
               pl: ["0", "40px", "30px", "30px", "38px", "50px"],
             }}
           >
-            <Text sx={{ fontWeight: "bold" }}>Tu etwas Gutes rein,</Text> dann
+            <span sx={{ fontWeight: "bold" }}>Tu etwas Gutes rein,</span> dann
             kommt etwas Gutes raus.
-          </Text>
-          <Text
+          </Heading>
+          <Paragraph
             variant="paragraph"
             sx={{
               pl: ["0", "40px", "30px", "30px", "38px", "50px"],
@@ -72,7 +72,7 @@ const TopContent = () => {
             }}
           >
             Worte unseres Urgroßvaters
-          </Text>
+          </Paragraph>
         </Box>
         <Box
           sx={{

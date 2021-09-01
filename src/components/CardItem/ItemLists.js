@@ -108,7 +108,7 @@ const ItemLists = () => {
 
         }}
       >
-        <Text variant="heading" sx={{
+        <Text variant="h2" sx={{
           fontSize: ["32px"],
         }}>Wähle eine Sorte.
           Oder gleich ein paar mehr.</Text>

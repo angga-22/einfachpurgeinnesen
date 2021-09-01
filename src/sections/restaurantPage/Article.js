@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from 'theme-ui'
+import { Paragraph } from 'theme-ui'
 import { GridWrapper } from '@thepuzzlers/pieces'
 
 import { TextContainer } from './components'
@@ -8,16 +8,16 @@ const Article = ({ firstParagraph, secondParagraph, sx }) => {
   return (
     <GridWrapper sx={sx}>
       <TextContainer>
-        <Text
+        <Paragraph
           sx={{
             pr: ["0", "0", "37px", "0", "0", "0"],
             pb: ["20px", "20px", "0", "20px", "20px", "20px"]
           }}
           variant="paragraph"
-        >{firstParagraph}</Text>
-        <Text
+        >{firstParagraph}</Paragraph>
+        <Paragraph
           variant="paragraph"
-        >{secondParagraph}</Text>
+        >{secondParagraph}</Paragraph>
       </TextContainer>
     </GridWrapper>
   )

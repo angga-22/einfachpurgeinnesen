@@ -4,10 +4,10 @@ import { Breakpoints } from '../components/Breakpoints'
 
 export default {
   colors: {
-    text: '#2E2E2E',
-    background: '#FFFCF9',
     primary: '#FFFCF9',
     secondary: '#FDC601',
+    text: '#2E2E2E',
+    background: '#FFFCF9',
     white: '#fff',
     footer: '#fCF5DE',
     banner: '#070569',
@@ -30,19 +30,33 @@ export default {
     wide: "0.25em"
   },
   text: {
-    heading: {
+    h2: {
       color: "text",
       lineHeight: '125%',
       fontFamily: 'label',
       fontWeight: 'normal',
       fontSize: ["40px", "50px", "38px", "51px", "56px", "55px"]
     },
-    subHeading: {
+    h3: {
+      color: "text",
+      fontFamily: 'label',
+      fontWeight: 'normal',
+      fontSize: ["32px", "42px", "28px", "40px", "40px", "68px"],
+      lineHeight: '125%'
+    },
+    h4: {
       color: "text",
       fontFamily: 'label',
       fontWeight: 'normal',
       lineHeight: '125%',
       fontSize: ["32px", "42px", "28px", "40px", "40px", "43px"]
+    },
+    h5: {
+      color: 'text',
+      fontFamily: 'label',
+      fontWeight: 'normal',
+      lineHeight: "125%",
+      fontSize: ["22px", "28px", "22px", "26px", "26px", "28px"],
     },
     paragraph: {
       color: "text",
@@ -57,6 +71,13 @@ export default {
       lineHeight: "175%",
       fontWeight: 'normal',
       fontSize: ["16px", "20px", "16px", "16px", "18px", "18px"]
+    },
+    footerText: {
+      color: "text",
+      fontFamily: 'body',
+      lineHeight: "175%",
+      fontWeight: 'normal',
+      fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
     },
     button: {
       lineHeights: '175%',

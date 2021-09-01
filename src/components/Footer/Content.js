@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Box, Text } from 'theme-ui'
+import { Box, Paragraph } from 'theme-ui'
+
 const Content = () => {
   const data = useStaticQuery(graphql`
     query FooterInfo {
@@ -35,22 +36,19 @@ const Content = () => {
           textAlign: ["center", "center", "left", "Left"],
         }}
       >
-        <Text
-          variant="paragraph"
+        <Paragraph
+          variant="footerText"
           sx={{
             fontWeight: 'ceraBold',
-            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
-        >Restaurant </Text>
+        >Restaurant </Paragraph>
         {data.allPurFooterJson.edges.slice(0, 2).map(item => {
           return (
             <Box key={item.node.id}>
-              <Text
-                variant="paragraph"
-                sx={{
-                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
-                }}
-              >{item.node.label + " " + item.node.content}</Text>
+              <Paragraph
+                variant="footerText"
+
+              >{item.node.label + " " + item.node.content}</Paragraph>
             </Box>
           )
         })}
@@ -64,22 +62,19 @@ const Content = () => {
           width: ["100%", "100%", "50%", "100%"]
         }}
       >
-        <Text
-          variant="paragraph"
+        <Paragraph
+          variant="footerText"
           sx={{
             fontWeight: 'ceraBold',
-            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
-        >Ladengeschäft </Text>
+        >Ladengeschäft </Paragraph>
         {data.allPurFooterJson.edges.slice(2, 3).map(item => {
           return (
             <Box key={item.node.id}>
-              <Text
-                variant="paragraph"
-                sx={{
-                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
-                }}
-              >{item.node.label + " " + item.node.content}</Text>
+              <Paragraph
+                variant="footerText"
+
+              >{item.node.label + " " + item.node.content}</Paragraph>
             </Box>
           )
         })}
@@ -94,22 +89,18 @@ const Content = () => {
           width: ["100%", "100%", "50%", "25%", "100%"]
         }}
       >
-        <Text
-          variant="paragraph"
+        <Paragraph
+          variant="footerText"
           sx={{
             fontWeight: 'ceraBold',
-            fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
           }}
-        >Kontakt & Anfahrt </Text>
+        >Kontakt & Anfahrt </Paragraph>
         {data.allPurFooterJson.edges.slice(3, 5).map(item => {
           return (
             <Box key={item.node.id}>
-              <Text
-                variant="paragraph"
-                sx={{
-                  fontSize: ["16px", "20px", "16px", "20px", "18px", "18px"]
-                }}
-              >{item.node.label + " " + item.node.content}</Text>
+              <Paragraph
+                variant="footerText"
+              >{item.node.label + " " + item.node.content}</Paragraph>
             </Box>
           )
         })}
