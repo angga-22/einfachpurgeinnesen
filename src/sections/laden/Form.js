@@ -122,25 +122,9 @@ const Form = () => {
             p: ["0", "0", "10px"],
           }}
         >
-          <Label
-            htmlFor="firstName"
-            sx={{
-              fontFamily: "body",
-              fontSize: "14px",
-            }}
-          >
-            First Name{" "}
-          </Label>
+          <Label htmlFor="firstName">First Name </Label>
           <Input
             sx={{
-              fontFamily: "body",
-              fontWeight: "ceraBold",
-              fontSize: "20px",
-              paddingLeft: "0",
-              color: "text",
-              border: "none",
-              outline: "none",
-              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: "bottom",
               backgroundSize: "100%",
@@ -152,7 +136,6 @@ const Form = () => {
                 backgroundRepeat: "no-repeat",
               },
             }}
-            variant="input"
             name="firstName"
             id="firstName"
             mb={3}
@@ -165,28 +148,12 @@ const Form = () => {
         <Box
           sx={{
             width: ["100%", "100%", "50%", "100%"],
-
             p: ["0", "0", "10px"],
           }}
         >
-          <Label
-            htmlFor="lastName"
-            sx={{
-              fontFamily: "body",
-              fontSize: "14px",
-            }}
-          >
-            Last Name{" "}
-          </Label>
+          <Label htmlFor="lastName">Last Name </Label>
           <Input
             sx={{
-              fontFamily: "body",
-              fontWeight: "ceraBold",
-              fontSize: "20px",
-              paddingLeft: "0",
-              border: "none",
-              outline: "none",
-              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: "bottom",
               backgroundRepeat: "no-repeat",
@@ -213,24 +180,9 @@ const Form = () => {
             p: ["0", "0", "10px"],
           }}
         >
-          <Label
-            htmlFor="email"
-            sx={{
-              fontFamily: "body",
-              fontSize: "14px",
-            }}
-          >
-            email{" "}
-          </Label>
+          <Label htmlFor="email">email </Label>
           <Input
             sx={{
-              fontFamily: "body",
-              fontWeight: "ceraBold",
-              fontSize: "20px",
-              paddingLeft: "0",
-              border: "none",
-              outline: "none",
-              mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
               backgroundPosition: "bottom",
               backgroundRepeat: "no-repeat",

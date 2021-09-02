@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Box, Heading, Paragraph } from "theme-ui";
-import Section from "components/Box";
 import MenuButton from "../../overlays/MenuOverlay/MenuButton";
 import bgBannerRestaurant from "../../images/bg-banner-restaurant.svg";
 import bgBannerRestaurantSmall from "../../images/bg-banner-restaurant-small.svg";

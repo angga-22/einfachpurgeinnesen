@@ -1,6 +1,8 @@
 import { theme as defaultTheme } from "@thepuzzlers/pieces";
 import maskButton from "../images/button-vector.png";
 import { Breakpoints } from "../components/Breakpoints";
+// import { underlineActive } from "../images/underline-active.svg";
+// import { underlineInactive } from "../images/underline-inactive.svg";
 
 export default {
   colors: {
@@ -95,6 +97,34 @@ export default {
     Breakpoints.desktop,
   ],
   grids: defaultTheme.grids,
+  forms: {
+    label: {
+      fontSize: "14px",
+      fontFamily: "body",
+      lineHeight: "125%",
+      fontWeight: "normal",
+    },
+    input: {
+      fontFamily: "body",
+      fontWeight: "ceraBold",
+      fontSize: "20px",
+      paddingLeft: "0",
+      color: "text",
+      border: "none",
+      outline: "none",
+      mb: ["50px", "50px", "32px", "50px", "50px"],
+      // background: `url(${underlineInactive})`,
+      // backgroundPosition: "bottom",
+      // backgroundSize: "100%",
+      // backgroundRepeat: "no-repeat",
+      // "&:focus": {
+      //   background: `url(${underlineActive})`,
+      //   backgroundPosition: "bottom",
+      //   backgroundSize: "100%",
+      //   backgroundRepeat: "no-repeat",
+      // },
+    },
+  },
   buttons: {
     primaryWhite: {
       variant: "text.button",
@@ -136,42 +166,6 @@ export default {
         backgroundColor: "text",
         mask: "none",
         transition: "all 2s",
-      },
-    },
-    forms: {
-      label: {
-        fontSize: "14px",
-        fontFamily: "body",
-        color: "red",
-        lineHeight: "125%",
-        fontWeight: "normal",
-      },
-      input: {
-        borderColor: "gray",
-        "&:focus": {
-          borderColor: "primary",
-          boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-          outline: "none",
-        },
-      },
-      select: {
-        borderColor: "gray",
-        "&:focus": {
-          borderColor: "primary",
-          boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-          outline: "none",
-        },
-      },
-      textarea: {
-        borderColor: "gray",
-        "&:focus": {
-          borderColor: "primary",
-          boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
-          outline: "none",
-        },
-      },
-      slider: {
-        bg: "muted",
       },
     },
   },
