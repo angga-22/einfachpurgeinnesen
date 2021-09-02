@@ -85,6 +85,7 @@ const TopContent = () => {
           <StaticImage src={"../../images/quote-right.png"} alt="quote-right" />
         </Box>
       </GridItem>
+
       {isMinPhoneLandscape ? (
         <GridItem
           sx={{

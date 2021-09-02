@@ -6,7 +6,7 @@ import MenuButton from "../../overlays/MenuOverlay/MenuButton";
 import bgBannerRestaurant from "../../images/bg-banner-restaurant.svg";
 import bgBannerRestaurantSmall from "../../images/bg-banner-restaurant-small.svg";
 import { useMediaQuery } from "../../helper/CustomQuery";
-
+import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 const Banner = () => {
   const isMaxPhonePortraitXl = useMediaQuery("(max-width: 500px)"); // for handling shrimp image
   const isMinPhoneLandscape = useMediaQuery("(min-width: 700px)"); // for handling BISTRO typography
@@ -16,146 +16,38 @@ const Banner = () => {
   ); // for handling shrimp image
 
   return (
-    <Section
+    <GridWrapper
       sx={{
         background: isBetweenPhonePortraitXlAndDesktop
           ? `url(${bgBannerRestaurant})`
           : `url(${bgBannerRestaurantSmall})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        margin: [
-          "120px 0",
-          "88px 0",
-          "90px 0",
-          "120px 0",
-          "120px 0",
-          "144px 0",
-        ],
-        padding: [
-          "0 7.5vw",
-          "0 12.5vw",
-          "0 7.6vw",
-          "0 100px",
-          "0 8.1vw",
-          "0 13vw",
-        ],
         position: "relative",
+        mt: ["130px", "88px", "34px", "120px", "120px", "237px"],
+        mb: ["150px", "88px", "90px", "120px", "120px", "144px"],
+        pt: ["195px", "206px", "192px", "232px", "268px", "281px"],
+        pb: ["80px", "96px", "167px", "131px", "177px", "204px"],
       }}
     >
-      {/* //section wrapper */}
-      <Box
+      {/* // shrimp image section */}
+      <GridItem
         sx={{
-          display: "flex",
-          flexDirection: ["row"],
+          position: "absolute",
+          top: ["3em", "3em", "6em", "5em", "7em", "10em"],
+          gridColumn: [
+            "6 / span 7",
+            "7 / span 8",
+            "19 / span 19",
+            "14 / span 14",
+            "18 / span 18",
+            "20 / span 20",
+          ],
         }}
       >
-        {/* // text section */}
-        <Box
-          sx={{
-            display: "flex",
-            position: ["relative"],
-            flexDirection: ["column", "column"],
-            m: ["22vh 0"],
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: ["column"],
-              width: ["100%", "100%"],
-            }}
-          >
-            {isMinPhoneLandscape ? (
-              <Heading
-                sx={{
-                  color: "white",
-                  fontWeight: "500",
-                  lineHeight: ["90%"],
-                  fontSize: ["72px", "100px", "80px", "100px", "120px"],
-                  wordWrap: ["break-word"],
-                  fontFamily: "label",
-                  mt: ["0", "20px", "0", "0", "50px"],
-                  mb: ["24px", "24px", "5px", "45px"],
-                }}
-                dangerouslySetInnerHTML={{ __html: " Bistroküche?! " }}
-              ></Heading>
-            ) : (
-              <Heading
-                sx={{
-                  color: "white",
-                  fontWeight: "500",
-                  lineHeight: ["90%"],
-                  fontSize: ["72px", "100px", "82px", "100px", "120px"],
-                  wordWrap: ["break-word"],
-                  fontFamily: "label",
-                  mt: ["0", "20px"],
-                  mb: ["24px"],
-                }}
-                dangerouslySetInnerHTML={{ __html: " Bistro- <br />küche?! " }}
-              ></Heading>
-            )}
-            {/* //button & paragraph wrapper */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: [
-                  "column",
-                  "column",
-                  "row",
-                  "column",
-                  "row",
-                  "row",
-                ],
-                justifyContent: "space-between",
-                alignItems: [
-                  "flex-start",
-                  "flex-start",
-                  "center",
-                  "flex-start",
-                  "center",
-                  "center",
-                ],
-                width: ["100%", "100%", "100%", "408px", "100%", "100%"],
-                ml: ["0", "0", "0", "29%", "0"],
-                mb: ["0", "0", "0", "-13%", "0"],
-              }}
-            >
-              <Paragraph
-                variant="paragraph"
-                sx={{
-                  width: ["90%", "100%", "55%", "100%", "55%", "60%"],
-                  mb: ["55px", "50px", "50px", null, null, null],
-                  pl: ["0", "0", "0", "0", "150px", "0"],
-                  color: "white",
-                }}
-              >
-                Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir
-                lieben es, mit den Produkten unserer Partner zu experimentieren
-                und Neues zu entdecken.
-              </Paragraph>
-              <Box
-                sx={{
-                  border: "1px solid white",
-                  borderRadius: "13px",
-                  width: ["211px", "211px", "199px", "211px", "211px", "211px"],
-                  height: ["57px", "57px", "44px", "57px", "57px", "57px"],
-                  mb: ["-6em", "-4em", "0", null, null, null],
-                }}
-              >
-                <MenuButton />
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-
-        {/* // shrimp image section */}
-
         <Box
           sx={{
             width: ["199px", "250px", "180px", "240px", "250px", "198px"],
-            position: "absolute",
-            top: ["5", "5", "5em", "4", "6em", "6em"],
-            right: ["4", "4", "3", "150px", "2em", "10em"],
           }}
         >
           {isMaxPhonePortraitXl ? (
@@ -184,8 +76,100 @@ const Banner = () => {
             />
           )}
         </Box>
-      </Box>
-    </Section>
+      </GridItem>
+      {/* wording bistro  */}
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 12",
+            "2 / span 12",
+            "1 / span 20",
+            "2 / span 22",
+            "1 / span 22",
+            " 4 / span 22",
+          ],
+          pb: ["24px", "16px", "16px", "45px", "50px", "46px"],
+        }}
+      >
+        {isMinPhoneLandscape ? (
+          <Heading
+            sx={{
+              color: "white",
+              fontWeight: "500",
+              lineHeight: ["90%"],
+              fontSize: ["72px", "100px", "80px", "100px", "120px", "120px"],
+              wordWrap: ["break-word"],
+              fontFamily: "label",
+            }}
+            dangerouslySetInnerHTML={{ __html: " Bistroküche?! " }}
+          ></Heading>
+        ) : (
+          <Heading
+            sx={{
+              color: "white",
+              fontWeight: "500",
+              lineHeight: ["90%"],
+              fontSize: ["72px", "100px", "82px", "100px", "120px", "120px"],
+              wordWrap: ["break-word"],
+              fontFamily: "label",
+            }}
+            dangerouslySetInnerHTML={{ __html: " Bistro- <br />küche?! " }}
+          ></Heading>
+        )}
+      </GridItem>
+
+      {/* // paragraph wrapper */}
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 11",
+            "2 / span 10",
+            "1 / span 14",
+            "9 / span 15",
+            "5 / span 10",
+            " 6 / span 7",
+          ],
+          pb: ["64px", "32px", null, "48px", null, null],
+        }}
+      >
+        <Paragraph
+          variant="paragraph"
+          sx={{
+            color: "white",
+          }}
+        >
+          Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben
+          es, mit den Produkten unserer Partner zu experimentieren und Neues zu
+          entdecken.
+        </Paragraph>
+      </GridItem>
+
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 12",
+            "2 / span 12",
+            "17 / span 10",
+            "9 / span 15",
+            "19 / span 15",
+            " 18 / 22",
+          ],
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            border: "1px solid white",
+            borderRadius: "13px",
+            width: ["211px", "211px", "199px", "211px", "211px", "211px"],
+            height: ["57px", "57px", "44px", "57px", "57px", "57px"],
+          }}
+        >
+          <MenuButton />
+        </Box>
+      </GridItem>
+    </GridWrapper>
   );
 };
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Heading, Paragraph } from "theme-ui";
+import { jsx, Flex, Box, Heading, Paragraph, Button } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";

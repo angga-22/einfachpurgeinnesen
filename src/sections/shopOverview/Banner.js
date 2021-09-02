@@ -57,7 +57,6 @@ const Banner = () => {
       <GridItem
         sx={{
           gridColumn: ["3 / span 5"],
-          m: [""],
         }}
       >
         <Box
