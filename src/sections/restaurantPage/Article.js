@@ -1,8 +1,7 @@
-import * as React from 'react'
-import { Paragraph } from 'theme-ui'
-import { GridWrapper } from '@thepuzzlers/pieces'
-
-import { TextContainer } from './components'
+import * as React from "react";
+import { Paragraph } from "theme-ui";
+import { GridWrapper } from "@thepuzzlers/pieces";
+import { TextContainer } from "./components";
 
 const Article = ({ firstParagraph, secondParagraph, sx }) => {
   return (
@@ -11,16 +10,16 @@ const Article = ({ firstParagraph, secondParagraph, sx }) => {
         <Paragraph
           sx={{
             pr: ["0", "0", "37px", "0", "0", "0"],
-            pb: ["20px", "20px", "0", "20px", "20px", "20px"]
+            pb: ["20px", "20px", "0", "20px", "20px", "20px"],
           }}
           variant="paragraph"
-        >{firstParagraph}</Paragraph>
-        <Paragraph
-          variant="paragraph"
-        >{secondParagraph}</Paragraph>
+        >
+          {firstParagraph}
+        </Paragraph>
+        <Paragraph variant="paragraph">{secondParagraph}</Paragraph>
       </TextContainer>
     </GridWrapper>
-  )
-}
+  );
+};
 
-export default Article
+export default Article;

@@ -1,57 +1,51 @@
-import * as React from 'react'
-import {
-  Box,
-  Heading,
-  Paragraph,
-  Label,
-  Input,
-} from 'theme-ui'
-import { Button } from '@theme-ui/components'
-import { StaticImage } from 'gatsby-plugin-image'
-import underlineActive from '../../images/underline-active.svg'
-import underlineInactive from '../../images/underline-inactive.svg'
-import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+import * as React from "react";
+import { Box, Heading, Paragraph, Label, Input } from "theme-ui";
+import { Button } from "@theme-ui/components";
+import { StaticImage } from "gatsby-plugin-image";
+import underlineActive from "../../images/underline-active.svg";
+import underlineInactive from "../../images/underline-inactive.svg";
+import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 
 const Form = () => {
-  const [firstName, setFirstName] = React.useState('')
-  const [lastName, setLastName] = React.useState('')
-  const [email, setEmail] = React.useState('')
+  const [firstName, setFirstName] = React.useState("");
+  const [lastName, setLastName] = React.useState("");
+  const [email, setEmail] = React.useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // let data = formData()
-    console.log('form submitted successfully')
-  }
+    console.log("form submitted successfully");
+  };
 
   return (
     <GridWrapper>
       <GridItem
         sx={{
-          gridColumn:
-            [
-              "1 / span 12",
-              "2 / span 11",
-              " 2 / span 18",
-              "3 / span 17",
-              "3 / span 12",
-              " 2 / span 8"
-            ]
-        }}>
-
+          gridColumn: [
+            "1 / span 12",
+            "2 / span 11",
+            " 2 / span 18",
+            "3 / span 17",
+            "3 / span 12",
+            " 2 / span 8",
+          ],
+        }}
+      >
         {/* // sentence section  */}
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          <Heading variant="h2"
+          <Heading
+            variant="h2"
             sx={{
-              fontWeight: 'quincyBold',
-              wordWrap: 'break-word',
-              pb: '24px',
-              pr: ['2em', "0", "0"],
-              fontSize: ["54px", "65px", "50px", "51px", "67px", "68px"]
+              fontWeight: "quincyBold",
+              wordWrap: "break-word",
+              pb: "24px",
+              pr: ["2em", "0", "0"],
+              fontSize: ["54px", "65px", "50px", "51px", "67px", "68px"],
             }}
           >
             Kooperation?!
@@ -59,83 +53,104 @@ const Form = () => {
           <Paragraph
             variant="paragraph"
             sx={{
-              mb: ["122px", "80px", "77px", "120px", "80px", null]
-            }}>
-            Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft nachgehen.
+              mb: ["122px", "80px", "77px", "120px", "80px", null],
+            }}
+          >
+            Seit 2005 überzeugt unser Bistro mit hervorragender Qualität und ist
+            für viele ein Ort des kulturellen Austauschs geworden. Bewusst haben
+            wir unser Umfeld stets so gestaltet, dass wir unserer Leidenschaft
+            nachgehen.
           </Paragraph>
         </Box>
       </GridItem>
 
-
-
       {/* // form section  */}
       <GridItem
         sx={{
-          gridColumn:
-            [
-              "1 / span 12",
-              "2 / span 10",
-              "2 / span 22",
-              "5 / span 15",
-              "10 / span 11",
-              " 13 / span 9"
-            ],
-          padding: ["34px 0 80px 0", "34px 2.7em 80px 2.7em", "34px 1em", "38px 30px", "38px 33px", "38px 49px"],
-          display: 'flex',
+          gridColumn: [
+            "1 / span 12",
+            "2 / span 10",
+            "2 / span 22",
+            "5 / span 15",
+            "10 / span 11",
+            " 13 / span 9",
+          ],
+          padding: [
+            "34px 0 80px 0",
+            "34px 2.7em 80px 2.7em",
+            "34px 1em",
+            "38px 30px",
+            "38px 33px",
+            "38px 49px",
+          ],
+          display: "flex",
           flexDirection: ["column", "column", "row", "row"],
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          position: 'relative',
-          borderRadius: '12px',
-          boxShadow: ["none", '0px 12px 24px rgba(0, 0, 0, 0.1)'],
-          m: ["50px 0 0 0", "0 0 127px 0", "0 0 107px 0", "50px 0 136px 0", "0 0 215px 0", "180px 0 211px 0"],
-          backgroundColor: ["primary"]
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          position: "relative",
+          borderRadius: "12px",
+          boxShadow: ["none", "0px 12px 24px rgba(0, 0, 0, 0.1)"],
+          m: [
+            "50px 0 0 0",
+            "0 0 127px 0",
+            "0 0 107px 0",
+            "50px 0 136px 0",
+            "0 0 215px 0",
+            "180px 0 211px 0",
+          ],
+          backgroundColor: ["primary"],
         }}
-        as="form" onSubmit={handleSubmit}>
-
-        <Box sx={{
-          position: 'absolute',
-          width: ["100px", "121px", "121px", "197px", "197px", "254px"],
-          top: ["-7em", "-3em", "-6em", "-8.5em", "-12em", "-12em"],
-          right: ['1.5em', "-2.4em", "-1.6em", "-5.4em", "-5em", "-8em"],
-          zIndex: '-99'
-        }}>
-          <StaticImage
-
-            src={'../../images/pink-crown.png'}
-            alt="pink-crown" />
+        as="form"
+        onSubmit={handleSubmit}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            width: ["100px", "121px", "121px", "197px", "197px", "254px"],
+            top: ["-7em", "-3em", "-6em", "-8.5em", "-12em", "-12em"],
+            right: ["1.5em", "-2.4em", "-1.6em", "-5.4em", "-5em", "-8em"],
+            zIndex: "-99",
+          }}
+        >
+          <StaticImage src={"../../images/pink-crown.png"} alt="pink-crown" />
         </Box>
 
         {/* // firstName  */}
-        <Box sx={{
-          width: ["100%", "100%", "50%", "100%"],
-          p: ["0", "0", '10px'],
-        }}>
-          <Label htmlFor="firstName"
+        <Box
+          sx={{
+            width: ["100%", "100%", "50%", "100%"],
+            p: ["0", "0", "10px"],
+          }}
+        >
+          <Label
+            htmlFor="firstName"
             sx={{
-              fontFamily: 'body',
-              fontSize: '14px'
-            }}>First Name </Label>
+              fontFamily: "body",
+              fontSize: "14px",
+            }}
+          >
+            First Name{" "}
+          </Label>
           <Input
             sx={{
-              fontFamily: 'body',
+              fontFamily: "body",
               fontWeight: "ceraBold",
               fontSize: "20px",
-              paddingLeft: '0',
-              color: 'text',
-              border: 'none',
-              outline: 'none',
+              paddingLeft: "0",
+              color: "text",
+              border: "none",
+              outline: "none",
               mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
-              backgroundPosition: 'bottom',
-              backgroundSize: '100%',
-              backgroundRepeat: 'no-repeat',
-              '&:focus': {
+              backgroundPosition: "bottom",
+              backgroundSize: "100%",
+              backgroundRepeat: "no-repeat",
+              "&:focus": {
                 background: `url(${underlineActive})`,
-                backgroundPosition: 'bottom',
-                backgroundSize: '100%',
-                backgroundRepeat: 'no-repeat',
-              }
+                backgroundPosition: "bottom",
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat",
+              },
             }}
             variant="input"
             name="firstName"
@@ -147,35 +162,41 @@ const Form = () => {
         </Box>
 
         {/* // lastName  */}
-        <Box sx={{
-          width: ["100%", "100%", "50%", "100%"],
+        <Box
+          sx={{
+            width: ["100%", "100%", "50%", "100%"],
 
-          p: ["0", "0", '10px']
-        }}>
-          <Label htmlFor="lastName"
+            p: ["0", "0", "10px"],
+          }}
+        >
+          <Label
+            htmlFor="lastName"
             sx={{
-              fontFamily: 'body',
-              fontSize: '14px'
-            }}>Last Name </Label>
+              fontFamily: "body",
+              fontSize: "14px",
+            }}
+          >
+            Last Name{" "}
+          </Label>
           <Input
             sx={{
-              fontFamily: 'body',
+              fontFamily: "body",
               fontWeight: "ceraBold",
               fontSize: "20px",
-              paddingLeft: '0',
-              border: 'none',
-              outline: 'none',
+              paddingLeft: "0",
+              border: "none",
+              outline: "none",
               mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
-              backgroundPosition: 'bottom',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100%',
-              '&:focus': {
+              backgroundPosition: "bottom",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100%",
+              "&:focus": {
                 background: `url(${underlineActive})`,
-                backgroundPosition: 'bottom',
-                backgroundSize: '100%',
-                backgroundRepeat: 'no-repeat',
-              }
+                backgroundPosition: "bottom",
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat",
+              },
             }}
             type="lastName"
             name="lastName"
@@ -186,35 +207,40 @@ const Form = () => {
           />
         </Box>
         {/* // email  */}
-        <Box sx={{
-          width: ["100%", "100%", "65%", "100%"],
-          p: ["0", "0", '10px']
-        }}>
-          <Label htmlFor="email"
+        <Box
+          sx={{
+            width: ["100%", "100%", "65%", "100%"],
+            p: ["0", "0", "10px"],
+          }}
+        >
+          <Label
+            htmlFor="email"
             sx={{
-              fontFamily: 'body',
-              fontSize: '14px'
+              fontFamily: "body",
+              fontSize: "14px",
             }}
-          >email </Label>
+          >
+            email{" "}
+          </Label>
           <Input
             sx={{
-              fontFamily: 'body',
+              fontFamily: "body",
               fontWeight: "ceraBold",
               fontSize: "20px",
-              paddingLeft: '0',
-              border: 'none',
-              outline: 'none',
+              paddingLeft: "0",
+              border: "none",
+              outline: "none",
               mb: ["50px", "50px", "32px", "50px", "50px"],
               background: `url(${underlineInactive})`,
-              backgroundPosition: 'bottom',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '100%',
-              '&:focus': {
+              backgroundPosition: "bottom",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100%",
+              "&:focus": {
                 background: `url(${underlineActive})`,
-                backgroundPosition: 'bottom',
-                backgroundSize: '100%',
-                backgroundRepeat: 'no-repeat',
-              }
+                backgroundPosition: "bottom",
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat",
+              },
             }}
             type="email"
             name="email"
@@ -224,18 +250,22 @@ const Form = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Box>
-        <Box sx={{
-          border: '1px solid #2E2E2E',
-          borderRadius: '13px',
-          width: ["211px"],
-          height: ["57px"]
-        }}>
-          <Button variant="primaryBlack" type="submit"> Jetzt einkaufen</Button>
+        <Box
+          sx={{
+            border: "1px solid #2E2E2E",
+            borderRadius: "13px",
+            width: ["211px"],
+            height: ["57px"],
+          }}
+        >
+          <Button variant="primaryBlack" type="submit">
+            {" "}
+            Jetzt einkaufen
+          </Button>
         </Box>
       </GridItem>
+    </GridWrapper>
+  );
+};
 
-    </GridWrapper >
-  )
-}
-
-export default Form
+export default Form;

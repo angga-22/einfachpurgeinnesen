@@ -1,5 +1,5 @@
 import { Box } from "theme-ui";
-import * as React from 'react'
+import * as React from "react";
 const Section = ({ sx, ...props }) => (
   <Box
     as="section"

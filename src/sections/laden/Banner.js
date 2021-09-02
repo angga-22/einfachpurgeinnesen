@@ -1,118 +1,159 @@
-import * as React from 'react'
-import { Box, Paragraph, Heading } from 'theme-ui'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Button } from '@theme-ui/components'
-import bgBannerLaden from '../../images/bg-banner-laden.svg'
-import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+import * as React from "react";
+import { Box, Paragraph, Heading } from "theme-ui";
+import { StaticImage } from "gatsby-plugin-image";
+import { Button } from "@theme-ui/components";
+import bgBannerLaden from "../../images/bg-banner-laden.svg";
+import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
+import { useMediaQuery } from "../../helper/CustomQuery";
 
 const Banner = () => {
-  const [beverages, setBeverages] = React.useState(
-    window.matchMedia("(max-width: 500px)").matches
-  );
-  const [buttonPosition, setButtonPosition] = React.useState(
-    window.matchMedia("(min-width: 1194px)").matches
-  );
-
-  React.useEffect(() => {
-    window.addEventListener("resize", () => {
-      setBeverages(window.matchMedia("(max-width: 500px)").matches);
-    });
-    window.addEventListener("resize", () => {
-      setButtonPosition(window.matchMedia("(min-width: 1194px)").matches);
-    });
-
-  });
-
+  const isMaxPhonePortraitXl = useMediaQuery("(max-width: 500px)"); // for handling foods&drink image position
+  const isMinTabletLandscape = useMediaQuery("(min-width: 1000px)"); // for handling responsive button position
 
   return (
-    <GridWrapper sx={{
-      background: `url(${bgBannerLaden})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      position: 'relative',
-      m: ["100px 0", "220px 0 120px 0", "90px 0 85px 0", "133px 0 107px 0", "197px 0 120px 0", "152px 0"]
-    }}>
-      {/* //pemisah  */}
-      <GridItem sx={{
-        gridColumn: ["1 / span 11", "1 / span 12", "2 / span 13", "12 / 24", "1 / 10", "2 / 9"],
-        m: ["130px 0 0 0", "115px 0 0 0", "82px 0 0 0", "92px 0 0 0", "10em 0 -5em 0", "10em 0 -10em 0"],
-      }}>
+    <GridWrapper
+      sx={{
+        background: `url(${bgBannerLaden})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "relative",
+        m: [
+          "100px 0",
+          "220px 0 120px 0",
+          "90px 0 85px 0",
+          "133px 0 107px 0",
+          "197px 0 120px 0",
+          "152px 0",
+        ],
+      }}
+    >
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 11",
+            "1 / span 12",
+            "2 / span 13",
+            "12 / 24",
+            "1 / 10",
+            "2 / 9",
+          ],
+          m: [
+            "130px 0 0 0",
+            "115px 0 0 0",
+            "82px 0 0 0",
+            "92px 0 0 0",
+            "10em 0 -5em 0",
+            "10em 0 -10em 0",
+          ],
+        }}
+      >
         <Heading variant="h4">
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.
         </Heading>
-        {buttonPosition ?
-
-          <Box sx={{
-            border: '1px solid #2E2E2E',
-            borderRadius: '13px',
-            position: 'static',
-            mt: ["48px", "32px", "20px", "28px", null, null],
-            width: ["186px", "211px", "200px", "211px", null, null],
-            height: ["44px", "57px", "44px", "57px", null, null],
-          }}>
+        {isMinTabletLandscape ? (
+          <Box
+            sx={{
+              border: "1px solid #2E2E2E",
+              borderRadius: "13px",
+              position: "static",
+              mt: ["48px", "32px", "20px", "28px", null, null],
+              width: ["186px", "211px", "200px", "211px", null, null],
+              height: ["44px", "57px", "44px", "57px", null, null],
+            }}
+          >
             <Button variant="primaryBlack">Jetzt einkaufen</Button>
           </Box>
-          : null
-        }
+        ) : null}
       </GridItem>
-
-      {/* //pemisah  */}
-      <GridItem sx={{
-        gridColumn: ["1 / span  12", "1 / span 12", "13 / span  14", "1 / span 13", "7 / span 14"],
-        m: ["2em 0 0 0", " 0", "-10em 0 0 0", "-3em 0 0 0", "-6em 0 0 0", "-7em 0 0 0"],
-        overflow: ["hidden"],
-      }}>
-        {beverages ?
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span  12",
+            "1 / span 12",
+            "13 / span  14",
+            "1 / span 13",
+            "7 / span 14",
+          ],
+          m: [
+            "2em 0 0 0",
+            " 0",
+            "-10em 0 0 0",
+            "-3em 0 0 0",
+            "-6em 0 0 0",
+            "-7em 0 0 0",
+          ],
+          overflow: ["hidden"],
+        }}
+      >
+        {isMaxPhonePortraitXl ? (
           <StaticImage
             sx={{
-              m: ['-6em 0 -4em 0', "-5em 0", "-6em 0", "0"],
-              width: '100%'
+              m: ["-6em 0 -4em 0", "-5em 0", "-6em 0", "0"],
+              width: "100%",
             }}
-            src={'../../images/header-img-2.png'}
+            src={"../../images/header-img-2.png"}
             alt="bottle"
           />
-
-          :
-
+        ) : (
           <StaticImage
             sx={{
-              m: ['0', "-5em 0 -3em 0", "-3.8em 0 -3.5em 0", "-5em 0 -3em -3em", "-7em 0 -5em -3em", "0"],
-              width: [null, "117%", "110%", "125%", "100%", "80%"]
+              m: [
+                "0",
+                "-5em 0 -3em 0",
+                "-3.8em 0 -3.5em 0",
+                "-5em 0 -3em -3em",
+                "-7em 0 -5em -3em",
+                "0",
+              ],
+              width: [null, "117%", "110%", "125%", "100%", "80%"],
             }}
-            src={'../../images/header-img.png'}
+            src={"../../images/header-img.png"}
             alt="bottle"
           />
-        }
-
+        )}
       </GridItem>
-
-      {/* //pemisah  */}
-
-      <GridItem sx={{
-        gridColumn: ["1 / span 11", "1 / span 11", "2 / span 11", "8 /  20", "17 / span 8", "18 / span 6"],
-        m: ["0 0 80px 0", "0 0 110px 0", "-14em 0 125px 0", "0 0 0 115px 0", "-5em 0 120px 0", "-21em 0 236px 0"]
-      }}>
+      <GridItem
+        sx={{
+          gridColumn: [
+            "1 / span 11",
+            "1 / span 11",
+            "2 / span 11",
+            "8 /  20",
+            "17 / span 8",
+            "18 / span 6",
+          ],
+          m: [
+            "0 0 80px 0",
+            "0 0 110px 0",
+            "-14em 0 125px 0",
+            "0 0 0 115px 0",
+            "-5em 0 120px 0",
+            "-21em 0 236px 0",
+          ],
+        }}
+      >
         <Paragraph variant="paragraph">
-          Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben es, mit den Produkten unserer Partner zu experimentieren und Neues zu entdecken.
+          Eine kleine Karte, oftmals wechselnd und immer saisonal. Wir lieben
+          es, mit den Produkten unserer Partner zu experimentieren und Neues zu
+          entdecken.
         </Paragraph>
-        {buttonPosition ?
-          null :
-          <Box sx={{
-            border: '1px solid #2E2E2E',
-            borderRadius: '13px',
-            position: 'static',
-            mt: ["48px", "32px", "20px", "28px", null, null],
-            width: ["186px", "211px", "200px", "211px", null, null],
-            height: ["44px", "57px", "44px", "57px", null, null],
-          }}>
+        {isMinTabletLandscape ? null : (
+          <Box
+            sx={{
+              border: "1px solid #2E2E2E",
+              borderRadius: "13px",
+              position: "static",
+              mt: ["48px", "32px", "20px", "28px", null, null],
+              width: ["186px", "211px", "200px", "211px", null, null],
+              height: ["44px", "57px", "44px", "57px", null, null],
+            }}
+          >
             <Button variant="primaryBlack">Jetzt einkaufen</Button>
           </Box>
-        }
-
+        )}
       </GridItem>
+    </GridWrapper>
+  );
+};
 
-    </GridWrapper >
-  )
-}
-
-export default Banner
+export default Banner;

@@ -1,19 +1,18 @@
-import * as React from 'react'
-import Section from '../Box'
-import { Text, Box, Paragraph } from 'theme-ui'
-import { StaticImage } from 'gatsby-plugin-image'
-import Content from './Content';
-import { Breakpoints } from '../Breakpoints';
+import * as React from "react";
+import Section from "../Box";
+import { Text, Box, Paragraph } from "theme-ui";
+import { StaticImage } from "gatsby-plugin-image";
+import Content from "./Content";
+import { Breakpoints } from "../Breakpoints";
 const Footer = () => {
-
   return (
     <Section
       sx={{
-        position: 'relative',
-        backgroundColor: 'footer',
+        position: "relative",
+        backgroundColor: "footer",
         display: ["flex"],
         flexDirection: ["column", "column", "column", "row", "row", "row"],
-        justifyContent: 'space-between',
+        justifyContent: "space-between",
         padding: [
           "0 7.5vw 48px 7.5vw",
           "0 9.4vw 81px 9.4vw",
@@ -24,19 +23,24 @@ const Footer = () => {
         ],
       }}
     >
-
       {/* //logo & seiten wrapper */}
       <Box
         sx={{
-          display: ["flex"], // the rest would be define later
-          flexDirection: ["column", "column", "row", "row", "row", "column-reverse"],
-          justifyContent: 'space-between',
+          display: ["flex"],
+          flexDirection: [
+            "column",
+            "column",
+            "row",
+            "row",
+            "row",
+            "column-reverse",
+          ],
+          justifyContent: "space-between",
           textAlign: ["center", "center", "left"],
           marginTop: ["0", "0", "0", "62px"],
-          width: ["100%", "100%", "100%", "100%", "50%", "60%"]
+          width: ["100%", "100%", "100%", "100%", "50%", "60%"],
         }}
       >
-
         {/* //logo */}
         <Box
           sx={{
@@ -48,20 +52,28 @@ const Footer = () => {
             sx={{
               textAlign: ["center"],
               width: ["100px", "129px", "80px", "113px", "140px", "140px"],
-              margin: ['0 auto', "0 auto", "0 0 14px 0", "0 0 12px 0", "0 0 16px 0", "0 0 8px 0"]
+              margin: [
+                "0 auto",
+                "0 auto",
+                "0 0 14px 0",
+                "0 0 12px 0",
+                "0 0 16px 0",
+                "0 0 8px 0",
+              ],
             }}
           >
-            <StaticImage
-              src={'../../images/logo-pur.png'}
-              alt="logo-pur" />
+            <StaticImage src={"../../images/logo-pur.png"} alt="logo-pur" />
           </Box>
           <Paragraph
             variant="paragraph"
             sx={{
               textAlign: ["center", "center", "left"],
-              fontSize: ["14px", "20px", "16px", "18px", "18px", "18px"]
+              fontSize: ["14px", "20px", "16px", "18px", "18px", "18px"],
             }}
-          >Ganz <Text sx={{ fontWeight: 'ceraBold' }}> bewusst, gewusst </Text> was.</Paragraph>
+          >
+            Ganz <Text sx={{ fontWeight: "ceraBold" }}> bewusst, gewusst </Text>{" "}
+            was.
+          </Paragraph>
         </Box>
 
         {/* //seitan */}
@@ -70,11 +82,18 @@ const Footer = () => {
             display: ["flex"],
             flexDirection: ["column", "column", "column"],
             textAlign: ["center"],
-            padding: ["0 0 56px 0", "0 0 81px 0", "0 60px 0 0", "0 30px 0 30px ", "0 5vw 0 0", "0 5vw 0 0"],
+            padding: [
+              "0 0 56px 0",
+              "0 0 81px 0",
+              "0 60px 0 0",
+              "0 30px 0 30px ",
+              "0 5vw 0 0",
+              "0 5vw 0 0",
+            ],
             maxWidth: ["300px", "500px", "100%", "100px", "40%", "100%"],
-            '@media screen and (max-width: 1000px)': {
-              margin: '0 auto',
-            }
+            "@media screen and (max-width: 1000px)": {
+              margin: "0 auto",
+            },
           }}
         >
           <Text
@@ -82,25 +101,25 @@ const Footer = () => {
             sx={{
               marginBottom: ["16px", "16px", "0"],
               textAlign: ["center", "center", "left", "left"],
-              fontWeight: 'bold'
+              fontWeight: "bold",
             }}
-          >Seiten</Text>
+          >
+            Seiten
+          </Text>
           <Paragraph
             variant="footerText"
             sx={{
               textAlign: ["center", "center", "left", "left"],
               [Breakpoints.tabletPortrait]: {
-                lineHeight: '300%',
-                whiteSpace: 'normal',
-                textAlign: 'left'
+                lineHeight: "300%",
+                whiteSpace: "normal",
+                textAlign: "left",
               },
-              // [Breakpoints.phoneLandscape]: {
-              //   whiteSpace: 'nowrap',
-
-              // },
               wordSpacing: ["1rem", "2.5rem", ".8rem", "0", "0", "42px"],
             }}
-          >Startseite Speisekarte Restaurant Ladengeschäft OnlineShop</Paragraph>
+          >
+            Startseite Speisekarte Restaurant Ladengeschäft OnlineShop
+          </Paragraph>
         </Box>
       </Box>
       {/* //content wrapper */}
@@ -109,21 +128,17 @@ const Footer = () => {
       </Box>
       <Box
         sx={{
-          position: 'absolute',
+          position: "absolute",
           left: "0",
           bottom: "0",
           width: ["250px", "450px", "220px", "220px", "270px", "270px"],
-          height: 'auto'
+          height: "auto",
         }}
       >
-        <StaticImage
-          src={'../../images/art-paint.png'}
-          alt="art-paint"
-        />
+        <StaticImage src={"../../images/art-paint.png"} alt="art-paint" />
       </Box>
-
     </Section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

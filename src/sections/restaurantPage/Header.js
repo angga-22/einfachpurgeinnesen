@@ -2,17 +2,10 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Box, Heading, Paragraph } from "theme-ui";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
+import { useMediaQuery } from "../../helper/CustomQuery";
 
 const TopContent = () => {
-  const [heroImage, setHeroImage] = React.useState(
-    window.matchMedia("(min-width: 700px)").matches
-  );
-
-  React.useEffect(() => {
-    window.addEventListener("resize", () => {
-      setHeroImage(window.matchMedia("(min-width: 700px)").matches);
-    });
-  });
+  const isMinPhoneLandscape = useMediaQuery("(min-width: 700px)"); // for handling hero image
 
   return (
     <GridWrapper
@@ -92,7 +85,7 @@ const TopContent = () => {
           <StaticImage src={"../../images/quote-right.png"} alt="quote-right" />
         </Box>
       </GridItem>
-      {heroImage ? (
+      {isMinPhoneLandscape ? (
         <GridItem
           sx={{
             gridColumn: [

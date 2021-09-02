@@ -1,10 +1,10 @@
-import * as React from 'react'
+import * as React from "react";
 import { Text } from "@theme-ui/components";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { Breakpoints } from '../Breakpoints'
-import { GridWrapper, GridItem } from '@thepuzzlers/pieces'
+import { Breakpoints } from "../Breakpoints";
+import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 
 const Nav = () => {
   const [hamburgerClicked, setHamburgerClicked] = React.useState(false);
@@ -33,7 +33,7 @@ const Nav = () => {
         alignItems: "center",
         height: ["91px", "100px", "80px", "100px", "100px", "100px"],
         position: "relative",
-        overflow: 'hidden'
+        overflow: "hidden",
       }}
     >
       {/* // burger menu  */}
@@ -41,7 +41,14 @@ const Nav = () => {
         onClick={handleBurgerClicked}
         sx={{
           backgroundColor: "primary",
-          gridColumn: ["1 / 1", "1 / 1", "1 / 1", " 1 / 1", '1 / span 24', '1 / span 24'],
+          gridColumn: [
+            "1 / 1",
+            "1 / 1",
+            "1 / 1",
+            " 1 / 1",
+            "1 / span 24",
+            "1 / span 24",
+          ],
           cursor: "pointer",
           [Breakpoints.tabletLandscape]: {
             display: "none",
@@ -97,32 +104,28 @@ const Nav = () => {
         ></Text>
       </GridItem>
 
-
       {/* //logo pur  */}
-      <GridItem sx={{
-        gridColumn: ["6 / span 6", "6 / span 6", "12 / span 12", "12 / span 12", "1 / span 1"],
-        width: ["43px", "55px", "55px", "63px", "63px", "63px"]
-      }}>
-        <StaticImage
-          src={"../../images/logo-pur.png"}
-          alt="logo-pur"
-        />
+      <GridItem
+        sx={{
+          gridColumn: [
+            "6 / span 6",
+            "6 / span 6",
+            "12 / span 12",
+            "12 / span 12",
+            "1 / span 1",
+          ],
+          width: ["43px", "55px", "55px", "63px", "63px", "63px"],
+        }}
+      >
+        <StaticImage src={"../../images/logo-pur.png"} alt="logo-pur" />
       </GridItem>
-
 
       {/* // navigation list  */}
       <GridItem
         sx={{
           gridColumn: ["5 / span 16"],
           display: "flex",
-          flexDirection: [
-            "column",
-            "column",
-            "column",
-            "column",
-            "row",
-            "row",
-          ],
+          flexDirection: ["column", "column", "column", "column", "row", "row"],
           position: [
             "absolute",
             "absolute",
@@ -134,9 +137,9 @@ const Nav = () => {
           justifyContent: "space-between ",
           // width: ["100%", "100%", "100%", "80%", "65%", "60%"],
           zIndex: "1",
-          backgroundColor: 'primary',
-          '@media screen and (max-width: 700px)': {
-            backgroundColor: 'red'
+          backgroundColor: "primary",
+          "@media screen and (max-width: 700px)": {
+            backgroundColor: "red",
           },
           alignItems: "center",
           top: "100px",
@@ -144,13 +147,13 @@ const Nav = () => {
           transform: hamburgerClicked
             ? "translateX(0)"
             : [
-              "translateX(-120%)",
-              "translateX(-120%)",
-              "translateX(-120%)",
-              "translateX(-120%)",
-              "translate(0)",
-              "translate(0)",
-            ],
+                "translateX(-120%)",
+                "translateX(-120%)",
+                "translateX(-120%)",
+                "translateX(-120%)",
+                "translate(0)",
+                "translate(0)",
+              ],
         }}
       >
         {data.allPurNavigationJson.edges.map((menu) => (
@@ -158,27 +161,36 @@ const Nav = () => {
             key={menu.node.id}
             to={menu.node.link}
             activeStyle={{
-              borderBottom: '1px solid text'
+              borderBottom: "1px solid text",
             }}
             style={{
               color: "#000",
               textDecoration: "none",
             }}
           >
-            <Text sx={{
-              fontFamily: 'body',
-              fontWeight: "normal",
-              lineHeight: "100%",
-              fontSize: ["16px", "16px", "16px", "16px", "16px", "18px"],
-            }}> {menu.node.label} </Text>
+            <Text
+              sx={{
+                fontFamily: "body",
+                fontWeight: "normal",
+                lineHeight: "100%",
+                fontSize: ["16px", "16px", "16px", "16px", "16px", "18px"],
+              }}
+            >
+              {menu.node.label}{" "}
+            </Text>
           </Link>
         ))}
       </GridItem>
       <GridItem
         sx={{
-          gridColumn: ["12 / span 12", "12 /span 12", "24 / span 24", "24 / span 24"],
-          display: 'flex',
-          flexDirection: 'flex-start'
+          gridColumn: [
+            "12 / span 12",
+            "12 /span 12",
+            "24 / span 24",
+            "24 / span 24",
+          ],
+          display: "flex",
+          flexDirection: "flex-start",
         }}
       >
         <StaticImage

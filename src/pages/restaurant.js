@@ -1,13 +1,7 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-
+import React from "react";
+import { graphql } from "gatsby";
 // Sections
-import {
-  Banner,
-  Article,
-  Header,
-  Quote
-} from 'sections/restaurantPage'
+import { Banner, Article, Header, Quote } from "sections/restaurantPage";
 
 const RestaurantPage = ({ data: { articles } }) => {
   return (
@@ -24,19 +18,22 @@ const RestaurantPage = ({ data: { articles } }) => {
         firstParagraph={articles.nodes[2].article}
         secondParagraph={articles.nodes[3].article}
       />
-      <Quote sx={{ pb: ["126px", "505px", "102px", "179px", "83px", "484px"] }} />
+      <Quote
+        sx={{ pb: ["126px", "505px", "102px", "179px", "83px", "484px"] }}
+      />
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
-    query getRestaurantArticles {
-        articles: allPurArticleJson {
-            nodes {
-            article
-            id
-        }
+  query getRestaurantArticles {
+    articles: allPurArticleJson {
+      nodes {
+        article
+        id
+      }
     }
-}`
+  }
+`;
 
-export default RestaurantPage
+export default RestaurantPage;

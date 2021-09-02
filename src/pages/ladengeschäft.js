@@ -1,10 +1,9 @@
 import * as React from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 import { Banner, Form, Products, Header, CopyWriter } from "sections/laden";
-import ItemLists from '../components/CardItem/ItemLists';
+import ItemLists from "../components/CardItem/ItemLists";
 
 const Laden = ({ data }) => {
-
   return (
     <>
       <Header
@@ -12,9 +11,7 @@ const Laden = ({ data }) => {
         content={data.pageData.header.content}
       />
       <CopyWriter />
-      <Products
-        data={data.pageData}
-      />
+      <Products data={data.pageData} />
       <Banner />
       <Form />
       {/* <ItemLists /> */}
@@ -35,9 +32,6 @@ export const query = graphql`
       }
     }
   }
-  `
-
-
-
+`;
 
 export default Laden;

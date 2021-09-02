@@ -1,10 +1,10 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../Footer'
-import Nav from '../Nav'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Footer from "../Footer";
+import Nav from "../Nav";
 
 // General css reset
-import 'reset-css'
+import "reset-css";
 
 const Layout = ({ children }) => (
   <>
@@ -16,6 +16,6 @@ const Layout = ({ children }) => (
     <main>{children}</main>
     <Footer />
   </>
-)
+);
 
-export default Layout
+export default Layout;
