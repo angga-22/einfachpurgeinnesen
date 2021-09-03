@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Box, Heading, Paragraph, Label, Input } from "theme-ui";
-import { Button } from "@theme-ui/components";
+import { Box, Heading, Paragraph } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
-import underlineActive from "../../images/underline-active.svg";
-import underlineInactive from "../../images/underline-inactive.svg";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
+import PrimaryButton from "../../components/PrimaryButton";
+import FormField from "../../components/Input";
 
 const Form = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -13,12 +12,12 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // let data = formData()
     console.log("form submitted successfully");
   };
 
   return (
     <GridWrapper>
+      {/* text section  */}
       <GridItem
         sx={{
           gridColumn: [
@@ -100,8 +99,6 @@ const Form = () => {
           ],
           backgroundColor: ["primary"],
         }}
-        as="form"
-        onSubmit={handleSubmit}
       >
         <Box
           sx={{
@@ -115,106 +112,44 @@ const Form = () => {
           <StaticImage src={"../../images/pink-crown.png"} alt="pink-crown" />
         </Box>
 
-        {/* // firstName  */}
-        <Box
-          sx={{
-            width: ["100%", "100%", "50%", "100%"],
-            p: ["0", "0", "10px"],
-          }}
-        >
-          <Label htmlFor="firstName">First Name </Label>
-          <Input
-            sx={{
-              background: `url(${underlineInactive})`,
-              backgroundPosition: "bottom",
-              backgroundSize: "100%",
-              backgroundRepeat: "no-repeat",
-              "&:focus": {
-                background: `url(${underlineActive})`,
-                backgroundPosition: "bottom",
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
-              },
-            }}
-            name="firstName"
-            id="firstName"
-            mb={3}
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </Box>
+        <FormField
+          htmlFor="firstName"
+          label="firstName"
+          type="text"
+          name="firstName"
+          id="firstName"
+          value={firstName}
+          handleChange={(e) => setFirstName(e.target.value)}
+        />
 
-        {/* // lastName  */}
-        <Box
-          sx={{
-            width: ["100%", "100%", "50%", "100%"],
-            p: ["0", "0", "10px"],
-          }}
-        >
-          <Label htmlFor="lastName">Last Name </Label>
-          <Input
-            sx={{
-              background: `url(${underlineInactive})`,
-              backgroundPosition: "bottom",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "100%",
-              "&:focus": {
-                background: `url(${underlineActive})`,
-                backgroundPosition: "bottom",
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
-              },
-            }}
-            type="lastName"
-            name="lastName"
-            id="lastName"
-            mb={3}
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </Box>
-        {/* // email  */}
-        <Box
-          sx={{
-            width: ["100%", "100%", "65%", "100%"],
-            p: ["0", "0", "10px"],
-          }}
-        >
-          <Label htmlFor="email">email </Label>
-          <Input
-            sx={{
-              background: `url(${underlineInactive})`,
-              backgroundPosition: "bottom",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "100%",
-              "&:focus": {
-                background: `url(${underlineActive})`,
-                backgroundPosition: "bottom",
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat",
-              },
-            }}
-            type="email"
-            name="email"
-            id="email"
-            mb={3}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Box>
-        <Box
+        <FormField
+          htmlFor="lastName"
+          label="lastName"
+          type="text"
+          name="lastName"
+          id="lastName"
+          value={lastName}
+          handleChange={(e) => setLastName(e.target.value)}
+        />
+
+        <FormField
+          htmlFor="email"
+          label="email"
+          type="text"
+          name="email"
+          id="email"
+          value={email}
+          handleChange={(e) => setEmail(e.target.value)}
+        />
+
+        <PrimaryButton
           sx={{
             border: "1px solid #2E2E2E",
-            borderRadius: "13px",
-            width: ["211px"],
-            height: ["57px"],
           }}
+          handleClick={handleSubmit}
         >
-          <Button variant="primaryBlack" type="submit">
-            {" "}
-            Jetzt einkaufen
-          </Button>
-        </Box>
+          Jetzt einkaufen
+        </PrimaryButton>
       </GridItem>
     </GridWrapper>
   );

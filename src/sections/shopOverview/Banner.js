@@ -1,11 +1,10 @@
 import React from "react";
-import { Box } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
-import { Button } from "@theme-ui/components";
 import bgToSmall from "../../images/bg-to-small-shopOverview.svg";
 import bgToBig from "../../images/bg-to-big-shopOverview.svg";
 import { useMediaQuery } from "../../helper/CustomQuery";
+import PrimaryButton from "../../components/PrimaryButton";
 
 const Banner = () => {
   const isMaxPhoneLandscape = useMediaQuery("(max-width: 700px)"); // for handling background banner
@@ -59,16 +58,13 @@ const Banner = () => {
           gridColumn: ["3 / span 5"],
         }}
       >
-        <Box
+        <PrimaryButton
           sx={{
             border: "1px solid #2E2E2E",
-            borderRadius: "13px",
-            width: ["186px", "211px", "200px", "211px", null, null],
-            height: ["44px", "57px", "44px", "57px", null, null],
           }}
         >
-          <Button variant="primaryBlack">Jetzt einkaufen</Button>
-        </Box>
+          Jetzt einkaufen
+        </PrimaryButton>
       </GridItem>
     </GridWrapper>
   );

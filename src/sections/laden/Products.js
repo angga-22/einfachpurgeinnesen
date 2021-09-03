@@ -61,6 +61,7 @@ const ListCafe = ({ data }) => {
                   maxWidth: "254px",
                 },
               }}
+              key={item.id}
             >
               <Heading
                 variant="h5"

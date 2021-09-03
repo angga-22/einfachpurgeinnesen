@@ -1,12 +1,11 @@
 import * as React from "react";
-import Section from "../Box";
 import { Text, Box, Paragraph } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 import Content from "./Content";
 import { Breakpoints } from "../Breakpoints";
 const Footer = () => {
   return (
-    <Section
+    <Box
       sx={{
         position: "relative",
         backgroundColor: "footer",
@@ -137,7 +136,7 @@ const Footer = () => {
       >
         <StaticImage src={"../../images/art-paint.png"} alt="art-paint" />
       </Box>
-    </Section>
+    </Box>
   );
 };
 

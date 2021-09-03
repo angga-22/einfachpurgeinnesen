@@ -1,8 +1,8 @@
 import { theme as defaultTheme } from "@thepuzzlers/pieces";
 import maskButton from "../images/button-vector.png";
 import { Breakpoints } from "../components/Breakpoints";
-// import { underlineActive } from "../images/underline-active.svg";
-// import { underlineInactive } from "../images/underline-inactive.svg";
+import underlineActive from "../images/underline-active.svg";
+import underlineInactive from "../images/underline-inactive.svg";
 
 export default {
   colors: {
@@ -113,16 +113,16 @@ export default {
       border: "none",
       outline: "none",
       mb: ["50px", "50px", "32px", "50px", "50px"],
-      // background: `url(${underlineInactive})`,
-      // backgroundPosition: "bottom",
-      // backgroundSize: "100%",
-      // backgroundRepeat: "no-repeat",
-      // "&:focus": {
-      //   background: `url(${underlineActive})`,
-      //   backgroundPosition: "bottom",
-      //   backgroundSize: "100%",
-      //   backgroundRepeat: "no-repeat",
-      // },
+      background: `url(${underlineInactive})`,
+      backgroundPosition: "bottom",
+      backgroundSize: "100%",
+      backgroundRepeat: "no-repeat",
+      "&:focus": {
+        background: `url(${underlineActive})`,
+        backgroundPosition: "bottom",
+        backgroundSize: "100%",
+        backgroundRepeat: "no-repeat",
+      },
     },
   },
   buttons: {

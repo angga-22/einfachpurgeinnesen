@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box, Heading } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
-import { Button } from "@theme-ui/components";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
+import PrimaryButton from "../../components/PrimaryButton";
 
 const Footer = () => {
   return (
@@ -101,16 +101,13 @@ const Footer = () => {
               sie einmal nicht vorbei kommen können.
               <span sx={{ fontWeight: "bold" }}> Unser Onlineshop. </span>
             </Heading>
-            <Box
+            <PrimaryButton
               sx={{
                 border: "1px solid #2E2E2E",
-                borderRadius: "13px",
-                width: ["186px", "211px", "200px", "211px", null, null],
-                height: ["44px", "57px", "44px", "57px", null, null],
               }}
             >
-              <Button variant="primaryBlack">Jetzt einkaufen</Button>
-            </Box>
+              Jetzt einkaufen
+            </PrimaryButton>
           </Box>
           <Box
             sx={{

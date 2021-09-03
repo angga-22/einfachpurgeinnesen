@@ -3,6 +3,7 @@ import { Box, Heading } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { useMediaQuery } from "../../helper/CustomQuery";
+
 const CopyWriter = () => {
   const isMinTabletPortrait = useMediaQuery("(min-width: 750px)"); // for handling changing leaves image
 
@@ -43,7 +44,11 @@ const CopyWriter = () => {
           }}
         >
           {isMinTabletPortrait ? (
-            <StaticImage src={"../../images/leaves-big.png"} alt="leaves" />
+            <StaticImage
+              src={"../../images/leaves-big.png"}
+              width="100"
+              alt="leaves"
+            />
           ) : (
             <StaticImage
               src={"../../images/leaves-star.png"}

@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "name": "one",
+    "price": 5,
+    "quantity": 1,
+    "isAdded": true
+  },
+  {
+    "id": 2,
+    "name": "two",
+    "price": 2,
+    "quantity": 1,
+    "isAdded": false
+  },
+  {
+    "id": 3,
+    "name": "three",
+    "price": 3,
+    "quantity": 1,
+    "isAdded": false
+  },
+  {
+    "id": 4,
+    "name": "four",
+    "price": 7,
+    "quantity": 1,
+    "isAdded": false
+  }
+]

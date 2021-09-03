@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Text } from "theme-ui";
+import { Box, Text, Paragraph } from "theme-ui";
 import CardItem from "./CardItem";
-import { Button } from "@theme-ui/components";
+import PrimaryButton from "../../../components/PrimaryButton";
+import underlineInactive from "../../../images/underline-inactive.svg";
+import bulletYellow from "../../../images/bullet-yellow.png";
 
 const CardOverview = ({ initialItems }) => {
   const [items, setItems] = React.useState(initialItems);
@@ -42,6 +44,10 @@ const CardOverview = ({ initialItems }) => {
     setItems(updateItem);
   };
 
+  const handleRemoveItem = (id) => {
+    items.filter((item) => console.log(item.id !== id));
+  };
+
   const totalPrices = () => {
     const totalPrice = items
       .map((item) => item.price * item.quantity)
@@ -61,12 +67,20 @@ const CardOverview = ({ initialItems }) => {
         p: "20px",
         backgroundColor: "white",
         borderRadius: "12px",
-        "box-shadow": " 0px 12px 24px rgba(0, 0, 0, 0.1)",
+        boxShadow: " 0px 12px 24px rgba(0, 0, 0, 0.1)",
       }}
     >
       <Box>
         <Box>
-          <Text variant="h2">We viel darf es sein?</Text>
+          <Paragraph
+            sx={{
+              fontSize: ["26px"],
+              fontFamily: "label",
+              fontWeight: "bold",
+            }}
+          >
+            We viel darf es sein?
+          </Paragraph>
         </Box>
         {items.map((item) => (
           <>
@@ -74,6 +88,7 @@ const CardOverview = ({ initialItems }) => {
               {...item}
               handlePlus={() => handlePlus(item.id)}
               handleMinus={() => handleMinus(item.id)}
+              handleRemoveItem={() => handleRemoveItem(item.id)}
             />
           </>
         ))}
@@ -85,21 +100,60 @@ const CardOverview = ({ initialItems }) => {
           justifyContent: "space-between",
         }}
       >
-        <Text variant="paragraph">Total</Text>
-        <Text variant="paragraph">{total} £</Text>
+        <Box
+          sx={{
+            background: `url(${underlineInactive})`,
+            backgroundPosition: "top",
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            pt: "20px",
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
+          <Text
+            variant="paragraph"
+            sx={{
+              fontWeight: "bold",
+              fontFamily: "body",
+              fontSize: "24px",
+            }}
+          >
+            Total
+          </Text>
+          <Box
+            sx={{
+              background: `url(${bulletYellow})`,
+              backgroundPosition: "top",
+              backgroundSize: "100%",
+              width: "45px",
+              height: "40px",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Text
+              sx={{
+                fontWeight: "bold",
+                fontFamily: "label",
+                fontSize: "24px",
+              }}
+            >
+              {total} €
+            </Text>
+          </Box>
+        </Box>
       </Box>
-      <Box
+      <PrimaryButton
         sx={{
           border: "1px solid #2E2E2E",
-          borderRadius: "13px",
           position: "static",
           mt: ["48px", "32px", "20px", "28px", null, null],
-          width: ["186px", "211px", "200px", "211px", null, null],
-          height: ["44px", "57px", "44px", "57px", null, null],
         }}
       >
-        <Button variant="primaryBlack">In den Warenkorb</Button>
-      </Box>
+        In den Warenkorb
+      </PrimaryButton>
     </Box>
   );
 };

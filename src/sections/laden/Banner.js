@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Box, Paragraph, Heading } from "theme-ui";
+import { Paragraph, Heading } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
-import { Button } from "@theme-ui/components";
 import bgBannerLaden from "../../images/bg-banner-laden.svg";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { useMediaQuery } from "../../helper/CustomQuery";
+import PrimaryButton from "../../components/PrimaryButton";
 
 const Banner = () => {
   const isMaxPhonePortraitXl = useMediaQuery("(max-width: 500px)"); // for handling foods&drink image position
@@ -51,18 +51,15 @@ const Banner = () => {
           Tu etwas Gutes rein, dann kommt etwas Gutes raus.
         </Heading>
         {isMinTabletLandscape ? (
-          <Box
+          <PrimaryButton
             sx={{
               border: "1px solid #2E2E2E",
-              borderRadius: "13px",
               position: "static",
               mt: ["48px", "32px", "20px", "28px", null, null],
-              width: ["186px", "211px", "200px", "211px", null, null],
-              height: ["44px", "57px", "44px", "57px", null, null],
             }}
           >
-            <Button variant="primaryBlack">Jetzt einkaufen</Button>
-          </Box>
+            Jetzt einkaufen
+          </PrimaryButton>
         ) : null}
       </GridItem>
       <GridItem
@@ -137,19 +134,17 @@ const Banner = () => {
           es, mit den Produkten unserer Partner zu experimentieren und Neues zu
           entdecken.
         </Paragraph>
+
         {isMinTabletLandscape ? null : (
-          <Box
+          <PrimaryButton
             sx={{
               border: "1px solid #2E2E2E",
-              borderRadius: "13px",
               position: "static",
               mt: ["48px", "32px", "20px", "28px", null, null],
-              width: ["186px", "211px", "200px", "211px", null, null],
-              height: ["44px", "57px", "44px", "57px", null, null],
             }}
           >
-            <Button variant="primaryBlack">Jetzt einkaufen</Button>
-          </Box>
+            Jetzt einkaufen
+          </PrimaryButton>
         )}
       </GridItem>
     </GridWrapper>

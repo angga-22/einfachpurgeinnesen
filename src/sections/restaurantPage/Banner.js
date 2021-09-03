@@ -6,6 +6,7 @@ import bgBannerRestaurant from "../../images/bg-banner-restaurant.svg";
 import bgBannerRestaurantSmall from "../../images/bg-banner-restaurant-small.svg";
 import { useMediaQuery } from "../../helper/CustomQuery";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
+import PrimaryButton from "../../components/PrimaryButton";
 const Banner = () => {
   const isMaxPhonePortraitXl = useMediaQuery("(max-width: 500px)"); // for handling shrimp image
   const isMinPhoneLandscape = useMediaQuery("(min-width: 700px)"); // for handling BISTRO typography
@@ -49,25 +50,21 @@ const Banner = () => {
             width: ["199px", "250px", "180px", "240px", "250px", "198px"],
           }}
         >
-          {isMaxPhonePortraitXl ? (
+          {isMaxPhonePortraitXl && (
             <StaticImage
               src={"../../images/crusta-nova.png"}
               width="100%"
               alt="crusta-nova"
             />
-          ) : isBetweenPhonePortraitXlAndDesktop ? (
+          )}
+          {isBetweenPhonePortraitXlAndDesktop && (
             <StaticImage
               src={"../../images/crusta-nova-stripes.png"}
-              alt="crusta-nova"
               width="100%"
-            />
-          ) : isMinDesktop ? (
-            <StaticImage
-              src={"../../images/crusta-nova.png"}
               alt="crusta-nova"
-              width="100%"
             />
-          ) : (
+          )}
+          {isMinDesktop && (
             <StaticImage
               src={"../../images/crusta-nova.png"}
               width="100%"
@@ -90,33 +87,19 @@ const Banner = () => {
           pb: ["24px", "16px", "16px", "45px", "50px", "46px"],
         }}
       >
-        {isMinPhoneLandscape ? (
-          <Heading
-            sx={{
-              color: "white",
-              fontWeight: "500",
-              lineHeight: ["90%"],
-              fontSize: ["72px", "100px", "80px", "100px", "120px", "120px"],
-              wordWrap: ["break-word"],
-              fontFamily: "label",
-            }}
-            dangerouslySetInnerHTML={{ __html: " Bistroküche?! " }}
-          ></Heading>
-        ) : (
-          <Heading
-            sx={{
-              color: "white",
-              fontWeight: "500",
-              lineHeight: ["90%"],
-              fontSize: ["72px", "100px", "82px", "100px", "120px", "120px"],
-              wordWrap: ["break-word"],
-              fontFamily: "label",
-            }}
-            dangerouslySetInnerHTML={{ __html: " Bistro- <br />küche?! " }}
-          ></Heading>
-        )}
+        <Heading
+          sx={{
+            color: "white",
+            fontWeight: "500",
+            lineHeight: ["90%"],
+            fontSize: ["72px", "100px", "80px", "100px", "120px", "120px"],
+            wordWrap: ["break-word"],
+            fontFamily: "label",
+          }}
+        >
+          {isMinPhoneLandscape ? "Bistroküche ?!" : "Bistro -  küche ?!"}
+        </Heading>
       </GridItem>
-
       {/* // paragraph wrapper */}
       <GridItem
         sx={{
@@ -157,16 +140,14 @@ const Banner = () => {
           alignItems: "center",
         }}
       >
-        <Box
+        <PrimaryButton
           sx={{
             border: "1px solid white",
-            borderRadius: "13px",
-            width: ["211px", "211px", "199px", "211px", "211px", "211px"],
-            height: ["57px", "57px", "44px", "57px", "57px", "57px"],
           }}
+          buttonTheme="primaryWhite"
         >
           <MenuButton />
-        </Box>
+        </PrimaryButton>
       </GridItem>
     </GridWrapper>
   );
