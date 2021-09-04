@@ -2,11 +2,12 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Box, Heading, Paragraph } from "theme-ui";
 import MenuButton from "../../overlays/MenuOverlay/MenuButton";
-import bgBannerRestaurant from "../../images/bg-banner-restaurant.svg";
-import bgBannerRestaurantSmall from "../../images/bg-banner-restaurant-small.svg";
+import bgBannerRestaurant from "../../images/restaurant-page/banner/bg-banner-lg.svg";
+import bgBannerRestaurantSmall from "../../images/restaurant-page/banner/bg-banner-sm.svg";
 import { useMediaQuery } from "../../helper/CustomQuery";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
-import PrimaryButton from "../../components/PrimaryButton";
+import PrimaryButton from "components/PrimaryButton";
+
 const Banner = () => {
   const isMaxPhonePortraitXl = useMediaQuery("(max-width: 500px)"); // for handling shrimp image
   const isMinPhoneLandscape = useMediaQuery("(min-width: 700px)"); // for handling BISTRO typography
@@ -52,21 +53,21 @@ const Banner = () => {
         >
           {isMaxPhonePortraitXl && (
             <StaticImage
-              src={"../../images/crusta-nova.png"}
+              src={"../../images/restaurant-page/banner/small-shrimp.png"}
               width="100%"
               alt="crusta-nova"
             />
           )}
           {isBetweenPhonePortraitXlAndDesktop && (
             <StaticImage
-              src={"../../images/crusta-nova-stripes.png"}
+              src={"../../images/restaurant-page/banner/big-shrimp.png"}
               width="100%"
               alt="crusta-nova"
             />
           )}
           {isMinDesktop && (
             <StaticImage
-              src={"../../images/crusta-nova.png"}
+              src={"../../images/restaurant-page/banner/small-shrimp.png"}
               width="100%"
               alt="crusta-nova"
             />

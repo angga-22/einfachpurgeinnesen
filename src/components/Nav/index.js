@@ -117,7 +117,7 @@ const Nav = () => {
           width: ["43px", "55px", "55px", "63px", "63px", "63px"],
         }}
       >
-        <StaticImage src={"../../images/logo-pur.png"} alt="logo-pur" />
+        <StaticImage src={"../../images/general/logo.png"} alt="logo-pur" />
       </GridItem>
 
       {/* // navigation list  */}
@@ -194,7 +194,7 @@ const Nav = () => {
         }}
       >
         <StaticImage
-          src={"../../images/bi_cart.png"}
+          src={"../../images/general/cart.png"}
           width="30"
           alt="cart-icon"
         />

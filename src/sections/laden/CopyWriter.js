@@ -38,20 +38,16 @@ const CopyWriter = () => {
           mb: ["48px", "64px", "48px", "64px", "80px", "64px"],
         }}
       >
-        <Box
-          sx={{
-            maxWidth: ["103px", "118px", "108px", "165px", "160px", "239px"],
-          }}
-        >
+        <Box>
           {isMinTabletPortrait ? (
             <StaticImage
-              src={"../../images/leaves-big.png"}
-              width="100"
+              src={"../../images/laden-page/big-leaves.png"}
+              width="150"
               alt="leaves"
             />
           ) : (
             <StaticImage
-              src={"../../images/leaves-star.png"}
+              src={"../../images/laden-page/leaves.png"}
               width="100"
               alt="leaves"
             />

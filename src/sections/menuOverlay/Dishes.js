@@ -69,13 +69,13 @@ const Dishes = () => {
                     <StaticImage
                       alt="vegan"
                       width="20"
-                      src={"../../images/vegan.png"}
+                      src={"../../images/menu-overlay/opt-mark-yellow.png"}
                     />
                   ) : item.node.type === "vegetarian" ? (
                     <StaticImage
                       alt="vegan"
                       width="12"
-                      src={"../../images/vegetarian.png"}
+                      src={"../../images/menu-overlay/opt-mark-green.png"}
                     />
                   ) : null}
                 </span>
@@ -108,7 +108,7 @@ const Dishes = () => {
                   sx={{
                     marginRight: "10px",
                   }}
-                  src={"../../images/bullet-small.png"}
+                  src={"../../images/menu-overlay/circle-black-sm.png"}
                 />
                 {item.node.currentPrice}
               </Paragraph>
@@ -129,7 +129,7 @@ const Dishes = () => {
                     sx={{
                       marginRight: "10px",
                     }}
-                    src={"../../images/bullet-big.png"}
+                    src={"../../images/menu-overlay/circle-black-lg.png"}
                   />
                   {item.node.nextPrice}
                 </Paragraph>
@@ -175,13 +175,13 @@ const Dishes = () => {
                     <StaticImage
                       alt="vegan"
                       width="20"
-                      src={"../../images/vegan.png"}
+                      src={"../../images/menu-overlay/opt-mark-yellow.png"}
                     />
                   ) : item.node.type === "vegetarian" ? (
                     <StaticImage
                       alt="vegan"
                       width="12"
-                      src={"../../images/vegetarian.png"}
+                      src={"../../images/menu-overlay/opt-mark-green.png"}
                     />
                   ) : null}
                 </span>
@@ -214,7 +214,7 @@ const Dishes = () => {
                   sx={{
                     marginRight: "10px",
                   }}
-                  src={"../../images/bullet-small.png"}
+                  src={"../../images/menu-overlay/circle-black-sm.png"}
                 />
                 {item.node.currentPrice}
               </Paragraph>
@@ -235,7 +235,7 @@ const Dishes = () => {
                     sx={{
                       marginRight: "10px",
                     }}
-                    src={"../../images/bullet-big.png"}
+                    src={"../../images/menu-overlay/circle-black-lg.png"}
                   />
                   {item.node.nextPrice}
                 </Paragraph>

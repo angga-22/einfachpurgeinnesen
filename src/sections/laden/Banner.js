@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Paragraph, Heading } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
-import bgBannerLaden from "../../images/bg-banner-laden.svg";
+import bgBannerLaden from "../../images/laden-page/banner-laden/bg-banner.svg";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { useMediaQuery } from "../../helper/CustomQuery";
 import PrimaryButton from "../../components/PrimaryButton";
@@ -84,28 +84,15 @@ const Banner = () => {
       >
         {isMaxPhonePortraitXl ? (
           <StaticImage
-            sx={{
-              m: ["-6em 0 -4em 0", "-5em 0", "-6em 0", "0"],
-              width: "100%",
-            }}
-            src={"../../images/header-img-2.png"}
-            alt="bottle"
+            width="100"
+            src={"../../images/laden-page/banner-laden/beverages-2.png"}
+            alt="beverages"
           />
         ) : (
           <StaticImage
-            sx={{
-              m: [
-                "0",
-                "-5em 0 -3em 0",
-                "-3.8em 0 -3.5em 0",
-                "-5em 0 -3em -3em",
-                "-7em 0 -5em -3em",
-                "0",
-              ],
-              width: [null, "117%", "110%", "125%", "100%", "80%"],
-            }}
-            src={"../../images/header-img.png"}
-            alt="bottle"
+            width="100"
+            src={"../../images/general/beverages.png"}
+            alt="beverages"
           />
         )}
       </GridItem>

@@ -109,18 +109,12 @@ const Footer = () => {
               Jetzt einkaufen
             </PrimaryButton>
           </Box>
-          <Box
-            sx={{
-              margin: ["0 auto", "0 auto", "0", null, null, null],
-              overflow: "hidden",
-            }}
-          >
+          <Box>
             <StaticImage
               sx={{
                 width: ["25em", "25em", "15em", "20em", "22em"],
-                margin: "-30px -35px -40px -20px",
               }}
-              src={"../../images/header-img.png"}
+              src={"../../images/general/beverages.png"}
               alt="bottle"
             />
           </Box>

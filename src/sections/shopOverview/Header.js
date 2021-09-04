@@ -34,7 +34,7 @@ const Header = ({ data }) => {
           }}
         >
           <StaticImage
-            src={"../../images/abstract-img.png"}
+            src={"../../images/shop-overview/yellow-shape.png"}
             alt="abstract-img"
           />
         </Box>
@@ -78,7 +78,10 @@ const Header = ({ data }) => {
           width: ["145px", "175px", "190px", "266px", "255px", "334px"],
         }}
       >
-        <StaticImage src={"../../images/curly-line.png"} alt="curly-line" />
+        <StaticImage
+          src={"../../images/shop-overview/curly-line.png"}
+          alt="curly-line"
+        />
       </Box>
     </GridWrapper>
   );

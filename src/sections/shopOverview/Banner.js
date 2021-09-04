@@ -1,8 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
-import bgToSmall from "../../images/bg-to-small-shopOverview.svg";
-import bgToBig from "../../images/bg-to-big-shopOverview.svg";
+import bgToSmall from "../../images/shop-overview/banner/bg-banner-small.svg";
+import bgToBig from "../../images/shop-overview/banner/bg-banner-big.svg";
 import { useMediaQuery } from "../../helper/CustomQuery";
 import PrimaryButton from "../../components/PrimaryButton";
 
@@ -30,11 +30,13 @@ const Banner = () => {
             "6 / span 12 ",
           ],
           backgroundColor: "blue",
-          width: ["250px", "350px", "350px", "400px"],
-          m: ["-5em 0 0 0", "-8em 0 0 0", "0"],
         }}
       >
-        <StaticImage src={"../../images/bottle.png"} alt="bottle" />
+        <StaticImage
+          src={"../../images/shop-overview/banner/single-bottle.png"}
+          width="100"
+          alt="bottle"
+        />
       </GridItem>
       <GridItem
         sx={{
@@ -47,11 +49,9 @@ const Banner = () => {
           position: "absolute",
           top: ["5em", "5em", "9em", "1px"],
           backgroundColor: "green",
-          right: ["-1.5em", "-1.9em", "-2em"],
-          width: ["100px", "130px", "1"],
         }}
       >
-        <StaticImage src={"../../images/bottle-jam.png"} alt="bottle-jam" />
+        <StaticImage src={"../../images/general/jam.png"} alt="bottle-jam" />
       </GridItem>
       <GridItem
         sx={{

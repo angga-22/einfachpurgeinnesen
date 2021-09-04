@@ -38,7 +38,10 @@ const Header = ({ label, content }) => {
               left: ["5", "6em", "6em", "5em", "7em", "10em"],
             }}
           >
-            <StaticImage src={"../../images/wave-line.png"} alt="wave-line" />
+            <StaticImage
+              src={"../../images/laden-page/wave-line.png"}
+              alt="wave-line"
+            />
           </Box>
           <Heading
             variant="h3"
@@ -57,7 +60,7 @@ const Header = ({ label, content }) => {
             }}
           >
             <StaticImage
-              src={"../../images/curly-line2.png"}
+              src={"../../images/laden-page/curly-line.png"}
               alt="curly-line2"
             />
           </Box>

@@ -109,7 +109,10 @@ const Form = () => {
             zIndex: "-99",
           }}
         >
-          <StaticImage src={"../../images/pink-crown.png"} alt="pink-crown" />
+          <StaticImage
+            src={"../../images/laden-page/pink-crown.png"}
+            alt="pink-crown"
+          />
         </Box>
 
         <FormField

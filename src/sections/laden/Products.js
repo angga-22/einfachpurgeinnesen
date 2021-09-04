@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box, Heading, Paragraph } from "theme-ui";
-import underline from "../../images/underline-inactive.svg";
+import underline from "../../images/laden-page/underline-inactive.svg";
 import { Breakpoints } from "../../components/Breakpoints";
 import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 

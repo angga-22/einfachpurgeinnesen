@@ -182,7 +182,7 @@ const Header = ({ handleClose }) => {
                     sx={{
                       mr: "10px",
                     }}
-                    src={"../../images/vegan.png"}
+                    src={"../../images/menu-overlay/opt-mark-yellow.png"}
                   />
                   <Paragraph
                     variant="paragraph"
@@ -216,7 +216,7 @@ const Header = ({ handleClose }) => {
                     sx={{
                       mr: "17px",
                     }}
-                    src={"../../images/vegetarian.png"}
+                    src={"../../images/menu-overlay/opt-mark-green.png"}
                   />
                   <Paragraph
                     variant="paragraph"
@@ -254,7 +254,7 @@ const Header = ({ handleClose }) => {
                   width: ["43px", "43px", "43px", "58px", "58px", "58px"],
                 }}
                 alt="vegetarian"
-                src={"../../images/close.png"}
+                src={"../../images/general/close-button.png"}
               />
             </button>
           </Flex>

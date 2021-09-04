@@ -1,8 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import { Banner } from "sections/ShopOverview";
-import { Header, Info, ProductShowcase } from "sections/shopOverview";
+import { Header, Info, ProductShowcase, Banner } from "sections/shopOverview";
 import { Box } from "theme-ui";
 
 const ShopOverview = ({ data }) => {

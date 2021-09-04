@@ -71,7 +71,7 @@ const Info = ({ data }) => {
         }}
       >
         <Box>
-          <StaticImage src={"../../images/line.png"} alt="line" />
+          <StaticImage src={"../../images/general/line.png"} alt="line" />
         </Box>
       </GridItem>
     </GridWrapper>

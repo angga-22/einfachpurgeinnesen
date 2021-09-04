@@ -1,5 +1,5 @@
 import { theme as defaultTheme } from "@thepuzzlers/pieces";
-import maskButton from "../images/button-vector.png";
+import maskButton from "../images/general/mask-button.png";
 import { Breakpoints } from "../components/Breakpoints";
 import underlineActive from "../images/underline-active.svg";
 import underlineInactive from "../images/underline-inactive.svg";

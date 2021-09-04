@@ -61,7 +61,7 @@ const Footer = () => {
               ],
             }}
           >
-            <StaticImage src={"../../images/logo-pur.png"} alt="logo-pur" />
+            <StaticImage src={"../../images/general/logo.png"} alt="logo-pur" />
           </Box>
           <Paragraph
             variant="paragraph"
@@ -134,7 +134,10 @@ const Footer = () => {
           height: "auto",
         }}
       >
-        <StaticImage src={"../../images/art-paint.png"} alt="art-paint" />
+        <StaticImage
+          src={"../../images/general/yellow-rain.png"}
+          alt="yellow-rain"
+        />
       </Box>
     </Box>
   );

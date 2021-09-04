@@ -38,7 +38,10 @@ const TopContent = () => {
             width: ["24px", "30px", "24px", "24px", "24px", "47px"],
           }}
         >
-          <StaticImage src={"../../images/quote-left.png"} alt="quote-left" />
+          <StaticImage
+            src={"../../images/restaurant-page/quote-left.png"}
+            alt="quote-left"
+          />
         </Box>
         <Box
           sx={{
@@ -82,7 +85,10 @@ const TopContent = () => {
             ],
           }}
         >
-          <StaticImage src={"../../images/quote-right.png"} alt="quote-right" />
+          <StaticImage
+            src={"../../images/restaurant-page/quote-right.png"}
+            alt="quote-right"
+          />
         </Box>
       </GridItem>
 
@@ -100,7 +106,10 @@ const TopContent = () => {
             position: ["static"],
           }}
         >
-          <StaticImage src={"../../images/hero-img.png"} alt="hero-img" />
+          <StaticImage
+            src={"../../images/restaurant-page/hero-art.png"}
+            alt="hero-img"
+          />
         </GridItem>
       ) : (
         <Box
@@ -112,7 +121,10 @@ const TopContent = () => {
             top: ["18em", ""],
           }}
         >
-          <StaticImage src={"../../images/hero-img.png"} alt="hero-img" />
+          <StaticImage
+            src={"../../images/restaurant-page/hero-art.png"}
+            alt="hero-img"
+          />
         </Box>
       )}
     </GridWrapper>

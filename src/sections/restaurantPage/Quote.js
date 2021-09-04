@@ -5,7 +5,7 @@ import { GridWrapper, GridItem } from "@thepuzzlers/pieces";
 import { useMediaQuery } from "../../helper/CustomQuery";
 
 const Quote = ({ sx }) => {
-  const isMinTablePortrait = useMediaQuery("(min-width: 750px)"); // for handling couple image
+  const isMinTabletPortrait = useMediaQuery("(min-width: 750px)"); // for handling couple image
 
   return (
     <GridWrapper sx={sx}>
@@ -46,10 +46,16 @@ const Quote = ({ sx }) => {
             ],
           }}
         >
-          {isMinTablePortrait ? (
-            <StaticImage src={"../../images/couple-two.png"} alt="couple" />
+          {isMinTabletPortrait ? (
+            <StaticImage
+              src={"../../images/restaurant-page/couple-big.png"}
+              alt="couple"
+            />
           ) : (
-            <StaticImage src={"../../images/quote.png"} alt="couple" />
+            <StaticImage
+              src={"../../images/restaurant-page/couple-small.png"}
+              alt="couple"
+            />
           )}
         </Box>
 
