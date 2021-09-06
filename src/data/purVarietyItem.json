@@ -3,7 +3,7 @@
     "name": "one",
     "price": 5,
     "quantity": 1,
-    "isAdded": true
+    "isAdded": false
   },
   {
     "id": 2,

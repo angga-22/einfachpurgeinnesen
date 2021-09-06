@@ -2,17 +2,17 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import { VariantSelection } from "sections/productDetails";
 
-const ProductDetail = ({ data }) => {
+const ProductDetail = (variantItem) => {
   return (
     <>
-      <VariantSelection />
+      <VariantSelection variantData={variantItem.data.variantItem.nodes} />
     </>
   );
 };
 
 export const query = graphql`
   query getVarietyItemData {
-    pageData: allPurVarietyItemJson {
+    variantItem: allPurVarietyItemJson {
       nodes {
         id
         name

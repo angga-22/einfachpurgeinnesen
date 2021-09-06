@@ -1,8 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { Banner, Form, Products, Header, CopyWriter } from "sections/laden";
-import VariantSelection from "sections/productDetails/components/VariantSelection";
-// import ItemLists from "../components/CardItem/ItemLists";
 
 const Laden = ({ data }) => {
   return (
@@ -15,7 +13,6 @@ const Laden = ({ data }) => {
       <Products data={data.pageData} />
       <Banner />
       <Form />
-      <VariantSelection />
     </>
   );
 };

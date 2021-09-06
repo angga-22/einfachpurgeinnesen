@@ -1,1 +1,1 @@
-export { default as VariantSelection } from "./components/VariantSelection";
+export { default as VariantSelection } from "../productDetails/VariantSelection";

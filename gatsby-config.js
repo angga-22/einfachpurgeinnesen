@@ -1,4 +1,3 @@
-
 module.exports = {
   siteMetadata: {
     title: `einfachpurgeniessen`,
@@ -14,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -23,8 +22,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`
-      }
+        path: `${__dirname}/src/data`,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -34,13 +33,13 @@ module.exports = {
         start_url: `/`,
         background_color: `#FFFCF9`,
         display: `minimal-ui`,
-        icon: `src/images/logo-pur.png`
-      }
+        icon: `src/images/general/logo.png`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-layout',
+      resolve: "gatsby-plugin-layout",
       options: {
-        component: require.resolve('./src/components/Layout/index.js'),
+        component: require.resolve("./src/components/Layout/index.js"),
       },
     },
   ],

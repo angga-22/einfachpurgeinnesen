@@ -11,37 +11,33 @@ const CardItem = ({
   handleRemoveItem,
 }) => {
   return (
-    <Box
-      sx={{
-        backgroundColor: "white",
-        pb: "20px",
-        pt: "10px",
-      }}
-      key={id}
-    >
+    <Box key={id}>
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          mb: "-20px",
+          alignItems: "center",
         }}
       >
-        <Text variant="paragraph" sx={{ fontWeight: "bold" }}>
-          {name}{" "}
-        </Text>
         <Text
           variant="paragraph"
           sx={{
             fontWeight: "bold",
+          }}
+        >
+          {name}
+        </Text>
+        <Text
+          sx={{
+            fontWeight: "bold",
             fontFamily: "label",
-            fontSize: "24px",
+            fontSize: ["20px", "22px", "20px", "22px", "21px", "21px"],
           }}
         >
           {price * quantity} €
         </Text>
       </Box>
-      <br />
       <Box
         sx={{
           display: "flex",
@@ -81,8 +77,11 @@ const CardItem = ({
         <Box>
           <Text
             sx={{
-              color: "red",
+              color: "#DA3C6E",
               cursor: "pointer",
+              fontWeight: "light",
+              fontFamily: "body",
+              fontSize: "14px",
             }}
             onClick={handleRemoveItem}
           >
