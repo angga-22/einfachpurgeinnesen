@@ -25,14 +25,11 @@ const VariantSelection = ({ variantData }) => {
       if (item.id === id) {
         item.isAdded = false;
       }
+      return item;
     });
     const itemInCard = initialCard.find((item) => item.id === id);
     itemInCard && setInitialCard(initialCard.filter((item) => item.id !== id));
   };
-
-  React.useEffect(() => {
-    setInitialCard(initialCard);
-  }, []);
 
   return (
     <GridWrapper>
@@ -47,6 +44,7 @@ const VariantSelection = ({ variantData }) => {
             "12 /  23",
           ],
           overflow: "hidden",
+          gridRow: ["1 / 1", "1 / 1", " 1  / 1", "1 / 1", " 1 / 1"],
         }}
       >
         <Box
@@ -124,6 +122,7 @@ const VariantSelection = ({ variantData }) => {
           ))}
         </Box>
       </GridItem>
+
       <GridItem
         sx={{
           gridColumn: [
@@ -131,10 +130,11 @@ const VariantSelection = ({ variantData }) => {
             "1 / span 12",
             "2 / span 22",
             "2 / span 16 ",
-            "1 / span 11",
-            " 1 / span 9",
+            "1 /  11",
+            " 1 /  9",
           ],
           position: "relative",
+          gridRow: ["2 /  2", "2 / 2", "2 / 2", "2 / 2", "1 / 1"],
         }}
       >
         <Box
@@ -152,21 +152,20 @@ const VariantSelection = ({ variantData }) => {
           />
         </Box>
         <CardOverview initialItems={initialCard} remove={removeItem} />
-        <Box
+        {/* <Box
           sx={{
             position: "absolute",
             bottom: "0",
             right: "-5em",
             width: "200px",
-            zIndex: "-1",
           }}
         >
           <StaticImage
-            width="100%"
+            width="100"
             src="../../../images/product-detail/black-scribble.png"
             alt="rain image"
           />
-        </Box>
+        </Box> */}
       </GridItem>
     </GridWrapper>
   );
